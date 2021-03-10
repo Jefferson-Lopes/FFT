@@ -3,18 +3,12 @@ from computeMatrix import computeMatrix
 
 def FFT (xr, xi):
     n = len(xr)
-    xe_r = []
-    xo_r = []
-    xe_i = []
-    xo_i = []
-    Xer = []
-    Xei = []
-    Xor = []
-    Xoi = []
-    Yr = []
-    Yi = []
+    xe_r = [0] * (n//2)
+    xo_r = [0] * (n//2)
+    xe_i = [0] * (n//2)
+    xo_i = [0] * (n//2)
 
-    if (n % 2) == 0:
+    if (n % 2) == 0:  # if even
         for k in range(n//2):
             xe_r[k] = xr[2*k]
             xo_r[k] = xr[2*k + 1]
