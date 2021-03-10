@@ -1,5 +1,4 @@
 import math
-import numpy as np
 
 def butterfly (Xer, Xei, Xor, Xoi, N):
     wr = []

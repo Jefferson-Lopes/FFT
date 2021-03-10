@@ -1,5 +1,8 @@
+from butterfly import butterfly
+from computeMatrix import computeMatrix
+
 def FFT (xr, xi):
-    N = len(xr)
+    n = len(xr)
     xe_r = []
     xo_r = []
     xe_i = []
@@ -11,8 +14,8 @@ def FFT (xr, xi):
     Yr = []
     Yi = []
 
-    if (N % 2) == 0:
-        for k in range(N//2):
+    if (n % 2) == 0:
+        for k in range(n//2):
             xe_r[k] = xr[2*k]
             xo_r[k] = xr[2*k + 1]
 
@@ -21,7 +24,7 @@ def FFT (xr, xi):
         
         Xer, Xei = FFT(xe_r, xe_i)
         Xor, Xoi = FFT(xo_r, xo_i)
-        Yr, Yi = butterfly(Xer, Xei, Xor, Xoi, N)
+        Yr, Yi = butterfly(Xer, Xei, Xor, Xoi, n)
     else:
         Yr, Yi = computeMatrix(xr, xi)
 
