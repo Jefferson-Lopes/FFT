@@ -1,41 +1,49 @@
-from cmath import pi
+from typing_extensions import TypeAlias
 from FFT import FFT
 from iFFT import iFFT
 import numpy as np
 from matplotlib import pyplot as plt
 
-freq_one = 8
-freq_two = 40
-w = 2.0 * np.pi/255
-samples = np.linspace(start = 0, stop = 255, num = 255)
+n = 255
+w = 2.0 * np.pi/n
+samples = np.linspace(start = 0, stop = n, num = n)
 
-signal_one = 40 * np.sin(freq_one * w * samples)
-signal_two = 30 * np.sin(freq_two * w * samples)
+signal_one = 40 * np.sin(8 * w * samples)
+signal_two = 30 * np.sin(40 * w * samples)
 signal = signal_one + signal_two
 
-result = FFT(signal, [0] * len(signal))
+rFFT = FFT(signal, [0] * len(signal))
 
-print('signal_one')
-print(signal_one)
-print('signal_two')
-print(signal_two)
-print('signal')
-print(signal)
+npFFT = np.fft.fft(signal)
 
 plt.figure(1)
 plt.title('Original signals')
-plt.plot(samples, signal_one, color='#0A0A2A', linewidth=2, label='4Hz A=4')
-plt.plot(samples, signal_two, color='#891717', linewidth=2, label='20Hz A=3')
+plt.plot(samples, signal_one, color='#0A0A2A', linewidth=2, label='8Hz A=40')
+plt.plot(samples, signal_two, color='#891717', linewidth=2, label='40Hz A=30')
 plt.legend()
 
 plt.figure(2)
 plt.title('Result signal')
 plt.plot(samples, signal, color='#0A0A2A', linewidth=2)
 
-plt.figure(3)
-plt.title('FFT result')
-plt.plot(samples, result[0], color='#0A0A2A', linewidth=2, label='real')
-plt.plot(samples, result[1], color='#891717', linewidth=2, label='imaginary')
+real_rFFT = rFFT[0]
+real_npFFT = npFFT.real
+freq = np.fft.fftfreq(n)
+mask = freq > 0
+
+print(real_rFFT)
+np.delete
+
+'''plt.figure(3)
+plt.title('Recursive FFT result')
+plt.plot(, real_rFFT, color='#0A0A2A', linewidth=2, label='real')
+plt.plot()
+plt.legend()'''
+
+plt.figure(4)
+plt.title('NumPy FFT result')
+plt.plot(freq, np.abs(real_npFFT), color='#0A0A2A', linewidth=2, label='real')
+plt.plot()
 plt.legend()
 
 plt.show()
