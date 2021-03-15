@@ -1,4 +1,3 @@
-from typing_extensions import TypeAlias
 from FFT import FFT
 from iFFT import iFFT
 import numpy as np
