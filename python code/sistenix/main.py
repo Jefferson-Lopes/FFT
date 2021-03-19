@@ -3,15 +3,22 @@ from iFFT import iFFT
 import numpy as np
 from matplotlib import pyplot as plt
 
-n = 255
+n = 256
 w = 2.0 * np.pi/n
-samples = np.linspace(start = 0, stop = n, num = n)
+samples = np.linspace(start = 0, stop = n-1, num = n)
 
 signal_one = 40 * np.sin(8 * w * samples)
 signal_two = 30 * np.sin(40 * w * samples)
 signal = signal_one + signal_two
 
 rFFT = FFT(signal, [0] * len(signal))
+
+#convert to from tuple to list of list
+rFFT = [list(x) for x in rFFT]
+#convert real part into int
+rFFT[0] = ([int(a) for a in rFFT[0]])
+#convert to np.array
+rFFT = np.array(rFFT[0]) + 1j*np.array(rFFT[1])
 
 npFFT = np.fft.fft(signal)
 
@@ -25,23 +32,18 @@ plt.figure(2)
 plt.title('Result signal')
 plt.plot(samples, signal, color='#0A0A2A', linewidth=2)
 
-real_rFFT = rFFT[0]
-real_npFFT = npFFT.real
 freq = np.fft.fftfreq(n)
 mask = freq > 0
 
-print(real_rFFT)
-np.delete
-
-'''plt.figure(3)
+plt.figure(3)
 plt.title('Recursive FFT result')
-plt.plot(, real_rFFT, color='#0A0A2A', linewidth=2, label='real')
+plt.plot(samples, np.abs(rFFT), color='#0A0A2A', linewidth=2, label='abs')
 plt.plot()
-plt.legend()'''
+plt.legend()
 
 plt.figure(4)
 plt.title('NumPy FFT result')
-plt.plot(freq, np.abs(real_npFFT), color='#0A0A2A', linewidth=2, label='real')
+plt.plot(samples, np.abs(npFFT), color='#0A0A2A', linewidth=2, label='abs')
 plt.plot()
 plt.legend()
 
