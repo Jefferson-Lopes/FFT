@@ -1,0 +1,1262 @@
+Analysis & Synthesis report for fft
+Sat Mar 27 14:46:29 2021
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis DSP Block Usage Summary
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Registers Added for RAM Pass-Through Logic
+ 13. Registers Packed Into Inferred Megafunctions
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Source assignments for BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|altsyncram:ram_rtl_0|altsyncram_56k1:auto_generated
+ 16. Source assignments for BUFRAM64C1:U_BUF2|RAM2x64C_1:URAM|altsyncram:ram_rtl_0|altsyncram_i3q1:auto_generated
+ 17. Source assignments for BUFRAM64C1:U_BUF1|RAM2x64C_1:URAM|altsyncram:ram_rtl_0|altsyncram_a3q1:auto_generated
+ 18. Parameter Settings for User Entity Instance: Top-level Entity: |USFFT64_2B
+ 19. Parameter Settings for User Entity Instance: BUFRAM64C1:U_BUF1
+ 20. Parameter Settings for User Entity Instance: BUFRAM64C1:U_BUF1|RAM2x64C_1:URAM
+ 21. Parameter Settings for User Entity Instance: FFT8:U_FFT1
+ 22. Parameter Settings for User Entity Instance: FFT8:U_FFT1|MPU707:UMR
+ 23. Parameter Settings for User Entity Instance: FFT8:U_FFT1|MPU707:UMI
+ 24. Parameter Settings for User Entity Instance: CNORM:U_NORM1
+ 25. Parameter Settings for User Entity Instance: ROTATOR64:U_MPU
+ 26. Parameter Settings for User Entity Instance: ROTATOR64:U_MPU|WROM64:UROM
+ 27. Parameter Settings for User Entity Instance: BUFRAM64C1:U_BUF2
+ 28. Parameter Settings for User Entity Instance: BUFRAM64C1:U_BUF2|RAM2x64C_1:URAM
+ 29. Parameter Settings for User Entity Instance: FFT8:U_FFT2
+ 30. Parameter Settings for User Entity Instance: FFT8:U_FFT2|MPU707:UMR
+ 31. Parameter Settings for User Entity Instance: FFT8:U_FFT2|MPU707:UMI
+ 32. Parameter Settings for User Entity Instance: CNORM:U_NORM2
+ 33. Parameter Settings for User Entity Instance: BUFRAM64C1:Ubuf3
+ 34. Parameter Settings for User Entity Instance: BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM
+ 35. Parameter Settings for Inferred Entity Instance: BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|altsyncram:ram_rtl_0
+ 36. Parameter Settings for Inferred Entity Instance: BUFRAM64C1:U_BUF2|RAM2x64C_1:URAM|altsyncram:ram_rtl_0
+ 37. Parameter Settings for Inferred Entity Instance: BUFRAM64C1:U_BUF1|RAM2x64C_1:URAM|altsyncram:ram_rtl_0
+ 38. altsyncram Parameter Settings by Entity Instance
+ 39. Port Connectivity Checks: "BUFRAM64C1:Ubuf3"
+ 40. Port Connectivity Checks: "CNORM:U_NORM2"
+ 41. Post-Synthesis Netlist Statistics for Top Partition
+ 42. Elapsed Time Per Partition
+ 43. Analysis & Synthesis Messages
+ 44. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Sat Mar 27 14:46:29 2021       ;
+; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                   ; fft                                         ;
+; Top-level Entity Name           ; USFFT64_2B                                  ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 2398                                        ;
+; Total pins                      ; 87                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 13,312                                      ;
+; Total DSP Blocks                ; 4                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; USFFT64_2B         ; fft                ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.1%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                     ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                 ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
+; USFFT64_2B_tb.v                  ; yes             ; User Verilog HDL File        ; C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/USFFT64_2B_tb.v           ;         ;
+; USFFT64_2B.v                     ; yes             ; User Verilog HDL File        ; C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/USFFT64_2B.v              ;         ;
+; WROM64.v                         ; yes             ; User Verilog HDL File        ; C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/WROM64.v                  ;         ;
+; rotator64_v.v                    ; yes             ; User Verilog HDL File        ; C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/rotator64_v.v             ;         ;
+; ram2x64c_1.v                     ; yes             ; User Verilog HDL File        ; C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/ram2x64c_1.v              ;         ;
+; mpu707.v                         ; yes             ; User Verilog HDL File        ; C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/mpu707.v                  ;         ;
+; fft8.v                           ; yes             ; User Verilog HDL File        ; C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/fft8.v                    ;         ;
+; cnorm.v                          ; yes             ; User Verilog HDL File        ; C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/cnorm.v                   ;         ;
+; bufram64c1.v                     ; yes             ; User Verilog HDL File        ; C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/bufram64c1.v              ;         ;
+; fft64_config.inc                 ; yes             ; User Unspecified File        ; C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/fft64_config.inc          ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; aglobal201.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_56k1.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/db/altsyncram_56k1.tdf    ;         ;
+; db/altsyncram_i3q1.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/db/altsyncram_i3q1.tdf    ;         ;
+; db/altsyncram_a3q1.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/db/altsyncram_a3q1.tdf    ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 1394      ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 1723      ;
+;     -- 7 input functions                    ; 6         ;
+;     -- 6 input functions                    ; 262       ;
+;     -- 5 input functions                    ; 282       ;
+;     -- 4 input functions                    ; 273       ;
+;     -- <=3 input functions                  ; 900       ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 2398      ;
+;                                             ;           ;
+; I/O pins                                    ; 87        ;
+; Total MLAB memory bits                      ; 0         ;
+; Total block memory bits                     ; 13312     ;
+;                                             ;           ;
+; Total DSP Blocks                            ; 4         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; CLK~input ;
+; Maximum fan-out                             ; 2502      ;
+; Total fan-out                               ; 16080     ;
+; Average fan-out                             ; 3.65      ;
++---------------------------------------------+-----------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                        ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                               ; Entity Name     ; Library Name ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------+-----------------+--------------+
+; |USFFT64_2B                                  ; 1723 (8)            ; 2398 (6)                  ; 13312             ; 4          ; 87   ; 0            ; |USFFT64_2B                                                                                       ; USFFT64_2B      ; work         ;
+;    |BUFRAM64C1:U_BUF1|                       ; 29 (29)             ; 23 (16)                   ; 4096              ; 0          ; 0    ; 0            ; |USFFT64_2B|BUFRAM64C1:U_BUF1                                                                     ; BUFRAM64C1      ; work         ;
+;       |RAM2x64C_1:URAM|                      ; 0 (0)               ; 7 (7)                     ; 4096              ; 0          ; 0    ; 0            ; |USFFT64_2B|BUFRAM64C1:U_BUF1|RAM2x64C_1:URAM                                                     ; RAM2x64C_1      ; work         ;
+;          |altsyncram:ram_rtl_0|              ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |USFFT64_2B|BUFRAM64C1:U_BUF1|RAM2x64C_1:URAM|altsyncram:ram_rtl_0                                ; altsyncram      ; work         ;
+;             |altsyncram_a3q1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |USFFT64_2B|BUFRAM64C1:U_BUF1|RAM2x64C_1:URAM|altsyncram:ram_rtl_0|altsyncram_a3q1:auto_generated ; altsyncram_a3q1 ; work         ;
+;    |BUFRAM64C1:U_BUF2|                       ; 29 (29)             ; 23 (16)                   ; 4608              ; 0          ; 0    ; 0            ; |USFFT64_2B|BUFRAM64C1:U_BUF2                                                                     ; BUFRAM64C1      ; work         ;
+;       |RAM2x64C_1:URAM|                      ; 0 (0)               ; 7 (7)                     ; 4608              ; 0          ; 0    ; 0            ; |USFFT64_2B|BUFRAM64C1:U_BUF2|RAM2x64C_1:URAM                                                     ; RAM2x64C_1      ; work         ;
+;          |altsyncram:ram_rtl_0|              ; 0 (0)               ; 0 (0)                     ; 4608              ; 0          ; 0    ; 0            ; |USFFT64_2B|BUFRAM64C1:U_BUF2|RAM2x64C_1:URAM|altsyncram:ram_rtl_0                                ; altsyncram      ; work         ;
+;             |altsyncram_i3q1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 4608              ; 0          ; 0    ; 0            ; |USFFT64_2B|BUFRAM64C1:U_BUF2|RAM2x64C_1:URAM|altsyncram:ram_rtl_0|altsyncram_i3q1:auto_generated ; altsyncram_i3q1 ; work         ;
+;    |BUFRAM64C1:Ubuf3|                        ; 69 (29)             ; 67 (16)                   ; 4608              ; 0          ; 0    ; 0            ; |USFFT64_2B|BUFRAM64C1:Ubuf3                                                                      ; BUFRAM64C1      ; work         ;
+;       |RAM2x64C_1:URAM|                      ; 40 (40)             ; 51 (51)                   ; 4608              ; 0          ; 0    ; 0            ; |USFFT64_2B|BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM                                                      ; RAM2x64C_1      ; work         ;
+;          |altsyncram:ram_rtl_0|              ; 0 (0)               ; 0 (0)                     ; 4608              ; 0          ; 0    ; 0            ; |USFFT64_2B|BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|altsyncram:ram_rtl_0                                 ; altsyncram      ; work         ;
+;             |altsyncram_56k1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 4608              ; 0          ; 0    ; 0            ; |USFFT64_2B|BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|altsyncram:ram_rtl_0|altsyncram_56k1:auto_generated  ; altsyncram_56k1 ; work         ;
+;    |CNORM:U_NORM1|                           ; 39 (39)             ; 38 (38)                   ; 0                 ; 0          ; 0    ; 0            ; |USFFT64_2B|CNORM:U_NORM1                                                                         ; CNORM           ; work         ;
+;    |CNORM:U_NORM2|                           ; 39 (39)             ; 38 (38)                   ; 0                 ; 0          ; 0    ; 0            ; |USFFT64_2B|CNORM:U_NORM2                                                                         ; CNORM           ; work         ;
+;    |FFT8:U_FFT1|                             ; 680 (528)           ; 954 (850)                 ; 0                 ; 0          ; 0    ; 0            ; |USFFT64_2B|FFT8:U_FFT1                                                                           ; FFT8            ; work         ;
+;       |MPU707:UMI|                           ; 76 (76)             ; 52 (52)                   ; 0                 ; 0          ; 0    ; 0            ; |USFFT64_2B|FFT8:U_FFT1|MPU707:UMI                                                                ; MPU707          ; work         ;
+;       |MPU707:UMR|                           ; 76 (76)             ; 52 (52)                   ; 0                 ; 0          ; 0    ; 0            ; |USFFT64_2B|FFT8:U_FFT1|MPU707:UMR                                                                ; MPU707          ; work         ;
+;    |FFT8:U_FFT2|                             ; 750 (582)           ; 1062 (946)                ; 0                 ; 0          ; 0    ; 0            ; |USFFT64_2B|FFT8:U_FFT2                                                                           ; FFT8            ; work         ;
+;       |MPU707:UMI|                           ; 84 (84)             ; 58 (58)                   ; 0                 ; 0          ; 0    ; 0            ; |USFFT64_2B|FFT8:U_FFT2|MPU707:UMI                                                                ; MPU707          ; work         ;
+;       |MPU707:UMR|                           ; 84 (84)             ; 58 (58)                   ; 0                 ; 0          ; 0    ; 0            ; |USFFT64_2B|FFT8:U_FFT2|MPU707:UMR                                                                ; MPU707          ; work         ;
+;    |ROTATOR64:U_MPU|                         ; 80 (50)             ; 187 (187)                 ; 0                 ; 4          ; 0    ; 0            ; |USFFT64_2B|ROTATOR64:U_MPU                                                                       ; ROTATOR64       ; work         ;
+;       |WROM64:UROM|                          ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |USFFT64_2B|ROTATOR64:U_MPU|WROM64:UROM                                                           ; WROM64          ; work         ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------+-----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                     ;
++--------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; Name                                                                                             ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
++--------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; BUFRAM64C1:U_BUF1|RAM2x64C_1:URAM|altsyncram:ram_rtl_0|altsyncram_a3q1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 128          ; 32           ; 128          ; 32           ; 4096 ; None ;
+; BUFRAM64C1:U_BUF2|RAM2x64C_1:URAM|altsyncram:ram_rtl_0|altsyncram_i3q1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 128          ; 36           ; 128          ; 36           ; 4608 ; None ;
+; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|altsyncram:ram_rtl_0|altsyncram_56k1:auto_generated|ALTSYNCRAM  ; AUTO ; Simple Dual Port ; 128          ; 36           ; 128          ; 36           ; 4608 ; None ;
++--------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+
+
++----------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary ;
++-------------------------------+--------------+
+; Statistic                     ; Number Used  ;
++-------------------------------+--------------+
+; Two Independent 18x18         ; 4            ;
+; Total number of DSP blocks    ; 4            ;
+;                               ;              ;
+; Fixed Point Signed Multiplier ; 4            ;
++-------------------------------+--------------+
+
+
++------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                 ;
++----------------------------------------+-------------------------------------------+
+; Register name                          ; Reason for Removal                        ;
++----------------------------------------+-------------------------------------------+
+; FFT8:U_FFT1|MPU707:UMI|dt[18]          ; Merged with FFT8:U_FFT1|MPU707:UMI|dt[17] ;
+; FFT8:U_FFT1|MPU707:UMI|dx5[20,21]      ; Merged with FFT8:U_FFT1|MPU707:UMI|dt[17] ;
+; FFT8:U_FFT1|MPU707:UMR|dt[18]          ; Merged with FFT8:U_FFT1|MPU707:UMR|dt[17] ;
+; FFT8:U_FFT1|MPU707:UMR|dx5[20,21]      ; Merged with FFT8:U_FFT1|MPU707:UMR|dt[17] ;
+; FFT8:U_FFT2|MPU707:UMI|dt[20]          ; Merged with FFT8:U_FFT2|MPU707:UMI|dt[19] ;
+; FFT8:U_FFT2|MPU707:UMI|dx5[22,23]      ; Merged with FFT8:U_FFT2|MPU707:UMI|dt[19] ;
+; FFT8:U_FFT2|MPU707:UMR|dt[20]          ; Merged with FFT8:U_FFT2|MPU707:UMR|dt[19] ;
+; FFT8:U_FFT2|MPU707:UMR|dx5[22,23]      ; Merged with FFT8:U_FFT2|MPU707:UMR|dt[19] ;
+; Total Number of Removed Registers = 12 ;                                           ;
++----------------------------------------+-------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 2398  ;
+; Number of registers using Synchronous Clear  ; 29    ;
+; Number of registers using Synchronous Load   ; 38    ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 2344  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Registers Added for RAM Pass-Through Logic                                                         ;
++-------------------------------------------------------+--------------------------------------------+
+; Register Name                                         ; RAM Name                                   ;
++-------------------------------------------------------+--------------------------------------------+
+; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0_bypass[0]  ; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0 ;
+; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0_bypass[1]  ; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0 ;
+; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0_bypass[2]  ; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0 ;
+; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0_bypass[3]  ; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0 ;
+; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0_bypass[4]  ; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0 ;
+; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0_bypass[5]  ; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0 ;
+; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0_bypass[6]  ; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0 ;
+; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0_bypass[7]  ; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0 ;
+; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0_bypass[8]  ; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0 ;
+; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0_bypass[9]  ; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0 ;
+; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0_bypass[10] ; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0 ;
+; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0_bypass[11] ; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0 ;
+; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0_bypass[12] ; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0 ;
+; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0_bypass[13] ; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0 ;
+; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0_bypass[14] ; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0 ;
+; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0_bypass[15] ; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0 ;
+; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0_bypass[16] ; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0 ;
+; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0_bypass[17] ; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0 ;
+; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0_bypass[18] ; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0 ;
+; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0_bypass[19] ; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0 ;
+; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0_bypass[20] ; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0 ;
+; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0_bypass[21] ; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0 ;
+; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0_bypass[22] ; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0 ;
+; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0_bypass[23] ; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0 ;
+; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0_bypass[24] ; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0 ;
+; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0_bypass[25] ; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0 ;
+; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0_bypass[26] ; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0 ;
+; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0_bypass[27] ; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0 ;
+; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0_bypass[28] ; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0 ;
+; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0_bypass[29] ; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0 ;
+; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0_bypass[30] ; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0 ;
+; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0_bypass[31] ; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0 ;
+; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0_bypass[32] ; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0 ;
+; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0_bypass[33] ; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0 ;
+; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0_bypass[34] ; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0 ;
+; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0_bypass[35] ; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0 ;
+; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0_bypass[36] ; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0 ;
+; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0_bypass[37] ; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0 ;
+; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0_bypass[38] ; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0 ;
+; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0_bypass[39] ; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0 ;
+; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0_bypass[40] ; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0 ;
+; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0_bypass[41] ; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0 ;
+; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0_bypass[42] ; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0 ;
+; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0_bypass[43] ; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0 ;
+; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0_bypass[44] ; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0 ;
+; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0_bypass[45] ; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0 ;
+; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0_bypass[46] ; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0 ;
+; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0_bypass[47] ; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0 ;
+; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0_bypass[48] ; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0 ;
+; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0_bypass[49] ; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0 ;
+; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0_bypass[50] ; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0 ;
++-------------------------------------------------------+--------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                                                           ;
++---------------------------------------------------+---------------------------------------------+------+
+; Register Name                                     ; Megafunction                                ; Type ;
++---------------------------------------------------+---------------------------------------------+------+
+; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|read_addra[0..6] ; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0  ; RAM  ;
+; FFT8:U_FFT2|di[0..17]                             ; BUFRAM64C1:U_BUF2|RAM2x64C_1:URAM|ram_rtl_0 ; RAM  ;
+; FFT8:U_FFT2|dr[0..17]                             ; BUFRAM64C1:U_BUF2|RAM2x64C_1:URAM|ram_rtl_0 ; RAM  ;
+; FFT8:U_FFT1|di[0..15]                             ; BUFRAM64C1:U_BUF1|RAM2x64C_1:URAM|ram_rtl_0 ; RAM  ;
+; FFT8:U_FFT1|dr[0..15]                             ; BUFRAM64C1:U_BUF1|RAM2x64C_1:URAM|ram_rtl_0 ; RAM  ;
++---------------------------------------------------+---------------------------------------------+------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |USFFT64_2B|CNORM:U_NORM1|dir[0]      ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |USFFT64_2B|CNORM:U_NORM1|dii[1]      ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |USFFT64_2B|CNORM:U_NORM1|dir[5]      ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |USFFT64_2B|CNORM:U_NORM2|dir[0]      ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |USFFT64_2B|CNORM:U_NORM2|dir[1]      ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |USFFT64_2B|CNORM:U_NORM2|dii[9]      ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |USFFT64_2B|addri[3]                  ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |USFFT64_2B|BUFRAM64C1:Ubuf3|addr[5]  ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |USFFT64_2B|BUFRAM64C1:U_BUF2|addr[4] ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |USFFT64_2B|BUFRAM64C1:U_BUF1|addr[2] ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |USFFT64_2B|FFT8:U_FFT1|RDY           ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |USFFT64_2B|FFT8:U_FFT2|RDY           ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |USFFT64_2B|ROTATOR64:U_MPU|addrw[4]  ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |USFFT64_2B|BUFRAM64C1:Ubuf3|ct2[0]   ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |USFFT64_2B|BUFRAM64C1:Ubuf3|ct2[1]   ;
+; 3:1                ; 34 bits   ; 68 LEs        ; 0 LEs                ; 68 LEs                 ; Yes        ; |USFFT64_2B|FFT8:U_FFT1|s5r[7]        ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 0 LEs                ; 8 LEs                  ; Yes        ; |USFFT64_2B|FFT8:U_FFT1|s5i[18]       ;
+; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |USFFT64_2B|FFT8:U_FFT2|s5i[6]        ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 0 LEs                ; 8 LEs                  ; Yes        ; |USFFT64_2B|FFT8:U_FFT2|s5i[20]       ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |USFFT64_2B|FFT8:U_FFT1|ctd[2]        ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |USFFT64_2B|FFT8:U_FFT2|ctd[0]        ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |USFFT64_2B|BUFRAM64C1:U_BUF1|ct2[0]  ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |USFFT64_2B|BUFRAM64C1:U_BUF1|ct2[5]  ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |USFFT64_2B|BUFRAM64C1:U_BUF2|ct2[0]  ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |USFFT64_2B|BUFRAM64C1:U_BUF2|ct2[5]  ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 0 LEs                ; 54 LEs                 ; Yes        ; |USFFT64_2B|FFT8:U_FFT1|sji[15]       ;
+; 5:1                ; 20 bits   ; 60 LEs        ; 0 LEs                ; 60 LEs                 ; Yes        ; |USFFT64_2B|FFT8:U_FFT2|sji[10]       ;
+; 7:1                ; 18 bits   ; 72 LEs        ; 36 LEs               ; 36 LEs                 ; Yes        ; |USFFT64_2B|FFT8:U_FFT1|sjr[2]        ;
+; 7:1                ; 20 bits   ; 80 LEs        ; 40 LEs               ; 40 LEs                 ; Yes        ; |USFFT64_2B|FFT8:U_FFT2|sjr[10]       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |USFFT64_2B|FFT8:U_FFT1|Add6          ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |USFFT64_2B|FFT8:U_FFT1|Add6          ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |USFFT64_2B|FFT8:U_FFT1|Add30         ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |USFFT64_2B|FFT8:U_FFT1|Add29         ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |USFFT64_2B|FFT8:U_FFT2|Add6          ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |USFFT64_2B|FFT8:U_FFT2|Add6          ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |USFFT64_2B|FFT8:U_FFT2|Add30         ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |USFFT64_2B|FFT8:U_FFT2|Add29         ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |USFFT64_2B|FFT8:U_FFT1|Add24         ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |USFFT64_2B|FFT8:U_FFT1|Add7          ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |USFFT64_2B|FFT8:U_FFT1|Add6          ;
+; 1:1                ; 8 bits    ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |USFFT64_2B|FFT8:U_FFT1|Add7          ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |USFFT64_2B|FFT8:U_FFT1|Add30         ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |USFFT64_2B|FFT8:U_FFT1|Add29         ;
+; 3:1                ; 36 bits   ; 72 LEs        ; 36 LEs               ; 36 LEs                 ; No         ; |USFFT64_2B|FFT8:U_FFT2|Add24         ;
+; 4:1                ; 36 bits   ; 72 LEs        ; 72 LEs               ; 0 LEs                  ; No         ; |USFFT64_2B|FFT8:U_FFT2|Add7          ;
+; 4:1                ; 36 bits   ; 72 LEs        ; 36 LEs               ; 36 LEs                 ; No         ; |USFFT64_2B|FFT8:U_FFT2|Add7          ;
+; 1:1                ; 8 bits    ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |USFFT64_2B|FFT8:U_FFT2|Add6          ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |USFFT64_2B|FFT8:U_FFT2|Add30         ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |USFFT64_2B|FFT8:U_FFT2|Add29         ;
+; 7:1                ; 33 bits   ; 132 LEs       ; 99 LEs               ; 33 LEs                 ; No         ; |USFFT64_2B|FFT8:U_FFT1|Add29         ;
+; 7:1                ; 34 bits   ; 136 LEs       ; 136 LEs              ; 0 LEs                  ; No         ; |USFFT64_2B|FFT8:U_FFT1|Add30         ;
+; 7:1                ; 37 bits   ; 148 LEs       ; 111 LEs              ; 37 LEs                 ; No         ; |USFFT64_2B|FFT8:U_FFT2|Add29         ;
+; 7:1                ; 38 bits   ; 152 LEs       ; 152 LEs              ; 0 LEs                  ; No         ; |USFFT64_2B|FFT8:U_FFT2|Add30         ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |USFFT64_2B|FFT8:U_FFT1|Add24         ;
+; 3:1                ; 38 bits   ; 76 LEs        ; 76 LEs               ; 0 LEs                  ; No         ; |USFFT64_2B|FFT8:U_FFT1|Add24         ;
+; 3:1                ; 18 bits   ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; No         ; |USFFT64_2B|FFT8:U_FFT1|Add18         ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |USFFT64_2B|FFT8:U_FFT2|Add24         ;
+; 3:1                ; 42 bits   ; 84 LEs        ; 84 LEs               ; 0 LEs                  ; No         ; |USFFT64_2B|FFT8:U_FFT2|Add23         ;
+; 3:1                ; 20 bits   ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |USFFT64_2B|FFT8:U_FFT2|Add18         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Source assignments for BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|altsyncram:ram_rtl_0|altsyncram_56k1:auto_generated ;
++---------------------------------+--------------------+------+-----------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                            ;
++---------------------------------+--------------------+------+-----------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                             ;
++---------------------------------+--------------------+------+-----------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Source assignments for BUFRAM64C1:U_BUF2|RAM2x64C_1:URAM|altsyncram:ram_rtl_0|altsyncram_i3q1:auto_generated ;
++---------------------------------+--------------------+------+------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                             ;
++---------------------------------+--------------------+------+------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                              ;
++---------------------------------+--------------------+------+------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Source assignments for BUFRAM64C1:U_BUF1|RAM2x64C_1:URAM|altsyncram:ram_rtl_0|altsyncram_a3q1:auto_generated ;
++---------------------------------+--------------------+------+------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                             ;
++---------------------------------+--------------------+------+------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                              ;
++---------------------------------+--------------------+------+------------------------------------------------+
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |USFFT64_2B ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; nb             ; 16    ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BUFRAM64C1:U_BUF1 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; nb             ; 16    ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BUFRAM64C1:U_BUF1|RAM2x64C_1:URAM ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; nb             ; 16    ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FFT8:U_FFT1 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; nb             ; 16    ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FFT8:U_FFT1|MPU707:UMR ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; nb             ; 16    ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FFT8:U_FFT1|MPU707:UMI ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; nb             ; 16    ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CNORM:U_NORM1 ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; nb             ; 16    ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ROTATOR64:U_MPU ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; nb             ; 16    ; Signed Integer                      ;
+; nw             ; 15    ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ROTATOR64:U_MPU|WROM64:UROM ;
++----------------+----------------------------------+----------------------+
+; Parameter Name ; Value                            ; Type                 ;
++----------------+----------------------------------+----------------------+
+; nw             ; 15                               ; Signed Integer       ;
+; c0             ; 0111111111111111                 ; Signed Binary        ;
+; s0             ; 0000000000000000                 ; Signed Binary        ;
+; c1             ; 0111111101100010                 ; Signed Binary        ;
+; s1             ; 0000110010001100                 ; Signed Binary        ;
+; c2             ; 0111110110001010                 ; Signed Binary        ;
+; s2             ; 0001100011111001                 ; Signed Binary        ;
+; c3             ; 0111101001111101                 ; Signed Binary        ;
+; s3             ; 0010010100101000                 ; Signed Binary        ;
+; c4             ; 0111011001000010                 ; Signed Binary        ;
+; s4             ; 0011000011111100                 ; Signed Binary        ;
+; c5             ; 0111000011100011                 ; Signed Binary        ;
+; s5             ; 0011110001010111                 ; Signed Binary        ;
+; c6             ; 0110101001101110                 ; Signed Binary        ;
+; s6             ; 0100011100011101                 ; Signed Binary        ;
+; c7             ; 0110001011110010                 ; Signed Binary        ;
+; s7             ; 0101000100110100                 ; Signed Binary        ;
+; c8             ; 0101101010000010                 ; Signed Binary        ;
+; w0             ; 01111111111111110000000000000000 ; Unsigned Binary      ;
+; w1             ; 01111111011000101111001101110100 ; Unsigned Binary      ;
+; w2             ; 01111101100010101110011100000111 ; Unsigned Binary      ;
+; w3             ; 01111010011111011101101011011000 ; Unsigned Binary      ;
+; w4             ; 01110110010000101100111100000100 ; Unsigned Binary      ;
+; w5             ; 01110000111000111100001110101001 ; Unsigned Binary      ;
+; w6             ; 01101010011011101011100011100011 ; Unsigned Binary      ;
+; w7             ; 01100010111100101010111011001100 ; Unsigned Binary      ;
+; w8             ; 01011010100000101010010101111110 ; Unsigned Binary      ;
+; w9             ; 01010001001101001001110100001110 ; Unsigned Binary      ;
+; w10            ; 01000111000111011001010110010010 ; Unsigned Binary      ;
+; w12            ; 00110000111111001000100110111110 ; Unsigned Binary      ;
+; w14            ; 00011000111110011000001001110110 ; Unsigned Binary      ;
+; w15            ; 00001100100011001000000010011110 ; Unsigned Binary      ;
+; w16            ; 00000000000000001000000000000001 ; Unsigned Binary      ;
+; w18            ; 11100111000001111000001001110110 ; Unsigned Binary      ;
+; w20            ; 11001111000001001000100110111110 ; Unsigned Binary      ;
+; w21            ; 11000011101010011000111100011101 ; Unsigned Binary      ;
+; w24            ; 10100101011111101010010101111110 ; Unsigned Binary      ;
+; w25            ; 10011101000011101010111011001100 ; Unsigned Binary      ;
+; w28            ; 10001001101111101100111100000100 ; Unsigned Binary      ;
+; w30            ; 10000010011101101110011100000111 ; Unsigned Binary      ;
+; w35            ; 10000101100000110010010100101000 ; Unsigned Binary      ;
+; w36            ; 10001001101111100011000011111100 ; Unsigned Binary      ;
+; w42            ; 10111000111000110110101001101110 ; Unsigned Binary      ;
+; w49            ; 00001100100011000111111101100010 ; Unsigned Binary      ;
+; wi0            ; 01111111111111110000000000000000 ; Unsigned Binary      ;
+; wi1            ; 01111111011000100000110010001100 ; Unsigned Binary      ;
+; wi2            ; 01111101100010100001100011111001 ; Unsigned Binary      ;
+; wi3            ; 01111010011111010010010100101000 ; Unsigned Binary      ;
+; wi4            ; 01110110010000100011000011111100 ; Unsigned Binary      ;
+; wi5            ; 01110000111000110011110001010111 ; Unsigned Binary      ;
+; wi6            ; 01101010011011100100011100011101 ; Unsigned Binary      ;
+; wi7            ; 01100010111100100101000100110100 ; Unsigned Binary      ;
+; wi8            ; 01011010100000100101101010000010 ; Unsigned Binary      ;
+; wi9            ; 01010001001101000110001011110010 ; Unsigned Binary      ;
+; wi10           ; 01000111000111010110101001101110 ; Unsigned Binary      ;
+; wi12           ; 00110000111111000111011001000010 ; Unsigned Binary      ;
+; wi14           ; 00011000111110010111110110001010 ; Unsigned Binary      ;
+; wi15           ; 00001100100011000111111101100010 ; Unsigned Binary      ;
+; wi16           ; 00000000000000000111111111111111 ; Unsigned Binary      ;
+; wi18           ; 11100111000001110111110110001010 ; Unsigned Binary      ;
+; wi20           ; 11001111000001000111011001000010 ; Unsigned Binary      ;
+; wi21           ; 11000011101010010111000011100011 ; Unsigned Binary      ;
+; wi24           ; 10100101011111100101101010000010 ; Unsigned Binary      ;
+; wi25           ; 10011101000011100101000100110100 ; Unsigned Binary      ;
+; wi28           ; 10001001101111100011000011111100 ; Unsigned Binary      ;
+; wi30           ; 10000010011101100001100011111001 ; Unsigned Binary      ;
+; wi35           ; 10000101100000111101101011011000 ; Unsigned Binary      ;
+; wi36           ; 10001001101111101100111100000100 ; Unsigned Binary      ;
+; wi42           ; 10111000111000111001010110010010 ; Unsigned Binary      ;
+; wi49           ; 00001100100011001000000010011110 ; Unsigned Binary      ;
++----------------+----------------------------------+----------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BUFRAM64C1:U_BUF2 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; nb             ; 18    ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BUFRAM64C1:U_BUF2|RAM2x64C_1:URAM ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; nb             ; 18    ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FFT8:U_FFT2 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; nb             ; 18    ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FFT8:U_FFT2|MPU707:UMR ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; nb             ; 18    ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FFT8:U_FFT2|MPU707:UMI ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; nb             ; 18    ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CNORM:U_NORM2 ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; nb             ; 18    ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BUFRAM64C1:Ubuf3 ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; nb             ; 19    ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; nb             ; 19    ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|altsyncram:ram_rtl_0 ;
++------------------------------------+----------------------+--------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                       ;
++------------------------------------+----------------------+--------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                    ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                 ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                               ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                               ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                             ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                    ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                                    ;
+; WIDTH_A                            ; 36                   ; Untyped                                    ;
+; WIDTHAD_A                          ; 7                    ; Untyped                                    ;
+; NUMWORDS_A                         ; 128                  ; Untyped                                    ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                    ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                    ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                    ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                    ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                    ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                    ;
+; WIDTH_B                            ; 36                   ; Untyped                                    ;
+; WIDTHAD_B                          ; 7                    ; Untyped                                    ;
+; NUMWORDS_B                         ; 128                  ; Untyped                                    ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                    ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                    ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                    ;
+; ADDRESS_REG_B                      ; CLOCK0               ; Untyped                                    ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                    ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                    ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                    ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                    ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                    ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                    ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                    ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                    ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                                    ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                    ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                    ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                    ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                    ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                    ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                    ;
+; INIT_FILE                          ; UNUSED               ; Untyped                                    ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                    ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                    ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                                    ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                    ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                                    ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                    ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                    ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                    ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                    ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                    ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                    ;
+; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                                    ;
+; CBXI_PARAMETER                     ; altsyncram_56k1      ; Untyped                                    ;
++------------------------------------+----------------------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: BUFRAM64C1:U_BUF2|RAM2x64C_1:URAM|altsyncram:ram_rtl_0 ;
++------------------------------------+----------------------+---------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                        ;
++------------------------------------+----------------------+---------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                     ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                  ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                              ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                     ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                                     ;
+; WIDTH_A                            ; 36                   ; Untyped                                     ;
+; WIDTHAD_A                          ; 7                    ; Untyped                                     ;
+; NUMWORDS_A                         ; 128                  ; Untyped                                     ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                     ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                     ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                     ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                     ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                     ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                     ;
+; WIDTH_B                            ; 36                   ; Untyped                                     ;
+; WIDTHAD_B                          ; 7                    ; Untyped                                     ;
+; NUMWORDS_B                         ; 128                  ; Untyped                                     ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                     ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                     ;
+; RDCONTROL_REG_B                    ; CLOCK0               ; Untyped                                     ;
+; ADDRESS_REG_B                      ; CLOCK0               ; Untyped                                     ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                     ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                     ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                     ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                     ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                     ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                     ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                     ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                     ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                                     ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                     ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                     ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                     ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA             ; Untyped                                     ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                     ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                     ;
+; INIT_FILE                          ; UNUSED               ; Untyped                                     ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                     ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                     ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                                     ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                     ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                                     ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                     ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                     ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                     ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                     ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                     ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                     ;
+; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                                     ;
+; CBXI_PARAMETER                     ; altsyncram_i3q1      ; Untyped                                     ;
++------------------------------------+----------------------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: BUFRAM64C1:U_BUF1|RAM2x64C_1:URAM|altsyncram:ram_rtl_0 ;
++------------------------------------+----------------------+---------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                        ;
++------------------------------------+----------------------+---------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                     ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                  ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                              ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                     ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                                     ;
+; WIDTH_A                            ; 32                   ; Untyped                                     ;
+; WIDTHAD_A                          ; 7                    ; Untyped                                     ;
+; NUMWORDS_A                         ; 128                  ; Untyped                                     ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                     ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                     ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                     ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                     ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                     ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                     ;
+; WIDTH_B                            ; 32                   ; Untyped                                     ;
+; WIDTHAD_B                          ; 7                    ; Untyped                                     ;
+; NUMWORDS_B                         ; 128                  ; Untyped                                     ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                     ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                     ;
+; RDCONTROL_REG_B                    ; CLOCK0               ; Untyped                                     ;
+; ADDRESS_REG_B                      ; CLOCK0               ; Untyped                                     ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                     ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                     ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                     ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                     ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                     ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                     ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                     ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                     ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                                     ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                     ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                     ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                     ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA             ; Untyped                                     ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                     ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                     ;
+; INIT_FILE                          ; UNUSED               ; Untyped                                     ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                     ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                     ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                                     ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                     ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                                     ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                     ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                     ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                     ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                     ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                     ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                     ;
+; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                                     ;
+; CBXI_PARAMETER                     ; altsyncram_a3q1      ; Untyped                                     ;
++------------------------------------+----------------------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                   ;
++-------------------------------------------+--------------------------------------------------------+
+; Name                                      ; Value                                                  ;
++-------------------------------------------+--------------------------------------------------------+
+; Number of entity instances                ; 3                                                      ;
+; Entity Instance                           ; BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|altsyncram:ram_rtl_0  ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                                              ;
+;     -- WIDTH_A                            ; 36                                                     ;
+;     -- NUMWORDS_A                         ; 128                                                    ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                           ;
+;     -- WIDTH_B                            ; 36                                                     ;
+;     -- NUMWORDS_B                         ; 128                                                    ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                                 ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                           ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                   ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                              ;
+; Entity Instance                           ; BUFRAM64C1:U_BUF2|RAM2x64C_1:URAM|altsyncram:ram_rtl_0 ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                                              ;
+;     -- WIDTH_A                            ; 36                                                     ;
+;     -- NUMWORDS_A                         ; 128                                                    ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                           ;
+;     -- WIDTH_B                            ; 36                                                     ;
+;     -- NUMWORDS_B                         ; 128                                                    ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                                 ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                           ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                   ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                               ;
+; Entity Instance                           ; BUFRAM64C1:U_BUF1|RAM2x64C_1:URAM|altsyncram:ram_rtl_0 ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                                              ;
+;     -- WIDTH_A                            ; 32                                                     ;
+;     -- NUMWORDS_A                         ; 128                                                    ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                           ;
+;     -- WIDTH_B                            ; 32                                                     ;
+;     -- NUMWORDS_B                         ; 128                                                    ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                                 ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                           ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                   ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                               ;
++-------------------------------------------+--------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "BUFRAM64C1:Ubuf3"                                                                                                                              ;
++------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                        ;
++------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
+; DR   ; Input  ; Warning  ; Input port expression (18 bits) is smaller than the input port (19 bits) it drives.  Extra input bit(s) "DR[18..18]" will be connected to GND. ;
+; DI   ; Input  ; Warning  ; Input port expression (18 bits) is smaller than the input port (19 bits) it drives.  Extra input bit(s) "DI[18..18]" will be connected to GND. ;
+; DOR  ; Output ; Warning  ; Output or bidir port (19 bits) is wider than the port expression (18 bits) it drives; bit(s) "DOR[18..18]" have no fanouts                     ;
+; DOI  ; Output ; Warning  ; Output or bidir port (19 bits) is wider than the port expression (18 bits) it drives; bit(s) "DOI[18..18]" have no fanouts                     ;
++------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "CNORM:U_NORM2"                                                                                                             ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                    ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
+; DOR  ; Output ; Warning  ; Output or bidir port (20 bits) is wider than the port expression (18 bits) it drives; bit(s) "DOR[19..18]" have no fanouts ;
+; DOI  ; Output ; Warning  ; Output or bidir port (20 bits) is wider than the port expression (18 bits) it drives; bit(s) "DOI[19..18]" have no fanouts ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 2398                        ;
+;     ENA               ; 2278                        ;
+;     ENA SCLR          ; 28                          ;
+;     ENA SLD           ; 38                          ;
+;     SCLR              ; 1                           ;
+;     plain             ; 53                          ;
+; arriav_lcell_comb     ; 1724                        ;
+;     arith             ; 902                         ;
+;         0 data inputs ; 4                           ;
+;         1 data inputs ; 69                          ;
+;         2 data inputs ; 477                         ;
+;         3 data inputs ; 116                         ;
+;         4 data inputs ; 10                          ;
+;         5 data inputs ; 226                         ;
+;     extend            ; 6                           ;
+;         7 data inputs ; 6                           ;
+;     normal            ; 725                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 10                          ;
+;         3 data inputs ; 129                         ;
+;         4 data inputs ; 263                         ;
+;         5 data inputs ; 56                          ;
+;         6 data inputs ; 262                         ;
+;     shared            ; 91                          ;
+;         2 data inputs ; 91                          ;
+; arriav_mac            ; 4                           ;
+; boundary_port         ; 87                          ;
+; stratixv_ram_block    ; 104                         ;
+;                       ;                             ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 2.49                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:05     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Sat Mar 27 14:46:07 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off fft -c fft
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file sin_tst_rom.v
+    Info (12023): Found entity 1: Wave_ROM64 File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/sin_tst_rom.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file usfft64_2b_tb.v
+    Info (12023): Found entity 1: USFFT64_2B_tb File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/USFFT64_2B_tb.v Line: 68
+Info (12021): Found 1 design units, including 1 entities, in source file usfft64_2b.v
+    Info (12023): Found entity 1: USFFT64_2B File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/USFFT64_2B.v Line: 69
+Info (12021): Found 1 design units, including 1 entities, in source file wrom64.v
+    Info (12023): Found entity 1: WROM64 File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/WROM64.v Line: 62
+Info (12021): Found 1 design units, including 1 entities, in source file rotator64_v.v
+    Info (12023): Found entity 1: ROTATOR64 File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/rotator64_v.v Line: 57
+Info (12021): Found 1 design units, including 1 entities, in source file ram64.v
+    Info (12023): Found entity 1: RAM64 File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/ram64.v Line: 59
+Info (12021): Found 1 design units, including 1 entities, in source file ram2x64c_1.v
+    Info (12023): Found entity 1: RAM2x64C_1 File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/ram2x64c_1.v Line: 67
+Info (12021): Found 1 design units, including 1 entities, in source file mpu707.v
+    Info (12023): Found entity 1: MPU707 File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/mpu707.v Line: 60
+Info (12021): Found 1 design units, including 1 entities, in source file fft8.v
+    Info (12023): Found entity 1: FFT8 File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/fft8.v Line: 108
+Info (12021): Found 1 design units, including 1 entities, in source file cnorm.v
+    Info (12023): Found entity 1: CNORM File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/cnorm.v Line: 63
+Info (12021): Found 1 design units, including 1 entities, in source file bufram64c1.v
+    Info (12023): Found entity 1: BUFRAM64C1 File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/bufram64c1.v Line: 65
+Warning (10236): Verilog HDL Implicit Net warning at fft8.v(257): created implicit net for "em" File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/fft8.v Line: 257
+Info (12127): Elaborating entity "USFFT64_2B" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at USFFT64_2B.v(223): truncated value with size 32 to match size of target (6) File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/USFFT64_2B.v Line: 223
+Info (12128): Elaborating entity "BUFRAM64C1" for hierarchy "BUFRAM64C1:U_BUF1" File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/USFFT64_2B.v Line: 118
+Warning (10230): Verilog HDL assignment warning at bufram64c1.v(104): truncated value with size 32 to match size of target (7) File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/bufram64c1.v Line: 104
+Warning (10230): Verilog HDL assignment warning at bufram64c1.v(106): truncated value with size 32 to match size of target (8) File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/bufram64c1.v Line: 106
+Info (12128): Elaborating entity "RAM2x64C_1" for hierarchy "BUFRAM64C1:U_BUF1|RAM2x64C_1:URAM" File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/bufram64c1.v Line: 121
+Warning (10036): Verilog HDL or VHDL warning at ram2x64c_1.v(92): object "odd2" assigned a value but never read File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/ram2x64c_1.v Line: 92
+Info (12128): Elaborating entity "FFT8" for hierarchy "FFT8:U_FFT1" File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/USFFT64_2B.v Line: 131
+Warning (10230): Verilog HDL assignment warning at fft8.v(148): truncated value with size 32 to match size of target (3) File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/fft8.v Line: 148
+Warning (10230): Verilog HDL assignment warning at fft8.v(150): truncated value with size 32 to match size of target (4) File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/fft8.v Line: 150
+Warning (10230): Verilog HDL assignment warning at fft8.v(271): truncated value with size 32 to match size of target (18) File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/fft8.v Line: 271
+Warning (10230): Verilog HDL assignment warning at fft8.v(275): truncated value with size 32 to match size of target (18) File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/fft8.v Line: 275
+Warning (10230): Verilog HDL assignment warning at fft8.v(279): truncated value with size 32 to match size of target (18) File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/fft8.v Line: 279
+Info (12128): Elaborating entity "MPU707" for hierarchy "FFT8:U_FFT1|MPU707:UMR" File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/fft8.v Line: 261
+Warning (10230): Verilog HDL assignment warning at mpu707.v(82): truncated value with size 23 to match size of target (18) File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/mpu707.v Line: 82
+Info (12128): Elaborating entity "CNORM" for hierarchy "CNORM:U_NORM1" File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/USFFT64_2B.v Line: 146
+Warning (10230): Verilog HDL assignment warning at cnorm.v(120): truncated value with size 19 to match size of target (18) File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/cnorm.v Line: 120
+Warning (10230): Verilog HDL assignment warning at cnorm.v(121): truncated value with size 19 to match size of target (18) File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/cnorm.v Line: 121
+Info (12128): Elaborating entity "ROTATOR64" for hierarchy "ROTATOR64:U_MPU" File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/USFFT64_2B.v Line: 159
+Warning (10230): Verilog HDL assignment warning at rotator64_v.v(95): truncated value with size 32 to match size of target (6) File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/rotator64_v.v Line: 95
+Info (12128): Elaborating entity "WROM64" for hierarchy "ROTATOR64:U_MPU|WROM64:UROM" File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/rotator64_v.v Line: 109
+Warning (10036): Verilog HDL or VHDL warning at WROM64.v(178): object "wb" assigned a value but never read File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/WROM64.v Line: 178
+Info (12128): Elaborating entity "BUFRAM64C1" for hierarchy "BUFRAM64C1:U_BUF2" File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/USFFT64_2B.v Line: 171
+Warning (10230): Verilog HDL assignment warning at bufram64c1.v(104): truncated value with size 32 to match size of target (7) File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/bufram64c1.v Line: 104
+Warning (10230): Verilog HDL assignment warning at bufram64c1.v(106): truncated value with size 32 to match size of target (8) File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/bufram64c1.v Line: 106
+Info (12128): Elaborating entity "RAM2x64C_1" for hierarchy "BUFRAM64C1:U_BUF2|RAM2x64C_1:URAM" File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/bufram64c1.v Line: 121
+Warning (10036): Verilog HDL or VHDL warning at ram2x64c_1.v(92): object "odd2" assigned a value but never read File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/ram2x64c_1.v Line: 92
+Info (12128): Elaborating entity "FFT8" for hierarchy "FFT8:U_FFT2" File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/USFFT64_2B.v Line: 184
+Warning (10230): Verilog HDL assignment warning at fft8.v(148): truncated value with size 32 to match size of target (3) File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/fft8.v Line: 148
+Warning (10230): Verilog HDL assignment warning at fft8.v(150): truncated value with size 32 to match size of target (4) File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/fft8.v Line: 150
+Warning (10230): Verilog HDL assignment warning at fft8.v(271): truncated value with size 32 to match size of target (20) File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/fft8.v Line: 271
+Warning (10230): Verilog HDL assignment warning at fft8.v(275): truncated value with size 32 to match size of target (20) File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/fft8.v Line: 275
+Warning (10230): Verilog HDL assignment warning at fft8.v(279): truncated value with size 32 to match size of target (20) File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/fft8.v Line: 279
+Info (12128): Elaborating entity "MPU707" for hierarchy "FFT8:U_FFT2|MPU707:UMR" File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/fft8.v Line: 261
+Warning (10230): Verilog HDL assignment warning at mpu707.v(82): truncated value with size 25 to match size of target (20) File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/mpu707.v Line: 82
+Info (12128): Elaborating entity "CNORM" for hierarchy "CNORM:U_NORM2" File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/USFFT64_2B.v Line: 200
+Warning (10230): Verilog HDL assignment warning at cnorm.v(120): truncated value with size 21 to match size of target (20) File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/cnorm.v Line: 120
+Warning (10230): Verilog HDL assignment warning at cnorm.v(121): truncated value with size 21 to match size of target (20) File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/cnorm.v Line: 121
+Info (12128): Elaborating entity "BUFRAM64C1" for hierarchy "BUFRAM64C1:Ubuf3" File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/USFFT64_2B.v Line: 213
+Warning (10230): Verilog HDL assignment warning at bufram64c1.v(104): truncated value with size 32 to match size of target (7) File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/bufram64c1.v Line: 104
+Warning (10230): Verilog HDL assignment warning at bufram64c1.v(106): truncated value with size 32 to match size of target (8) File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/bufram64c1.v Line: 106
+Info (12128): Elaborating entity "RAM2x64C_1" for hierarchy "BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM" File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/bufram64c1.v Line: 121
+Warning (10036): Verilog HDL or VHDL warning at ram2x64c_1.v(92): object "odd2" assigned a value but never read File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/ram2x64c_1.v Line: 92
+Info (286030): Timing-Driven Synthesis is running
+Warning (276020): Inferred RAM node "BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
+Info (19000): Inferred 3 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|ram_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 36
+        Info (286033): Parameter WIDTHAD_A set to 7
+        Info (286033): Parameter NUMWORDS_A set to 128
+        Info (286033): Parameter WIDTH_B set to 36
+        Info (286033): Parameter WIDTHAD_B set to 7
+        Info (286033): Parameter NUMWORDS_B set to 128
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "BUFRAM64C1:U_BUF2|RAM2x64C_1:URAM|ram_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 36
+        Info (286033): Parameter WIDTHAD_A set to 7
+        Info (286033): Parameter NUMWORDS_A set to 128
+        Info (286033): Parameter WIDTH_B set to 36
+        Info (286033): Parameter WIDTHAD_B set to 7
+        Info (286033): Parameter NUMWORDS_B set to 128
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
+        Info (286033): Parameter RDCONTROL_REG_B set to CLOCK0
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "BUFRAM64C1:U_BUF1|RAM2x64C_1:URAM|ram_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 32
+        Info (286033): Parameter WIDTHAD_A set to 7
+        Info (286033): Parameter NUMWORDS_A set to 128
+        Info (286033): Parameter WIDTH_B set to 32
+        Info (286033): Parameter WIDTHAD_B set to 7
+        Info (286033): Parameter NUMWORDS_B set to 128
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
+        Info (286033): Parameter RDCONTROL_REG_B set to CLOCK0
+Info (12130): Elaborated megafunction instantiation "BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|altsyncram:ram_rtl_0"
+Info (12133): Instantiated megafunction "BUFRAM64C1:Ubuf3|RAM2x64C_1:URAM|altsyncram:ram_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "36"
+    Info (12134): Parameter "WIDTHAD_A" = "7"
+    Info (12134): Parameter "NUMWORDS_A" = "128"
+    Info (12134): Parameter "WIDTH_B" = "36"
+    Info (12134): Parameter "WIDTHAD_B" = "7"
+    Info (12134): Parameter "NUMWORDS_B" = "128"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_56k1.tdf
+    Info (12023): Found entity 1: altsyncram_56k1 File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/db/altsyncram_56k1.tdf Line: 28
+Info (12130): Elaborated megafunction instantiation "BUFRAM64C1:U_BUF2|RAM2x64C_1:URAM|altsyncram:ram_rtl_0"
+Info (12133): Instantiated megafunction "BUFRAM64C1:U_BUF2|RAM2x64C_1:URAM|altsyncram:ram_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "36"
+    Info (12134): Parameter "WIDTHAD_A" = "7"
+    Info (12134): Parameter "NUMWORDS_A" = "128"
+    Info (12134): Parameter "WIDTH_B" = "36"
+    Info (12134): Parameter "WIDTHAD_B" = "7"
+    Info (12134): Parameter "NUMWORDS_B" = "128"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
+    Info (12134): Parameter "RDCONTROL_REG_B" = "CLOCK0"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_i3q1.tdf
+    Info (12023): Found entity 1: altsyncram_i3q1 File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/db/altsyncram_i3q1.tdf Line: 28
+Info (12130): Elaborated megafunction instantiation "BUFRAM64C1:U_BUF1|RAM2x64C_1:URAM|altsyncram:ram_rtl_0"
+Info (12133): Instantiated megafunction "BUFRAM64C1:U_BUF1|RAM2x64C_1:URAM|altsyncram:ram_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "32"
+    Info (12134): Parameter "WIDTHAD_A" = "7"
+    Info (12134): Parameter "NUMWORDS_A" = "128"
+    Info (12134): Parameter "WIDTH_B" = "32"
+    Info (12134): Parameter "WIDTHAD_B" = "7"
+    Info (12134): Parameter "NUMWORDS_B" = "128"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
+    Info (12134): Parameter "RDCONTROL_REG_B" = "CLOCK0"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_a3q1.tdf
+    Info (12023): Found entity 1: altsyncram_a3q1 File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/db/altsyncram_a3q1.tdf Line: 28
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "DOR[18]" is stuck at GND File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/USFFT64_2B.v Line: 80
+    Warning (13410): Pin "DOI[18]" is stuck at GND File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/USFFT64_2B.v Line: 82
+Info (144001): Generated suppressed messages file C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/output_files/fft.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 3332 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 40 input pins
+    Info (21059): Implemented 47 output pins
+    Info (21061): Implemented 3137 logic cells
+    Info (21064): Implemented 104 RAM segments
+    Info (21062): Implemented 4 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 35 warnings
+    Info: Peak virtual memory: 4841 megabytes
+    Info: Processing ended: Sat Mar 27 14:46:29 2021
+    Info: Elapsed time: 00:00:22
+    Info: Total CPU time (on all processors): 00:00:38
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/output_files/fft.map.smsg.
+
+

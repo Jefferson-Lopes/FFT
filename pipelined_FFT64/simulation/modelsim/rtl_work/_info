@@ -1,0 +1,261 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Jeff/Desktop/fft/simulation/modelsim
+vBUFRAM64C1
+Z1 !s110 1616810865
+!i10b 1
+!s100 6M@TD1]D_Q^79A?[f]]Pb2
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I2DUXU]?gMA21bLNN@Lkln2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1616797503
+8C:/Users/Jeff/Desktop/fft/bufram64c1.v
+FC:/Users/Jeff/Desktop/fft/bufram64c1.v
+!i122 7
+L0 65 59
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1616810864.000000
+!s107 C:/Users/Jeff/Desktop/fft/FFT64_CONFIG.inc|C:/Users/Jeff/Desktop/fft/bufram64c1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Jeff/Desktop/fft|C:/Users/Jeff/Desktop/fft/bufram64c1.v|
+!i113 1
+Z6 o-vlog01compat -work work
+Z7 !s92 -vlog01compat -work work +incdir+C:/Users/Jeff/Desktop/fft
+Z8 tCvgOpt 0
+n@b@u@f@r@a@m64@c1
+vCNORM
+Z9 !s110 1616810864
+!i10b 1
+!s100 a><bTTESmd[NmFP[X<dY72
+R2
+IWTc`;o1NfeWNYN=h_;`KR3
+R3
+R0
+w1616809971
+8C:/Users/Jeff/Desktop/fft/cnorm.v
+FC:/Users/Jeff/Desktop/fft/cnorm.v
+!i122 6
+L0 63 61
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Jeff/Desktop/fft/FFT64_CONFIG.inc|C:/Users/Jeff/Desktop/fft/cnorm.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Jeff/Desktop/fft|C:/Users/Jeff/Desktop/fft/cnorm.v|
+!i113 1
+R6
+R7
+R8
+n@c@n@o@r@m
+vFFT8
+R9
+!i10b 1
+!s100 P5WGJiD:2D_k6k`Nf_ZVA3
+R2
+I2ed_o[nEREhYQYW3ElX:F3
+R3
+R0
+Z10 w1616809110
+8C:/Users/Jeff/Desktop/fft/fft8.v
+FC:/Users/Jeff/Desktop/fft/fft8.v
+!i122 5
+L0 108 294
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Jeff/Desktop/fft/FFT64_CONFIG.inc|C:/Users/Jeff/Desktop/fft/fft8.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Jeff/Desktop/fft|C:/Users/Jeff/Desktop/fft/fft8.v|
+!i113 1
+R6
+R7
+R8
+n@f@f@t8
+vMPU707
+R1
+!i10b 1
+!s100 NNAjFzI@e2WC^l3KjC<ZT0
+R2
+IbO^A4XVS;12[fAef8A@P<3
+R3
+R0
+w1616809112
+8C:/Users/Jeff/Desktop/fft/mpu707.v
+FC:/Users/Jeff/Desktop/fft/mpu707.v
+!i122 8
+L0 60 35
+R4
+r1
+!s85 0
+31
+Z11 !s108 1616810865.000000
+!s107 C:/Users/Jeff/Desktop/fft/FFT64_CONFIG.inc|C:/Users/Jeff/Desktop/fft/mpu707.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Jeff/Desktop/fft|C:/Users/Jeff/Desktop/fft/mpu707.v|
+!i113 1
+R6
+R7
+R8
+n@m@p@u707
+vRAM2x64C_1
+R9
+!i10b 1
+!s100 fIdKYL?M87WQ@nH]FVkY63
+R2
+IEYRg8gG=j>CaZIKNhhC;81
+R3
+R0
+w1616809109
+8C:/Users/Jeff/Desktop/fft/ram2x64c_1.v
+FC:/Users/Jeff/Desktop/fft/ram2x64c_1.v
+!i122 4
+L0 67 112
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Jeff/Desktop/fft/FFT64_CONFIG.inc|C:/Users/Jeff/Desktop/fft/ram2x64c_1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Jeff/Desktop/fft|C:/Users/Jeff/Desktop/fft/ram2x64c_1.v|
+!i113 1
+R6
+R7
+R8
+n@r@a@m2x64@c_1
+vROTATOR64
+R9
+!i10b 1
+!s100 jd>28RNMKP??oWhS?a[SI1
+R2
+IoJZG2895k=zIkbO_ffE1E3
+R3
+R0
+R10
+8C:/Users/Jeff/Desktop/fft/rotator64_v.v
+FC:/Users/Jeff/Desktop/fft/rotator64_v.v
+!i122 3
+L0 57 84
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Jeff/Desktop/fft/FFT64_CONFIG.inc|C:/Users/Jeff/Desktop/fft/rotator64_v.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Jeff/Desktop/fft|C:/Users/Jeff/Desktop/fft/rotator64_v.v|
+!i113 1
+R6
+R7
+R8
+n@r@o@t@a@t@o@r64
+vUSFFT64_2B
+R9
+!i10b 1
+!s100 k8ok3[iJ;UP]VBU3edGFA2
+R2
+IMdPzXfHVh33c:DRHoBFUa3
+R3
+R0
+Z12 w1616809111
+8C:/Users/Jeff/Desktop/fft/USFFT64_2B.v
+FC:/Users/Jeff/Desktop/fft/USFFT64_2B.v
+!i122 1
+L0 69 179
+R4
+r1
+!s85 0
+31
+!s108 1616810863.000000
+!s107 C:/Users/Jeff/Desktop/fft/FFT64_CONFIG.inc|C:/Users/Jeff/Desktop/fft/USFFT64_2B.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Jeff/Desktop/fft|C:/Users/Jeff/Desktop/fft/USFFT64_2B.v|
+!i113 1
+R6
+R7
+R8
+n@u@s@f@f@t64_2@b
+vUSFFT64_2B_tb
+R1
+!i10b 1
+!s100 N@k8bYOJKJ`hf>b`nPaCi1
+R2
+If=AGTn1mN87JXH3R;99<W2
+R3
+R0
+w1616805331
+8C:/Users/Jeff/Desktop/fft/USFFT64_2B_tb.v
+FC:/Users/Jeff/Desktop/fft/USFFT64_2B_tb.v
+!i122 9
+L0 68 110
+R4
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/Jeff/Desktop/fft/FFT64_CONFIG.inc|C:/Users/Jeff/Desktop/fft/USFFT64_2B_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Jeff/Desktop/fft|C:/Users/Jeff/Desktop/fft/USFFT64_2B_tb.v|
+!i113 1
+R6
+R7
+R8
+n@u@s@f@f@t64_2@b_tb
+vWave_ROM64
+!s110 1616810866
+!i10b 1
+!s100 2U7TLjbXzFk6MB]_P_o762
+R2
+ID;igh<bhcaV6>4B3DD5P`3
+R3
+R0
+R12
+8C:/Users/Jeff/Desktop/fft/sin_tst_rom.v
+FC:/Users/Jeff/Desktop/fft/sin_tst_rom.v
+!i122 10
+L0 42 27
+R4
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/Jeff/Desktop/fft/sin_tst_rom.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Jeff/Desktop/fft|C:/Users/Jeff/Desktop/fft/sin_tst_rom.v|
+!i113 1
+R6
+R7
+R8
+n@wave_@r@o@m64
+vWROM64
+R9
+!i10b 1
+!s100 :[[ZE1Im@j[hlzZ4NS]=m2
+R2
+IRPnTh5E0zYYzJM`6UMB7?2
+R3
+R0
+w1616809107
+8C:/Users/Jeff/Desktop/fft/WROM64.v
+FC:/Users/Jeff/Desktop/fft/WROM64.v
+!i122 2
+L0 62 154
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Jeff/Desktop/fft/FFT64_CONFIG.inc|C:/Users/Jeff/Desktop/fft/WROM64.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Jeff/Desktop/fft|C:/Users/Jeff/Desktop/fft/WROM64.v|
+!i113 1
+R6
+R7
+R8
+n@w@r@o@m64
