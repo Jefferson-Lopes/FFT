@@ -2,6 +2,12 @@
 
 FFT algorithm implementation on an FPGA for processing  `2^N`  points from the BINGO telescope
 
+## FFT 64 points
+
+The picture below shows the FFT64 simulation on ModelSim-Altera:
+
+![modelSim_FFT64](modelSim_FFT64.png)
+
 ## Reference
 
 * [Sistenix/FFT](https://sistenix.com/fft.html)
