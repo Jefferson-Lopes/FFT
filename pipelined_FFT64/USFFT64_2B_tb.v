@@ -71,19 +71,23 @@ module USFFT64_2B_tb;
 	`USFFT64paramnb	
 	
 	//Internal signals declarations:
-	reg CLK;
-	reg RST;
-	reg ED;
-	reg START;
-	reg [3:0]SHIFT;
-	wire [nb-1:0]DR;
-	wire [nb-1:0]DI;
-	wire RDY;
-	wire OVF1;
-	wire OVF2;
-	wire [5:0]ADDR;
-	wire signed [nb+2:0]DOR;
-	wire signed [nb+2:0]DOI;		 
+	reg            CLK;
+	reg            RST;
+	reg             ED;
+	reg          START;
+	reg  [3:0]   SHIFT;
+	reg  [nb-1:0]   DR;
+	reg  [nb-1:0]   DI;
+	
+//	wire  [nb-1:0]   DR;
+//	wire  [nb-1:0]   DI;
+	wire            RDY;
+	wire           OVF1;
+	wire           OVF2;
+	wire  [5:0]    ADDR;
+	
+	wire signed  [nb+2:0]  DOR;
+	wire signed  [nb+2:0]  DOI;		 
 	
 	initial 
 		begin
@@ -103,24 +107,31 @@ module USFFT64_2B_tb;
 			#12 START =1'b0;
 		end	
 	
-	reg [5:0] ct64;
-	
-	always @(posedge CLK or posedge START) begin
-		if (START) 
-			ct64 = 6'b000000;
-		else 
-			ct64 = ct64 + 'd1;
-	end
-	
-	wire [15:0] SIN;	
-	
-	Wave_ROM64 UG( 
-		.ADDR(ct64),
-		.DATA(SIN)
-	);
-	
-	assign DR = SIN[15:15-nb+1];
-	assign DI = SIN[15:15-nb+1];
+//	reg [5:0] ct64;
+//	
+//	always @(posedge CLK or posedge START) begin
+//		if (START) 
+//			ct64 = 6'b000000;
+//		else 
+//			ct64 = ct64 + 'd1;
+//	end
+//	
+//	
+//	wire [15:0] SIN;	
+//	
+//	Wave_ROM64 UG( 
+//		.ADDR(ct64),
+//		.DATA(SIN)
+//	);
+//	
+//	assign DR = SIN[15:15-nb+1];
+//	assign DI = SIN[15:15-nb+1];
+
+	initial 
+		begin
+			DR = 16'hFF;
+			DI = 16'h00;
+		end
 	
 	// Unit Under Test 
 	USFFT64_2B UUT (
@@ -147,31 +158,44 @@ module USFFT64_2B_tb;
 		assign addrr= ADDR;
 	`endif
 	
-	wire signed [15:0] DREF;	
-	Wave_ROM64 UR( 
-		.ADDR(addrr),
-		.DATA(DREF)
-	);
 	
-	integer sqra; 
-	integer ctres; 
-	reg f;				  
-	initial f=0;
-	always@(posedge CLK) begin 
-		if (f) 
-			ctres=ctres+1;
-		if (RST || RDY)  begin
-			if (RDY) 
-				f=1;
-			sqra=0;
-			ctres=0; 
-		end
-		else if (ctres<64) begin
-			#2 sqra = sqra +(DREF-DOR)*(DREF-DOR);
-			#2 sqra = sqra +(DOI)*(DOI); 
-		end		 
-		else if (ctres==64)  
-			$display("rms error is ", (sqra/128), " lsb");
+//	wire signed [15:0] DREF;	
+//	Wave_ROM64 UR( 
+//		.ADDR(addrr),
+//		.DATA(DREF)
+//	);
+//	
+//	integer sqra; 
+//	integer ctres; 
+//	reg f;				  
+//	initial f=0;
+//	always@(posedge CLK) begin 
+//		if (f) 
+//			ctres=ctres+1;
+//		if (RST || RDY)  begin
+//			if (RDY) 
+//				f=1;
+//			sqra=0;
+//			ctres=0; 
+//		end
+//		else if (ctres<64) begin
+//			#2 sqra = sqra +(DREF-DOR)*(DREF-DOR);
+//			#2 sqra = sqra +(DOI)*(DOI); 
+//		end		 
+//		else if (ctres==64)  
+//			$display("rms error is ", (sqra/128), " lsb");
+//	end
+
+	always @(negedge RDY) begin
+		$display("Result ready at ", $time);
+	end
+	
+	always @(posedge OVF1) begin
+		$display("Overflow1 at ", $time);
+	end
+	
+	always @(posedge OVF2) begin
+		$display("Overflow2 at ", $time);
 	end
 
 endmodule

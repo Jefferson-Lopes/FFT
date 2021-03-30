@@ -10,123 +10,122 @@
 # Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/Jeff/Desktop/fft {C:/Users/Jeff/Desktop/fft/USFFT64_2B_tb.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64 {C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/USFFT64_2B_tb.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:07:43 on Mar 26,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jeff/Desktop/fft" C:/Users/Jeff/Desktop/fft/USFFT64_2B_tb.v 
+# Start time: 21:31:35 on Mar 29,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64" C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/USFFT64_2B_tb.v 
 # -- Compiling module USFFT64_2B_tb
 # 
 # Top level modules:
 # 	USFFT64_2B_tb
-# End time: 23:07:43 on Mar 26,2021, Elapsed time: 0:00:00
+# End time: 21:31:35 on Mar 29,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Jeff/Desktop/fft {C:/Users/Jeff/Desktop/fft/USFFT64_2B.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64 {C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/USFFT64_2B.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:07:43 on Mar 26,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jeff/Desktop/fft" C:/Users/Jeff/Desktop/fft/USFFT64_2B.v 
+# Start time: 21:31:36 on Mar 29,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64" C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/USFFT64_2B.v 
 # -- Compiling module USFFT64_2B
 # 
 # Top level modules:
 # 	USFFT64_2B
-# End time: 23:07:44 on Mar 26,2021, Elapsed time: 0:00:01
+# End time: 21:31:36 on Mar 29,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Jeff/Desktop/fft {C:/Users/Jeff/Desktop/fft/WROM64.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64 {C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/WROM64.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:07:44 on Mar 26,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jeff/Desktop/fft" C:/Users/Jeff/Desktop/fft/WROM64.v 
+# Start time: 21:31:36 on Mar 29,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64" C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/WROM64.v 
 # -- Compiling module WROM64
 # 
 # Top level modules:
 # 	WROM64
-# End time: 23:07:44 on Mar 26,2021, Elapsed time: 0:00:00
+# End time: 21:31:36 on Mar 29,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Jeff/Desktop/fft {C:/Users/Jeff/Desktop/fft/rotator64_v.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64 {C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/rotator64_v.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:07:44 on Mar 26,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jeff/Desktop/fft" C:/Users/Jeff/Desktop/fft/rotator64_v.v 
+# Start time: 21:31:36 on Mar 29,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64" C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/rotator64_v.v 
 # -- Compiling module ROTATOR64
 # 
 # Top level modules:
 # 	ROTATOR64
-# End time: 23:07:44 on Mar 26,2021, Elapsed time: 0:00:00
+# End time: 21:31:36 on Mar 29,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Jeff/Desktop/fft {C:/Users/Jeff/Desktop/fft/ram2x64c_1.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64 {C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/ram2x64c_1.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:07:44 on Mar 26,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jeff/Desktop/fft" C:/Users/Jeff/Desktop/fft/ram2x64c_1.v 
+# Start time: 21:31:36 on Mar 29,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64" C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/ram2x64c_1.v 
 # -- Compiling module RAM2x64C_1
 # 
 # Top level modules:
 # 	RAM2x64C_1
-# End time: 23:07:44 on Mar 26,2021, Elapsed time: 0:00:00
+# End time: 21:31:37 on Mar 29,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Jeff/Desktop/fft {C:/Users/Jeff/Desktop/fft/fft8.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64 {C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/fft8.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:07:44 on Mar 26,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jeff/Desktop/fft" C:/Users/Jeff/Desktop/fft/fft8.v 
+# Start time: 21:31:37 on Mar 29,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64" C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/fft8.v 
 # -- Compiling module FFT8
 # 
 # Top level modules:
 # 	FFT8
-# End time: 23:07:44 on Mar 26,2021, Elapsed time: 0:00:00
+# End time: 21:31:37 on Mar 29,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Jeff/Desktop/fft {C:/Users/Jeff/Desktop/fft/cnorm.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64 {C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/cnorm.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:07:44 on Mar 26,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jeff/Desktop/fft" C:/Users/Jeff/Desktop/fft/cnorm.v 
+# Start time: 21:31:37 on Mar 29,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64" C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/cnorm.v 
 # -- Compiling module CNORM
 # 
 # Top level modules:
 # 	CNORM
-# End time: 23:07:44 on Mar 26,2021, Elapsed time: 0:00:00
+# End time: 21:31:37 on Mar 29,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Jeff/Desktop/fft {C:/Users/Jeff/Desktop/fft/bufram64c1.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64 {C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/bufram64c1.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:07:44 on Mar 26,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jeff/Desktop/fft" C:/Users/Jeff/Desktop/fft/bufram64c1.v 
+# Start time: 21:31:37 on Mar 29,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64" C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/bufram64c1.v 
 # -- Compiling module BUFRAM64C1
 # 
 # Top level modules:
 # 	BUFRAM64C1
-# End time: 23:07:45 on Mar 26,2021, Elapsed time: 0:00:01
+# End time: 21:31:38 on Mar 29,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Jeff/Desktop/fft {C:/Users/Jeff/Desktop/fft/mpu707.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64 {C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/mpu707.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:07:45 on Mar 26,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jeff/Desktop/fft" C:/Users/Jeff/Desktop/fft/mpu707.v 
+# Start time: 21:31:38 on Mar 29,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64" C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/mpu707.v 
 # -- Compiling module MPU707
 # 
 # Top level modules:
 # 	MPU707
-# End time: 23:07:45 on Mar 26,2021, Elapsed time: 0:00:00
+# End time: 21:31:38 on Mar 29,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/Jeff/Desktop/fft {C:/Users/Jeff/Desktop/fft/USFFT64_2B_tb.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64 {C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/USFFT64_2B_tb.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:07:45 on Mar 26,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jeff/Desktop/fft" C:/Users/Jeff/Desktop/fft/USFFT64_2B_tb.v 
+# Start time: 21:31:38 on Mar 29,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64" C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/USFFT64_2B_tb.v 
 # -- Compiling module USFFT64_2B_tb
 # 
 # Top level modules:
 # 	USFFT64_2B_tb
-# End time: 23:07:45 on Mar 26,2021, Elapsed time: 0:00:00
+# End time: 21:31:38 on Mar 29,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Jeff/Desktop/fft {C:/Users/Jeff/Desktop/fft/sin_tst_rom.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64 {C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/sin_tst_rom.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:07:45 on Mar 26,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jeff/Desktop/fft" C:/Users/Jeff/Desktop/fft/sin_tst_rom.v 
+# Start time: 21:31:38 on Mar 29,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64" C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/sin_tst_rom.v 
 # -- Compiling module Wave_ROM64
 # 
 # Top level modules:
 # 	Wave_ROM64
-# End time: 23:07:46 on Mar 26,2021, Elapsed time: 0:00:01
+# End time: 21:31:38 on Mar 29,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  USFFT64_2B_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" USFFT64_2B_tb 
-# Start time: 23:07:46 on Mar 26,2021
+# Start time: 21:31:39 on Mar 29,2021
 # Loading work.USFFT64_2B_tb
-# Loading work.Wave_ROM64
 # Loading work.USFFT64_2B
 # Loading work.BUFRAM64C1
 # Loading work.RAM2x64C_1
@@ -135,18 +134,18 @@
 # Loading work.CNORM
 # Loading work.ROTATOR64
 # Loading work.WROM64
-# ** Warning: (vsim-3015) [PCDPC] - Port size (20) does not match connection size (18) for port 'DOR'. The port definition is at: C:/Users/Jeff/Desktop/fft/cnorm.v(63).
-#    Time: 0 ps  Iteration: 0  Instance: /USFFT64_2B_tb/UUT/U_NORM2 File: C:/Users/Jeff/Desktop/fft/USFFT64_2B.v Line: 189
-# ** Warning: (vsim-3015) [PCDPC] - Port size (20) does not match connection size (18) for port 'DOI'. The port definition is at: C:/Users/Jeff/Desktop/fft/cnorm.v(63).
-#    Time: 0 ps  Iteration: 0  Instance: /USFFT64_2B_tb/UUT/U_NORM2 File: C:/Users/Jeff/Desktop/fft/USFFT64_2B.v Line: 189
-# ** Warning: (vsim-3015) [PCDPC] - Port size (19) does not match connection size (18) for port 'DR'. The port definition is at: C:/Users/Jeff/Desktop/fft/bufram64c1.v(65).
-#    Time: 0 ps  Iteration: 0  Instance: /USFFT64_2B_tb/UUT/Ubuf3 File: C:/Users/Jeff/Desktop/fft/USFFT64_2B.v Line: 203
-# ** Warning: (vsim-3015) [PCDPC] - Port size (19) does not match connection size (18) for port 'DI'. The port definition is at: C:/Users/Jeff/Desktop/fft/bufram64c1.v(65).
-#    Time: 0 ps  Iteration: 0  Instance: /USFFT64_2B_tb/UUT/Ubuf3 File: C:/Users/Jeff/Desktop/fft/USFFT64_2B.v Line: 203
-# ** Warning: (vsim-3015) [PCDPC] - Port size (19) does not match connection size (18) for port 'DOR'. The port definition is at: C:/Users/Jeff/Desktop/fft/bufram64c1.v(65).
-#    Time: 0 ps  Iteration: 0  Instance: /USFFT64_2B_tb/UUT/Ubuf3 File: C:/Users/Jeff/Desktop/fft/USFFT64_2B.v Line: 203
-# ** Warning: (vsim-3015) [PCDPC] - Port size (19) does not match connection size (18) for port 'DOI'. The port definition is at: C:/Users/Jeff/Desktop/fft/bufram64c1.v(65).
-#    Time: 0 ps  Iteration: 0  Instance: /USFFT64_2B_tb/UUT/Ubuf3 File: C:/Users/Jeff/Desktop/fft/USFFT64_2B.v Line: 203
+# ** Warning: (vsim-3015) [PCDPC] - Port size (20) does not match connection size (18) for port 'DOR'. The port definition is at: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/cnorm.v(63).
+#    Time: 0 ps  Iteration: 0  Instance: /USFFT64_2B_tb/UUT/U_NORM2 File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/USFFT64_2B.v Line: 189
+# ** Warning: (vsim-3015) [PCDPC] - Port size (20) does not match connection size (18) for port 'DOI'. The port definition is at: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/cnorm.v(63).
+#    Time: 0 ps  Iteration: 0  Instance: /USFFT64_2B_tb/UUT/U_NORM2 File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/USFFT64_2B.v Line: 189
+# ** Warning: (vsim-3015) [PCDPC] - Port size (19) does not match connection size (18) for port 'DR'. The port definition is at: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/bufram64c1.v(65).
+#    Time: 0 ps  Iteration: 0  Instance: /USFFT64_2B_tb/UUT/Ubuf3 File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/USFFT64_2B.v Line: 203
+# ** Warning: (vsim-3015) [PCDPC] - Port size (19) does not match connection size (18) for port 'DI'. The port definition is at: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/bufram64c1.v(65).
+#    Time: 0 ps  Iteration: 0  Instance: /USFFT64_2B_tb/UUT/Ubuf3 File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/USFFT64_2B.v Line: 203
+# ** Warning: (vsim-3015) [PCDPC] - Port size (19) does not match connection size (18) for port 'DOR'. The port definition is at: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/bufram64c1.v(65).
+#    Time: 0 ps  Iteration: 0  Instance: /USFFT64_2B_tb/UUT/Ubuf3 File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/USFFT64_2B.v Line: 203
+# ** Warning: (vsim-3015) [PCDPC] - Port size (19) does not match connection size (18) for port 'DOI'. The port definition is at: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/bufram64c1.v(65).
+#    Time: 0 ps  Iteration: 0  Instance: /USFFT64_2B_tb/UUT/Ubuf3 File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/USFFT64_2B.v Line: 203
 # 
 # add wave *
 # view structure
@@ -154,8 +153,9 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# rms error is    15000738 lsb
+# Result ready at                    5
+# Result ready at                 2425
 # Break key hit
-# Break in Module FFT8 at C:/Users/Jeff/Desktop/fft/fft8.v line 257
-# End time: 23:14:41 on Mar 26,2021, Elapsed time: 0:06:55
+# Break at C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/ram2x64c_1.v line 156
+# End time: 22:08:51 on Mar 29,2021, Elapsed time: 0:37:12
 # Errors: 0, Warnings: 6
