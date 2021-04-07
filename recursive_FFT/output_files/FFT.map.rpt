@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FFT
-Mon Mar 15 12:24:25 2021
+Wed Mar 31 10:03:11 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -38,7 +38,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Mon Mar 15 12:24:25 2021           ;
+; Analysis & Synthesis Status ; Failed - Wed Mar 31 10:03:11 2021           ;
 ; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name               ; FFT                                         ;
 ; Top-level Entity Name       ; FFT                                         ;
@@ -162,52 +162,52 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon Mar 15 12:24:12 2021
+    Info: Processing started: Wed Mar 31 10:02:56 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FFT -c FFT
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
-Error (10170): Verilog HDL syntax error at divbyN.sv(14) near text: "if";  expecting "endmodule". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/Jeff/Documents/GitHub/FFT/verilog/divbyN.sv Line: 14
-Error (10170): Verilog HDL syntax error at divbyN.sv(18) near text: "=";  expecting ".", or an identifier. Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/Jeff/Documents/GitHub/FFT/verilog/divbyN.sv Line: 18
-Error (10170): Verilog HDL syntax error at divbyN.sv(27) near text: "end";  expecting "endmodule". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/Jeff/Documents/GitHub/FFT/verilog/divbyN.sv Line: 27
-Error (10112): Ignored design unit "divbyN" at divbyN.sv(3) due to previous errors File: C:/Users/Jeff/Documents/GitHub/FFT/verilog/divbyN.sv Line: 3
-Error (10170): Verilog HDL syntax error at FFT.sv(23) near text: "if";  expecting "endmodule". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/Jeff/Documents/GitHub/FFT/verilog/FFT.sv Line: 23
-Error (10170): Verilog HDL syntax error at FFT.sv(23) near text: ")";  expecting ".", or an identifier. Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/Jeff/Documents/GitHub/FFT/verilog/FFT.sv Line: 23
-Error (10170): Verilog HDL syntax error at FFT.sv(28) near text: "end";  expecting "endmodule". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/Jeff/Documents/GitHub/FFT/verilog/FFT.sv Line: 28
-Error (10112): Ignored design unit "FFT" at FFT.sv(10) due to previous errors File: C:/Users/Jeff/Documents/GitHub/FFT/verilog/FFT.sv Line: 10
-Error (10112): Ignored design unit "iFFT" at FFT.sv(34) due to previous errors File: C:/Users/Jeff/Documents/GitHub/FFT/verilog/FFT.sv Line: 34
-Error (10170): Verilog HDL syntax error at FFT.sv(55) near text: "if";  expecting "endmodule". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/Jeff/Documents/GitHub/FFT/verilog/FFT.sv Line: 55
-Error (10112): Ignored design unit "RecursiveFFT" at FFT.sv(49) due to previous errors File: C:/Users/Jeff/Documents/GitHub/FFT/verilog/FFT.sv Line: 49
+Error (10170): Verilog HDL syntax error at divbyN.sv(14) near text: "if";  expecting "endmodule". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/Jeff/Documents/GitHub/FFT/recursive_FFT/divbyN.sv Line: 14
+Error (10170): Verilog HDL syntax error at divbyN.sv(18) near text: "=";  expecting ".", or an identifier. Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/Jeff/Documents/GitHub/FFT/recursive_FFT/divbyN.sv Line: 18
+Error (10170): Verilog HDL syntax error at divbyN.sv(27) near text: "end";  expecting "endmodule". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/Jeff/Documents/GitHub/FFT/recursive_FFT/divbyN.sv Line: 27
+Error (10112): Ignored design unit "divbyN" at divbyN.sv(3) due to previous errors File: C:/Users/Jeff/Documents/GitHub/FFT/recursive_FFT/divbyN.sv Line: 3
+Error (10170): Verilog HDL syntax error at FFT.sv(23) near text: "if";  expecting "endmodule". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/Jeff/Documents/GitHub/FFT/recursive_FFT/FFT.sv Line: 23
+Error (10170): Verilog HDL syntax error at FFT.sv(23) near text: ")";  expecting ".", or an identifier. Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/Jeff/Documents/GitHub/FFT/recursive_FFT/FFT.sv Line: 23
+Error (10170): Verilog HDL syntax error at FFT.sv(28) near text: "end";  expecting "endmodule". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/Jeff/Documents/GitHub/FFT/recursive_FFT/FFT.sv Line: 28
+Error (10112): Ignored design unit "FFT" at FFT.sv(10) due to previous errors File: C:/Users/Jeff/Documents/GitHub/FFT/recursive_FFT/FFT.sv Line: 10
+Error (10112): Ignored design unit "iFFT" at FFT.sv(34) due to previous errors File: C:/Users/Jeff/Documents/GitHub/FFT/recursive_FFT/FFT.sv Line: 34
+Error (10170): Verilog HDL syntax error at FFT.sv(55) near text: "if";  expecting "endmodule". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/Jeff/Documents/GitHub/FFT/recursive_FFT/FFT.sv Line: 55
+Error (10112): Ignored design unit "RecursiveFFT" at FFT.sv(49) due to previous errors File: C:/Users/Jeff/Documents/GitHub/FFT/recursive_FFT/FFT.sv Line: 49
 Info (12021): Found 0 design units, including 0 entities, in source file fft.sv
-Error (10228): Verilog HDL error at swap.sv(1): module "swap" cannot be declared more than once File: C:/Users/Jeff/Documents/GitHub/FFT/verilog/swap.sv Line: 1
-Info (10499): HDL info at swap.sv(1): see declaration for object "swap" File: C:/Users/Jeff/Documents/GitHub/FFT/verilog/swap.sv Line: 1
+Error (10228): Verilog HDL error at swap.sv(1): module "swap" cannot be declared more than once File: C:/Users/Jeff/Documents/GitHub/FFT/recursive_FFT/swap.sv Line: 1
+Info (10499): HDL info at swap.sv(1): see declaration for object "swap" File: C:/Users/Jeff/Documents/GitHub/FFT/recursive_FFT/swap.sv Line: 1
 Info (12021): Found 0 design units, including 0 entities, in source file swap.sv
-Error (10228): Verilog HDL error at invN.sv(1): module "invN" cannot be declared more than once File: C:/Users/Jeff/Documents/GitHub/FFT/verilog/invN.sv Line: 1
-Info (10499): HDL info at invN.sv(1): see declaration for object "invN" File: C:/Users/Jeff/Documents/GitHub/FFT/verilog/invN.sv Line: 1
+Error (10228): Verilog HDL error at invN.sv(1): module "invN" cannot be declared more than once File: C:/Users/Jeff/Documents/GitHub/FFT/recursive_FFT/invN.sv Line: 1
+Info (10499): HDL info at invN.sv(1): see declaration for object "invN" File: C:/Users/Jeff/Documents/GitHub/FFT/recursive_FFT/invN.sv Line: 1
 Info (12021): Found 0 design units, including 0 entities, in source file invn.sv
-Error (10228): Verilog HDL error at butterfly.sv(1): module "butterfly" cannot be declared more than once File: C:/Users/Jeff/Documents/GitHub/FFT/verilog/butterfly.sv Line: 1
-Info (10499): HDL info at butterfly.sv(1): see declaration for object "butterfly" File: C:/Users/Jeff/Documents/GitHub/FFT/verilog/butterfly.sv Line: 1
+Error (10228): Verilog HDL error at butterfly.sv(1): module "butterfly" cannot be declared more than once File: C:/Users/Jeff/Documents/GitHub/FFT/recursive_FFT/butterfly.sv Line: 1
+Info (10499): HDL info at butterfly.sv(1): see declaration for object "butterfly" File: C:/Users/Jeff/Documents/GitHub/FFT/recursive_FFT/butterfly.sv Line: 1
 Info (12021): Found 0 design units, including 0 entities, in source file butterfly.sv
-Error (10228): Verilog HDL error at computeMatrix.sv(1): module "computeMatrix" cannot be declared more than once File: C:/Users/Jeff/Documents/GitHub/FFT/verilog/computeMatrix.sv Line: 1
-Info (10499): HDL info at computeMatrix.sv(1): see declaration for object "computeMatrix" File: C:/Users/Jeff/Documents/GitHub/FFT/verilog/computeMatrix.sv Line: 1
+Error (10228): Verilog HDL error at computeMatrix.sv(1): module "computeMatrix" cannot be declared more than once File: C:/Users/Jeff/Documents/GitHub/FFT/recursive_FFT/computeMatrix.sv Line: 1
+Info (10499): HDL info at computeMatrix.sv(1): see declaration for object "computeMatrix" File: C:/Users/Jeff/Documents/GitHub/FFT/recursive_FFT/computeMatrix.sv Line: 1
 Info (12021): Found 0 design units, including 0 entities, in source file computematrix.sv
-Error (10228): Verilog HDL error at invN.sv(1): module "invN" cannot be declared more than once File: C:/Users/Jeff/Documents/GitHub/FFT/verilog/invN.sv Line: 1
-Info (10499): HDL info at invN.sv(1): see declaration for object "invN" File: C:/Users/Jeff/Documents/GitHub/FFT/verilog/invN.sv Line: 1
-Error (10170): Verilog HDL syntax error at divbyN.sv(14) near text: "if";  expecting "endmodule". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/Jeff/Documents/GitHub/FFT/verilog/divbyN.sv Line: 14
-Error (10170): Verilog HDL syntax error at divbyN.sv(18) near text: "=";  expecting ".", or an identifier. Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/Jeff/Documents/GitHub/FFT/verilog/divbyN.sv Line: 18
-Error (10170): Verilog HDL syntax error at divbyN.sv(27) near text: "end";  expecting "endmodule". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/Jeff/Documents/GitHub/FFT/verilog/divbyN.sv Line: 27
-Error (10112): Ignored design unit "divbyN" at divbyN.sv(3) due to previous errors File: C:/Users/Jeff/Documents/GitHub/FFT/verilog/divbyN.sv Line: 3
+Error (10228): Verilog HDL error at invN.sv(1): module "invN" cannot be declared more than once File: C:/Users/Jeff/Documents/GitHub/FFT/recursive_FFT/invN.sv Line: 1
+Info (10499): HDL info at invN.sv(1): see declaration for object "invN" File: C:/Users/Jeff/Documents/GitHub/FFT/recursive_FFT/invN.sv Line: 1
+Error (10170): Verilog HDL syntax error at divbyN.sv(14) near text: "if";  expecting "endmodule". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/Jeff/Documents/GitHub/FFT/recursive_FFT/divbyN.sv Line: 14
+Error (10170): Verilog HDL syntax error at divbyN.sv(18) near text: "=";  expecting ".", or an identifier. Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/Jeff/Documents/GitHub/FFT/recursive_FFT/divbyN.sv Line: 18
+Error (10170): Verilog HDL syntax error at divbyN.sv(27) near text: "end";  expecting "endmodule". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/Jeff/Documents/GitHub/FFT/recursive_FFT/divbyN.sv Line: 27
+Error (10112): Ignored design unit "divbyN" at divbyN.sv(3) due to previous errors File: C:/Users/Jeff/Documents/GitHub/FFT/recursive_FFT/divbyN.sv Line: 3
 Info (12021): Found 0 design units, including 0 entities, in source file divbyn.sv
-Info (144001): Generated suppressed messages file C:/Users/Jeff/Documents/GitHub/FFT/verilog/output_files/FFT.map.smsg
+Info (144001): Generated suppressed messages file C:/Users/Jeff/Documents/GitHub/FFT/recursive_FFT/output_files/FFT.map.smsg
 Error: Quartus Prime Analysis & Synthesis was unsuccessful. 20 errors, 1 warning
-    Error: Peak virtual memory: 4754 megabytes
-    Error: Processing ended: Mon Mar 15 12:24:25 2021
-    Error: Elapsed time: 00:00:13
+    Error: Peak virtual memory: 4762 megabytes
+    Error: Processing ended: Wed Mar 31 10:03:11 2021
+    Error: Elapsed time: 00:00:15
     Error: Total CPU time (on all processors): 00:00:30
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/Jeff/Documents/GitHub/FFT/verilog/output_files/FFT.map.smsg.
+The suppressed messages can be found in C:/Users/Jeff/Documents/GitHub/FFT/recursive_FFT/output_files/FFT.map.smsg.
 
 

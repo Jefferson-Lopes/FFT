@@ -1,7 +1,7 @@
-Info (10281): Verilog HDL Declaration information at computeMatrix.sv(3): object "x" differs only in case from object "X" in the same scope File: C:/Users/Jeff/Documents/GitHub/FFT/verilog/computeMatrix.sv Line: 3
-Info (10281): Verilog HDL Declaration information at FFT.sv(11): object "x" differs only in case from object "X" in the same scope File: C:/Users/Jeff/Documents/GitHub/FFT/verilog/FFT.sv Line: 11
-Info (10281): Verilog HDL Declaration information at FFT.sv(14): object "xe" differs only in case from object "Xe" in the same scope File: C:/Users/Jeff/Documents/GitHub/FFT/verilog/FFT.sv Line: 14
-Info (10281): Verilog HDL Declaration information at FFT.sv(14): object "xo" differs only in case from object "Xo" in the same scope File: C:/Users/Jeff/Documents/GitHub/FFT/verilog/FFT.sv Line: 14
-Info (10281): Verilog HDL Declaration information at FFT.sv(35): object "x" differs only in case from object "X" in the same scope File: C:/Users/Jeff/Documents/GitHub/FFT/verilog/FFT.sv Line: 35
-Info (10281): Verilog HDL Declaration information at FFT.sv(52): object "x" differs only in case from object "X" in the same scope File: C:/Users/Jeff/Documents/GitHub/FFT/verilog/FFT.sv Line: 52
-Info (10281): Verilog HDL Declaration information at computeMatrix.sv(3): object "x" differs only in case from object "X" in the same scope File: C:/Users/Jeff/Documents/GitHub/FFT/verilog/computeMatrix.sv Line: 3
+Info (10281): Verilog HDL Declaration information at computeMatrix.sv(3): object "x" differs only in case from object "X" in the same scope File: C:/Users/Jeff/Documents/GitHub/FFT/recursive_FFT/computeMatrix.sv Line: 3
+Info (10281): Verilog HDL Declaration information at FFT.sv(11): object "x" differs only in case from object "X" in the same scope File: C:/Users/Jeff/Documents/GitHub/FFT/recursive_FFT/FFT.sv Line: 11
+Info (10281): Verilog HDL Declaration information at FFT.sv(14): object "xe" differs only in case from object "Xe" in the same scope File: C:/Users/Jeff/Documents/GitHub/FFT/recursive_FFT/FFT.sv Line: 14
+Info (10281): Verilog HDL Declaration information at FFT.sv(14): object "xo" differs only in case from object "Xo" in the same scope File: C:/Users/Jeff/Documents/GitHub/FFT/recursive_FFT/FFT.sv Line: 14
+Info (10281): Verilog HDL Declaration information at FFT.sv(35): object "x" differs only in case from object "X" in the same scope File: C:/Users/Jeff/Documents/GitHub/FFT/recursive_FFT/FFT.sv Line: 35
+Info (10281): Verilog HDL Declaration information at FFT.sv(52): object "x" differs only in case from object "X" in the same scope File: C:/Users/Jeff/Documents/GitHub/FFT/recursive_FFT/FFT.sv Line: 52
+Info (10281): Verilog HDL Declaration information at computeMatrix.sv(3): object "x" differs only in case from object "X" in the same scope File: C:/Users/Jeff/Documents/GitHub/FFT/recursive_FFT/computeMatrix.sv Line: 3
