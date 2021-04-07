@@ -1,0 +1,20 @@
+Fitter Status : Successful - Tue Apr 06 23:19:08 2021
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : FFT
+Top-level Entity Name : FFT64
+Family : Cyclone V
+Device : 5CSEMA5F31C6
+Timing Models : Final
+Logic utilization (in ALMs) : 581 / 32,070 ( 2 % )
+Total registers : 923
+Total pins : 68 / 457 ( 15 % )
+Total virtual pins : 0
+Total block memory bits : 1,536 / 4,065,280 ( < 1 % )
+Total RAM Blocks : 2 / 397 ( < 1 % )
+Total DSP Blocks : 10 / 87 ( 11 % )
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 0 / 6 ( 0 % )
+Total DLLs : 0 / 4 ( 0 % )

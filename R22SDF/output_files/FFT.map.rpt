@@ -1,0 +1,813 @@
+Analysis & Synthesis report for FFT
+Tue Apr 06 23:17:06 2021
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis DSP Block Usage Summary
+ 10. General Register Statistics
+ 11. Registers Packed Into Inferred Megafunctions
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Source assignments for SdfUnit:SU1|DelayBuffer:DB1|altshift_taps:buf_im_rtl_0|shift_taps_d0v:auto_generated|altsyncram_pu91:altsyncram4
+ 14. Source assignments for SdfUnit:SU1|DelayBuffer:DB2|altshift_taps:buf_im_rtl_0|shift_taps_f0v:auto_generated|altsyncram_ru91:altsyncram4
+ 15. Parameter Settings for User Entity Instance: Top-level Entity: |FFT64
+ 16. Parameter Settings for User Entity Instance: SdfUnit:SU1
+ 17. Parameter Settings for User Entity Instance: SdfUnit:SU1|Butterfly:BF1
+ 18. Parameter Settings for User Entity Instance: SdfUnit:SU1|DelayBuffer:DB1
+ 19. Parameter Settings for User Entity Instance: SdfUnit:SU1|Butterfly:BF2
+ 20. Parameter Settings for User Entity Instance: SdfUnit:SU1|DelayBuffer:DB2
+ 21. Parameter Settings for User Entity Instance: SdfUnit:SU1|Twiddle:TW
+ 22. Parameter Settings for User Entity Instance: SdfUnit:SU1|Multiply:MU
+ 23. Parameter Settings for User Entity Instance: SdfUnit:SU2
+ 24. Parameter Settings for User Entity Instance: SdfUnit:SU2|Butterfly:BF1
+ 25. Parameter Settings for User Entity Instance: SdfUnit:SU2|DelayBuffer:DB1
+ 26. Parameter Settings for User Entity Instance: SdfUnit:SU2|Butterfly:BF2
+ 27. Parameter Settings for User Entity Instance: SdfUnit:SU2|DelayBuffer:DB2
+ 28. Parameter Settings for User Entity Instance: SdfUnit:SU2|Twiddle:TW
+ 29. Parameter Settings for User Entity Instance: SdfUnit:SU2|Multiply:MU
+ 30. Parameter Settings for User Entity Instance: SdfUnit:SU3
+ 31. Parameter Settings for User Entity Instance: SdfUnit:SU3|Butterfly:BF1
+ 32. Parameter Settings for User Entity Instance: SdfUnit:SU3|DelayBuffer:DB1
+ 33. Parameter Settings for User Entity Instance: SdfUnit:SU3|Butterfly:BF2
+ 34. Parameter Settings for User Entity Instance: SdfUnit:SU3|DelayBuffer:DB2
+ 35. Parameter Settings for User Entity Instance: SdfUnit:SU3|Twiddle:TW
+ 36. Parameter Settings for User Entity Instance: SdfUnit:SU3|Multiply:MU
+ 37. Parameter Settings for Inferred Entity Instance: SdfUnit:SU1|DelayBuffer:DB1|altshift_taps:buf_im_rtl_0
+ 38. Parameter Settings for Inferred Entity Instance: SdfUnit:SU1|DelayBuffer:DB2|altshift_taps:buf_im_rtl_0
+ 39. altshift_taps Parameter Settings by Entity Instance
+ 40. Port Connectivity Checks: "SdfUnit:SU3|Multiply:MU"
+ 41. Post-Synthesis Netlist Statistics for Top Partition
+ 42. Elapsed Time Per Partition
+ 43. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Tue Apr 06 23:17:06 2021       ;
+; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                   ; FFT                                         ;
+; Top-level Entity Name           ; FFT64                                       ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 891                                         ;
+; Total pins                      ; 68                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 1,536                                       ;
+; Total DSP Blocks                ; 10                                          ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; FFT64              ; FFT                ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                 ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                             ; Library ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------+---------+
+; FFT64.v                          ; yes             ; User Verilog HDL File        ; C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/FFT64.v                        ;         ;
+; Twiddle64.v                      ; yes             ; User Verilog HDL File        ; C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/Twiddle64.v                    ;         ;
+; SdfUnit.v                        ; yes             ; User Verilog HDL File        ; C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v                      ;         ;
+; Multiply.v                       ; yes             ; User Verilog HDL File        ; C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/Multiply.v                     ;         ;
+; DelayBuffer.v                    ; yes             ; User Verilog HDL File        ; C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/DelayBuffer.v                  ;         ;
+; Butterfly.v                      ; yes             ; User Verilog HDL File        ; C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/Butterfly.v                    ;         ;
+; altshift_taps.tdf                ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altshift_taps.tdf ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.inc      ;         ;
+; lpm_counter.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_counter.inc   ;         ;
+; lpm_compare.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_compare.inc   ;         ;
+; lpm_constant.inc                 ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_constant.inc  ;         ;
+; db/shift_taps_d0v.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/db/shift_taps_d0v.tdf          ;         ;
+; db/altsyncram_pu91.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/db/altsyncram_pu91.tdf         ;         ;
+; db/cntr_djf.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/db/cntr_djf.tdf                ;         ;
+; db/shift_taps_f0v.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/db/shift_taps_f0v.tdf          ;         ;
+; db/altsyncram_ru91.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/db/altsyncram_ru91.tdf         ;         ;
+; db/cntr_ejf.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/db/cntr_ejf.tdf                ;         ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimate of Logic utilization (ALMs needed) ; 555         ;
+;                                             ;             ;
+; Combinational ALUT usage for logic          ; 942         ;
+;     -- 7 input functions                    ; 0           ;
+;     -- 6 input functions                    ; 70          ;
+;     -- 5 input functions                    ; 25          ;
+;     -- 4 input functions                    ; 120         ;
+;     -- <=3 input functions                  ; 727         ;
+;                                             ;             ;
+; Dedicated logic registers                   ; 891         ;
+;                                             ;             ;
+; I/O pins                                    ; 68          ;
+; Total MLAB memory bits                      ; 0           ;
+; Total block memory bits                     ; 1536        ;
+;                                             ;             ;
+; Total DSP Blocks                            ; 10          ;
+;                                             ;             ;
+; Maximum fan-out node                        ; clock~input ;
+; Maximum fan-out                             ; 955         ;
+; Total fan-out                               ; 6362        ;
+; Average fan-out                             ; 3.11        ;
++---------------------------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                              ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                     ; Entity Name     ; Library Name ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; |FFT64                                       ; 942 (0)             ; 891 (0)                   ; 1536              ; 10         ; 68   ; 0            ; |FFT64                                                                                                                  ; FFT64           ; work         ;
+;    |SdfUnit:SU1|                             ; 392 (106)           ; 171 (121)                 ; 1536              ; 5          ; 0    ; 0            ; |FFT64|SdfUnit:SU1                                                                                                      ; SdfUnit         ; work         ;
+;       |Butterfly:BF1|                        ; 68 (68)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FFT64|SdfUnit:SU1|Butterfly:BF1                                                                                        ; Butterfly       ; work         ;
+;       |Butterfly:BF2|                        ; 132 (132)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FFT64|SdfUnit:SU1|Butterfly:BF2                                                                                        ; Butterfly       ; work         ;
+;       |DelayBuffer:DB1|                      ; 12 (0)              ; 10 (0)                    ; 1024              ; 0          ; 0    ; 0            ; |FFT64|SdfUnit:SU1|DelayBuffer:DB1                                                                                      ; DelayBuffer     ; work         ;
+;          |altshift_taps:buf_im_rtl_0|        ; 12 (0)              ; 10 (0)                    ; 1024              ; 0          ; 0    ; 0            ; |FFT64|SdfUnit:SU1|DelayBuffer:DB1|altshift_taps:buf_im_rtl_0                                                           ; altshift_taps   ; work         ;
+;             |shift_taps_d0v:auto_generated|  ; 12 (7)              ; 10 (5)                    ; 1024              ; 0          ; 0    ; 0            ; |FFT64|SdfUnit:SU1|DelayBuffer:DB1|altshift_taps:buf_im_rtl_0|shift_taps_d0v:auto_generated                             ; shift_taps_d0v  ; work         ;
+;                |altsyncram_pu91:altsyncram4| ; 0 (0)               ; 0 (0)                     ; 1024              ; 0          ; 0    ; 0            ; |FFT64|SdfUnit:SU1|DelayBuffer:DB1|altshift_taps:buf_im_rtl_0|shift_taps_d0v:auto_generated|altsyncram_pu91:altsyncram4 ; altsyncram_pu91 ; work         ;
+;                |cntr_djf:cntr1|              ; 5 (5)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |FFT64|SdfUnit:SU1|DelayBuffer:DB1|altshift_taps:buf_im_rtl_0|shift_taps_d0v:auto_generated|cntr_djf:cntr1              ; cntr_djf        ; work         ;
+;       |DelayBuffer:DB2|                      ; 10 (0)              ; 8 (0)                     ; 512               ; 0          ; 0    ; 0            ; |FFT64|SdfUnit:SU1|DelayBuffer:DB2                                                                                      ; DelayBuffer     ; work         ;
+;          |altshift_taps:buf_im_rtl_0|        ; 10 (0)              ; 8 (0)                     ; 512               ; 0          ; 0    ; 0            ; |FFT64|SdfUnit:SU1|DelayBuffer:DB2|altshift_taps:buf_im_rtl_0                                                           ; altshift_taps   ; work         ;
+;             |shift_taps_f0v:auto_generated|  ; 10 (6)              ; 8 (4)                     ; 512               ; 0          ; 0    ; 0            ; |FFT64|SdfUnit:SU1|DelayBuffer:DB2|altshift_taps:buf_im_rtl_0|shift_taps_f0v:auto_generated                             ; shift_taps_f0v  ; work         ;
+;                |altsyncram_ru91:altsyncram4| ; 0 (0)               ; 0 (0)                     ; 512               ; 0          ; 0    ; 0            ; |FFT64|SdfUnit:SU1|DelayBuffer:DB2|altshift_taps:buf_im_rtl_0|shift_taps_f0v:auto_generated|altsyncram_ru91:altsyncram4 ; altsyncram_ru91 ; work         ;
+;                |cntr_ejf:cntr1|              ; 4 (4)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |FFT64|SdfUnit:SU1|DelayBuffer:DB2|altshift_taps:buf_im_rtl_0|shift_taps_f0v:auto_generated|cntr_ejf:cntr1              ; cntr_ejf        ; work         ;
+;       |Multiply:MU|                          ; 32 (32)             ; 0 (0)                     ; 0                 ; 4          ; 0    ; 0            ; |FFT64|SdfUnit:SU1|Multiply:MU                                                                                          ; Multiply        ; work         ;
+;       |Twiddle:TW|                           ; 32 (32)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |FFT64|SdfUnit:SU1|Twiddle:TW                                                                                           ; Twiddle         ; work         ;
+;    |SdfUnit:SU2|                             ; 308 (44)            ; 537 (121)                 ; 0                 ; 5          ; 0    ; 0            ; |FFT64|SdfUnit:SU2                                                                                                      ; SdfUnit         ; work         ;
+;       |Butterfly:BF1|                        ; 68 (68)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FFT64|SdfUnit:SU2|Butterfly:BF1                                                                                        ; Butterfly       ; work         ;
+;       |Butterfly:BF2|                        ; 132 (132)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FFT64|SdfUnit:SU2|Butterfly:BF2                                                                                        ; Butterfly       ; work         ;
+;       |DelayBuffer:DB1|                      ; 0 (0)               ; 256 (256)                 ; 0                 ; 0          ; 0    ; 0            ; |FFT64|SdfUnit:SU2|DelayBuffer:DB1                                                                                      ; DelayBuffer     ; work         ;
+;       |DelayBuffer:DB2|                      ; 0 (0)               ; 128 (128)                 ; 0                 ; 0          ; 0    ; 0            ; |FFT64|SdfUnit:SU2|DelayBuffer:DB2                                                                                      ; DelayBuffer     ; work         ;
+;       |Multiply:MU|                          ; 32 (32)             ; 0 (0)                     ; 0                 ; 4          ; 0    ; 0            ; |FFT64|SdfUnit:SU2|Multiply:MU                                                                                          ; Multiply        ; work         ;
+;       |Twiddle:TW|                           ; 32 (32)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |FFT64|SdfUnit:SU2|Twiddle:TW                                                                                           ; Twiddle         ; work         ;
+;    |SdfUnit:SU3|                             ; 242 (42)            ; 183 (87)                  ; 0                 ; 0          ; 0    ; 0            ; |FFT64|SdfUnit:SU3                                                                                                      ; SdfUnit         ; work         ;
+;       |Butterfly:BF1|                        ; 68 (68)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FFT64|SdfUnit:SU3|Butterfly:BF1                                                                                        ; Butterfly       ; work         ;
+;       |Butterfly:BF2|                        ; 132 (132)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FFT64|SdfUnit:SU3|Butterfly:BF2                                                                                        ; Butterfly       ; work         ;
+;       |DelayBuffer:DB1|                      ; 0 (0)               ; 64 (64)                   ; 0                 ; 0          ; 0    ; 0            ; |FFT64|SdfUnit:SU3|DelayBuffer:DB1                                                                                      ; DelayBuffer     ; work         ;
+;       |DelayBuffer:DB2|                      ; 0 (0)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |FFT64|SdfUnit:SU3|DelayBuffer:DB2                                                                                      ; DelayBuffer     ; work         ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                ;
++-----------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; Name                                                                                                                        ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
++-----------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; SdfUnit:SU1|DelayBuffer:DB1|altshift_taps:buf_im_rtl_0|shift_taps_d0v:auto_generated|altsyncram_pu91:altsyncram4|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 32           ; 32           ; 32           ; 32           ; 1024 ; None ;
+; SdfUnit:SU1|DelayBuffer:DB2|altshift_taps:buf_im_rtl_0|shift_taps_f0v:auto_generated|altsyncram_ru91:altsyncram4|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 16           ; 32           ; 16           ; 32           ; 512  ; None ;
++-----------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+
+
++-----------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary  ;
++---------------------------------+-------------+
+; Statistic                       ; Number Used ;
++---------------------------------+-------------+
+; Independent 9x9                 ; 2           ;
+; Two Independent 18x18           ; 8           ;
+; Total number of DSP blocks      ; 10          ;
+;                                 ;             ;
+; Fixed Point Signed Multiplier   ; 8           ;
+; Fixed Point Unsigned Multiplier ; 2           ;
++---------------------------------+-------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 891   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 384   ;
+; Number of registers using Asynchronous Clear ; 65    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                                                             ;
++--------------------------------------------------+------------------------------------------+------------+
+; Register Name                                    ; Megafunction                             ; Type       ;
++--------------------------------------------------+------------------------------------------+------------+
+; SdfUnit:SU1|DelayBuffer:DB1|buf_im[0..31][0..15] ; SdfUnit:SU1|DelayBuffer:DB1|buf_im_rtl_0 ; SHIFT_TAPS ;
+; SdfUnit:SU1|DelayBuffer:DB1|buf_re[0..31][0..15] ; SdfUnit:SU1|DelayBuffer:DB1|buf_im_rtl_0 ; SHIFT_TAPS ;
+; SdfUnit:SU1|DelayBuffer:DB2|buf_im[0..15][0..15] ; SdfUnit:SU1|DelayBuffer:DB2|buf_im_rtl_0 ; SHIFT_TAPS ;
+; SdfUnit:SU1|DelayBuffer:DB2|buf_re[0..15][0..15] ; SdfUnit:SU1|DelayBuffer:DB2|buf_im_rtl_0 ; SHIFT_TAPS ;
++--------------------------------------------------+------------------------------------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |FFT64|SdfUnit:SU1|bf1_do_re[10] ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |FFT64|SdfUnit:SU3|bf1_do_re[1]  ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |FFT64|SdfUnit:SU2|bf1_do_re[15] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for SdfUnit:SU1|DelayBuffer:DB1|altshift_taps:buf_im_rtl_0|shift_taps_d0v:auto_generated|altsyncram_pu91:altsyncram4 ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                        ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                         ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for SdfUnit:SU1|DelayBuffer:DB2|altshift_taps:buf_im_rtl_0|shift_taps_f0v:auto_generated|altsyncram_ru91:altsyncram4 ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                        ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                         ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |FFT64 ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; WIDTH          ; 16    ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SdfUnit:SU1 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; N              ; 64    ; Signed Integer                  ;
+; M              ; 64    ; Signed Integer                  ;
+; WIDTH          ; 16    ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SdfUnit:SU1|Butterfly:BF1 ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; WIDTH          ; 16    ; Signed Integer                                ;
+; RH             ; 0     ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SdfUnit:SU1|DelayBuffer:DB1 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; DEPTH          ; 32    ; Signed Integer                                  ;
+; WIDTH          ; 16    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SdfUnit:SU1|Butterfly:BF2 ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; WIDTH          ; 16    ; Signed Integer                                ;
+; RH             ; 1     ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SdfUnit:SU1|DelayBuffer:DB2 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; DEPTH          ; 16    ; Signed Integer                                  ;
+; WIDTH          ; 16    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SdfUnit:SU1|Twiddle:TW ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; TW_FF          ; 1     ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SdfUnit:SU1|Multiply:MU ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; WIDTH          ; 16    ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SdfUnit:SU2 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; N              ; 64    ; Signed Integer                  ;
+; M              ; 16    ; Signed Integer                  ;
+; WIDTH          ; 16    ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SdfUnit:SU2|Butterfly:BF1 ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; WIDTH          ; 16    ; Signed Integer                                ;
+; RH             ; 0     ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SdfUnit:SU2|DelayBuffer:DB1 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; DEPTH          ; 8     ; Signed Integer                                  ;
+; WIDTH          ; 16    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SdfUnit:SU2|Butterfly:BF2 ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; WIDTH          ; 16    ; Signed Integer                                ;
+; RH             ; 1     ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SdfUnit:SU2|DelayBuffer:DB2 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; DEPTH          ; 4     ; Signed Integer                                  ;
+; WIDTH          ; 16    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SdfUnit:SU2|Twiddle:TW ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; TW_FF          ; 1     ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SdfUnit:SU2|Multiply:MU ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; WIDTH          ; 16    ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SdfUnit:SU3 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; N              ; 64    ; Signed Integer                  ;
+; M              ; 4     ; Signed Integer                  ;
+; WIDTH          ; 16    ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SdfUnit:SU3|Butterfly:BF1 ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; WIDTH          ; 16    ; Signed Integer                                ;
+; RH             ; 0     ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SdfUnit:SU3|DelayBuffer:DB1 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; DEPTH          ; 2     ; Signed Integer                                  ;
+; WIDTH          ; 16    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SdfUnit:SU3|Butterfly:BF2 ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; WIDTH          ; 16    ; Signed Integer                                ;
+; RH             ; 1     ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SdfUnit:SU3|DelayBuffer:DB2 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; DEPTH          ; 1     ; Signed Integer                                  ;
+; WIDTH          ; 16    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SdfUnit:SU3|Twiddle:TW ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; TW_FF          ; 1     ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SdfUnit:SU3|Multiply:MU ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; WIDTH          ; 16    ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: SdfUnit:SU1|DelayBuffer:DB1|altshift_taps:buf_im_rtl_0 ;
++----------------+----------------+-----------------------------------------------------------------------+
+; Parameter Name ; Value          ; Type                                                                  ;
++----------------+----------------+-----------------------------------------------------------------------+
+; WIDTH_BYTEENA  ; 1              ; Untyped                                                               ;
+; NUMBER_OF_TAPS ; 1              ; Untyped                                                               ;
+; TAP_DISTANCE   ; 32             ; Untyped                                                               ;
+; WIDTH          ; 32             ; Untyped                                                               ;
+; POWER_UP_STATE ; DONT_CARE      ; Untyped                                                               ;
+; CBXI_PARAMETER ; shift_taps_d0v ; Untyped                                                               ;
++----------------+----------------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: SdfUnit:SU1|DelayBuffer:DB2|altshift_taps:buf_im_rtl_0 ;
++----------------+----------------+-----------------------------------------------------------------------+
+; Parameter Name ; Value          ; Type                                                                  ;
++----------------+----------------+-----------------------------------------------------------------------+
+; WIDTH_BYTEENA  ; 1              ; Untyped                                                               ;
+; NUMBER_OF_TAPS ; 1              ; Untyped                                                               ;
+; TAP_DISTANCE   ; 16             ; Untyped                                                               ;
+; WIDTH          ; 32             ; Untyped                                                               ;
+; POWER_UP_STATE ; DONT_CARE      ; Untyped                                                               ;
+; CBXI_PARAMETER ; shift_taps_f0v ; Untyped                                                               ;
++----------------+----------------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; altshift_taps Parameter Settings by Entity Instance                                 ;
++----------------------------+--------------------------------------------------------+
+; Name                       ; Value                                                  ;
++----------------------------+--------------------------------------------------------+
+; Number of entity instances ; 2                                                      ;
+; Entity Instance            ; SdfUnit:SU1|DelayBuffer:DB1|altshift_taps:buf_im_rtl_0 ;
+;     -- NUMBER_OF_TAPS      ; 1                                                      ;
+;     -- TAP_DISTANCE        ; 32                                                     ;
+;     -- WIDTH               ; 32                                                     ;
+; Entity Instance            ; SdfUnit:SU1|DelayBuffer:DB2|altshift_taps:buf_im_rtl_0 ;
+;     -- NUMBER_OF_TAPS      ; 1                                                      ;
+;     -- TAP_DISTANCE        ; 16                                                     ;
+;     -- WIDTH               ; 32                                                     ;
++----------------------------+--------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "SdfUnit:SU3|Multiply:MU"                                                            ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; m_re ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; m_im ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 891                         ;
+;     CLR               ; 65                          ;
+;     SLD               ; 384                         ;
+;     plain             ; 442                         ;
+; arriav_lcell_comb     ; 942                         ;
+;     arith             ; 446                         ;
+;         1 data inputs ; 198                         ;
+;         2 data inputs ; 197                         ;
+;         3 data inputs ; 3                           ;
+;         4 data inputs ; 48                          ;
+;     normal            ; 260                         ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 9                           ;
+;         3 data inputs ; 80                          ;
+;         4 data inputs ; 72                          ;
+;         5 data inputs ; 25                          ;
+;         6 data inputs ; 70                          ;
+;     shared            ; 236                         ;
+;         2 data inputs ; 236                         ;
+; arriav_mac            ; 10                          ;
+; boundary_port         ; 68                          ;
+; stratixv_ram_block    ; 64                          ;
+;                       ;                             ;
+; Max LUT depth         ; 4.60                        ;
+; Average LUT depth     ; 2.19                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Tue Apr 06 23:16:48 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FFT -c FFT
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file tb64.v
+    Info (12023): Found entity 1: TB64 File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/TB64.v Line: 7
+Info (12021): Found 1 design units, including 1 entities, in source file fft64.v
+    Info (12023): Found entity 1: FFT64 File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/FFT64.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file twiddle64.v
+    Info (12023): Found entity 1: Twiddle File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/Twiddle64.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file sdfunit.v
+    Info (12023): Found entity 1: SdfUnit File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file multiply.v
+    Info (12023): Found entity 1: Multiply File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/Multiply.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file delaybuffer.v
+    Info (12023): Found entity 1: DelayBuffer File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/DelayBuffer.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file butterfly.v
+    Info (12023): Found entity 1: Butterfly File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/Butterfly.v Line: 4
+Info (12127): Elaborating entity "FFT64" for the top level hierarchy
+Info (12128): Elaborating entity "SdfUnit" for hierarchy "SdfUnit:SU1" File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/FFT64.v Line: 36
+Warning (10230): Verilog HDL assignment warning at SdfUnit.v(232): truncated value with size 6 to match size of target (4) File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v Line: 232
+Info (12128): Elaborating entity "Butterfly" for hierarchy "SdfUnit:SU1|Butterfly:BF1" File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v Line: 127
+Warning (10230): Verilog HDL assignment warning at Butterfly.v(27): truncated value with size 32 to match size of target (16) File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/Butterfly.v Line: 27
+Warning (10230): Verilog HDL assignment warning at Butterfly.v(28): truncated value with size 32 to match size of target (16) File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/Butterfly.v Line: 28
+Warning (10230): Verilog HDL assignment warning at Butterfly.v(29): truncated value with size 32 to match size of target (16) File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/Butterfly.v Line: 29
+Warning (10230): Verilog HDL assignment warning at Butterfly.v(30): truncated value with size 32 to match size of target (16) File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/Butterfly.v Line: 30
+Info (12128): Elaborating entity "DelayBuffer" for hierarchy "SdfUnit:SU1|DelayBuffer:DB1" File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v Line: 135
+Info (12128): Elaborating entity "Butterfly" for hierarchy "SdfUnit:SU1|Butterfly:BF2" File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v Line: 184
+Warning (10230): Verilog HDL assignment warning at Butterfly.v(27): truncated value with size 32 to match size of target (16) File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/Butterfly.v Line: 27
+Warning (10230): Verilog HDL assignment warning at Butterfly.v(28): truncated value with size 32 to match size of target (16) File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/Butterfly.v Line: 28
+Warning (10230): Verilog HDL assignment warning at Butterfly.v(29): truncated value with size 32 to match size of target (16) File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/Butterfly.v Line: 29
+Warning (10230): Verilog HDL assignment warning at Butterfly.v(30): truncated value with size 32 to match size of target (16) File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/Butterfly.v Line: 30
+Info (12128): Elaborating entity "DelayBuffer" for hierarchy "SdfUnit:SU1|DelayBuffer:DB2" File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v Line: 192
+Info (12128): Elaborating entity "Twiddle" for hierarchy "SdfUnit:SU1|Twiddle:TW" File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v Line: 240
+Info (12128): Elaborating entity "Multiply" for hierarchy "SdfUnit:SU1|Multiply:MU" File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v Line: 257
+Warning (10230): Verilog HDL assignment warning at Multiply.v(25): truncated value with size 32 to match size of target (16) File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/Multiply.v Line: 25
+Warning (10230): Verilog HDL assignment warning at Multiply.v(26): truncated value with size 32 to match size of target (16) File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/Multiply.v Line: 26
+Warning (10230): Verilog HDL assignment warning at Multiply.v(27): truncated value with size 32 to match size of target (16) File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/Multiply.v Line: 27
+Warning (10230): Verilog HDL assignment warning at Multiply.v(28): truncated value with size 32 to match size of target (16) File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/Multiply.v Line: 28
+Info (12128): Elaborating entity "SdfUnit" for hierarchy "SdfUnit:SU2" File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/FFT64.v Line: 47
+Warning (10230): Verilog HDL assignment warning at SdfUnit.v(232): truncated value with size 6 to match size of target (4) File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v Line: 232
+Info (12128): Elaborating entity "DelayBuffer" for hierarchy "SdfUnit:SU2|DelayBuffer:DB1" File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v Line: 135
+Info (12128): Elaborating entity "DelayBuffer" for hierarchy "SdfUnit:SU2|DelayBuffer:DB2" File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v Line: 192
+Info (12128): Elaborating entity "SdfUnit" for hierarchy "SdfUnit:SU3" File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/FFT64.v Line: 58
+Warning (10230): Verilog HDL assignment warning at SdfUnit.v(232): truncated value with size 6 to match size of target (4) File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v Line: 232
+Info (12128): Elaborating entity "DelayBuffer" for hierarchy "SdfUnit:SU3|DelayBuffer:DB1" File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v Line: 135
+Info (12128): Elaborating entity "DelayBuffer" for hierarchy "SdfUnit:SU3|DelayBuffer:DB2" File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v Line: 192
+Info (286030): Timing-Driven Synthesis is running
+Info (19000): Inferred 2 megafunctions from design logic
+    Info (276034): Inferred altshift_taps megafunction from the following design logic: "SdfUnit:SU1|DelayBuffer:DB1|buf_im_rtl_0"
+        Info (286033): Parameter NUMBER_OF_TAPS set to 1
+        Info (286033): Parameter TAP_DISTANCE set to 32
+        Info (286033): Parameter WIDTH set to 32
+        Info (286033): Parameter POWER_UP_STATE set to DONT_CARE
+    Info (276034): Inferred altshift_taps megafunction from the following design logic: "SdfUnit:SU1|DelayBuffer:DB2|buf_im_rtl_0"
+        Info (286033): Parameter NUMBER_OF_TAPS set to 1
+        Info (286033): Parameter TAP_DISTANCE set to 16
+        Info (286033): Parameter WIDTH set to 32
+        Info (286033): Parameter POWER_UP_STATE set to DONT_CARE
+Info (12130): Elaborated megafunction instantiation "SdfUnit:SU1|DelayBuffer:DB1|altshift_taps:buf_im_rtl_0"
+Info (12133): Instantiated megafunction "SdfUnit:SU1|DelayBuffer:DB1|altshift_taps:buf_im_rtl_0" with the following parameter:
+    Info (12134): Parameter "NUMBER_OF_TAPS" = "1"
+    Info (12134): Parameter "TAP_DISTANCE" = "32"
+    Info (12134): Parameter "WIDTH" = "32"
+    Info (12134): Parameter "POWER_UP_STATE" = "DONT_CARE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/shift_taps_d0v.tdf
+    Info (12023): Found entity 1: shift_taps_d0v File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/db/shift_taps_d0v.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_pu91.tdf
+    Info (12023): Found entity 1: altsyncram_pu91 File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/db/altsyncram_pu91.tdf Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_djf.tdf
+    Info (12023): Found entity 1: cntr_djf File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/db/cntr_djf.tdf Line: 26
+Info (12130): Elaborated megafunction instantiation "SdfUnit:SU1|DelayBuffer:DB2|altshift_taps:buf_im_rtl_0"
+Info (12133): Instantiated megafunction "SdfUnit:SU1|DelayBuffer:DB2|altshift_taps:buf_im_rtl_0" with the following parameter:
+    Info (12134): Parameter "NUMBER_OF_TAPS" = "1"
+    Info (12134): Parameter "TAP_DISTANCE" = "16"
+    Info (12134): Parameter "WIDTH" = "32"
+    Info (12134): Parameter "POWER_UP_STATE" = "DONT_CARE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/shift_taps_f0v.tdf
+    Info (12023): Found entity 1: shift_taps_f0v File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/db/shift_taps_f0v.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ru91.tdf
+    Info (12023): Found entity 1: altsyncram_ru91 File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/db/altsyncram_ru91.tdf Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_ejf.tdf
+    Info (12023): Found entity 1: cntr_ejf File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/db/cntr_ejf.tdf Line: 26
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 1445 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 35 input pins
+    Info (21059): Implemented 33 output pins
+    Info (21061): Implemented 1303 logic cells
+    Info (21064): Implemented 64 RAM segments
+    Info (21062): Implemented 10 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 16 warnings
+    Info: Peak virtual memory: 4831 megabytes
+    Info: Processing ended: Tue Apr 06 23:17:06 2021
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:36
+
+
