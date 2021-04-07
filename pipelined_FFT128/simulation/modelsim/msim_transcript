@@ -1,0 +1,233 @@
+# Reading pref.tcl
+# do fft128_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128 {C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/WROM128.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:49:50 on Mar 31,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128" C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/WROM128.v 
+# -- Compiling module WROM128
+# 
+# Top level modules:
+# 	WROM128
+# End time: 09:49:50 on Mar 31,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128 {C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/rotator128_v.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:49:50 on Mar 31,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128" C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/rotator128_v.v 
+# -- Compiling module ROTATOR128
+# 
+# Top level modules:
+# 	ROTATOR128
+# End time: 09:49:50 on Mar 31,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128 {C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/ram2x128.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:49:50 on Mar 31,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128" C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/ram2x128.v 
+# -- Compiling module RAM2x128C
+# 
+# Top level modules:
+# 	RAM2x128C
+# End time: 09:49:50 on Mar 31,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128 {C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/mpuc924_383.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:49:50 on Mar 31,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128" C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/mpuc924_383.v 
+# -- Compiling module MPUC924_383
+# 
+# Top level modules:
+# 	MPUC924_383
+# End time: 09:49:51 on Mar 31,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128 {C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/mpuc707.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:49:51 on Mar 31,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128" C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/mpuc707.v 
+# -- Compiling module MPUC707
+# 
+# Top level modules:
+# 	MPUC707
+# End time: 09:49:51 on Mar 31,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128 {C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/mpuc541.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:49:51 on Mar 31,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128" C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/mpuc541.v 
+# -- Compiling module MPUC541
+# 
+# Top level modules:
+# 	MPUC541
+# End time: 09:49:51 on Mar 31,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128 {C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/mpuc1307.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:49:51 on Mar 31,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128" C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/mpuc1307.v 
+# -- Compiling module MPUC1307
+# 
+# Top level modules:
+# 	MPUC1307
+# End time: 09:49:52 on Mar 31,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128 {C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/fft8_3.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:49:52 on Mar 31,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128" C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/fft8_3.v 
+# -- Compiling module FFT8
+# 
+# Top level modules:
+# 	FFT8
+# End time: 09:49:52 on Mar 31,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128 {C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/fft16.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:49:52 on Mar 31,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128" C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/fft16.v 
+# -- Compiling module FFT16
+# 
+# Top level modules:
+# 	FFT16
+# End time: 09:49:52 on Mar 31,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128 {C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/fft128.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:49:52 on Mar 31,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128" C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/fft128.v 
+# -- Compiling module fft128
+# 
+# Top level modules:
+# 	fft128
+# End time: 09:49:53 on Mar 31,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128 {C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/cnorm_2.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:49:53 on Mar 31,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128" C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/cnorm_2.v 
+# -- Compiling module CNORM_2
+# 
+# Top level modules:
+# 	CNORM_2
+# End time: 09:49:53 on Mar 31,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128 {C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/cnorm_1.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:49:53 on Mar 31,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128" C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/cnorm_1.v 
+# -- Compiling module CNORM_1
+# 
+# Top level modules:
+# 	CNORM_1
+# End time: 09:49:53 on Mar 31,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128 {C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/bufram128c_2.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:49:53 on Mar 31,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128" C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/bufram128c_2.v 
+# -- Compiling module BUFRAM128C_2
+# 
+# Top level modules:
+# 	BUFRAM128C_2
+# End time: 09:49:53 on Mar 31,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128 {C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/bufram128c_1.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:49:54 on Mar 31,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128" C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/bufram128c_1.v 
+# -- Compiling module BUFRAM128C_1
+# 
+# Top level modules:
+# 	BUFRAM128C_1
+# End time: 09:49:54 on Mar 31,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128 {C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/bufram128c.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:49:54 on Mar 31,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128" C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/bufram128c.v 
+# -- Compiling module BUFRAM128C
+# 
+# Top level modules:
+# 	BUFRAM128C
+# End time: 09:49:54 on Mar 31,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128 {C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/FFT128_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:49:54 on Mar 31,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128" C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/FFT128_tb.v 
+# -- Compiling module FFT128_tb
+# 
+# Top level modules:
+# 	FFT128_tb
+# End time: 09:49:55 on Mar 31,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128 {C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/Wave_ROM128.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:49:55 on Mar 31,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128" C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/Wave_ROM128.v 
+# -- Compiling module Wave_ROM128
+# 
+# Top level modules:
+# 	Wave_ROM128
+# End time: 09:49:55 on Mar 31,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  FFT128_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" FFT128_tb 
+# Start time: 09:49:55 on Mar 31,2021
+# Loading sv_std.std
+# Loading work.FFT128_tb
+# Loading work.Wave_ROM128
+# Loading work.fft128
+# Loading work.BUFRAM128C_1
+# Loading work.RAM2x128C
+# Loading work.FFT8
+# Loading work.MPUC707
+# Loading work.CNORM_1
+# Loading work.ROTATOR128
+# Loading work.WROM128
+# Loading work.BUFRAM128C_2
+# Loading work.FFT16
+# Loading work.MPUC541
+# Loading work.MPUC1307
+# Loading work.MPUC924_383
+# Loading work.CNORM_2
+# Loading work.BUFRAM128C
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'UM707'.  Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /FFT128_tb/UUT/U_FFT1/UM707 File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/fft8_3.v Line: 244
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'UM707'.  Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /FFT128_tb/UUT/U_FFT2/UM707 File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/fft16.v Line: 273
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'UM541'.  Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /FFT128_tb/UUT/U_FFT2/UM541 File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/fft16.v Line: 431
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'UM1307'.  Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /FFT128_tb/UUT/U_FFT2/UM1307 File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/fft16.v Line: 439
+# ** Warning: (vsim-3015) [PCDPC] - Port size (22) does not match connection size (21) for port 'DOR'. The port definition is at: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/mpuc1307.v(53).
+#    Time: 0 ps  Iteration: 0  Instance: /FFT128_tb/UUT/U_FFT2/UM1307 File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/fft16.v Line: 439
+# ** Warning: (vsim-3015) [PCDPC] - Port size (22) does not match connection size (21) for port 'DOI'. The port definition is at: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/mpuc1307.v(53).
+#    Time: 0 ps  Iteration: 0  Instance: /FFT128_tb/UUT/U_FFT2/UM1307 File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/fft16.v Line: 439
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'UM383'.  Expected 10, found 9.
+#    Time: 0 ps  Iteration: 0  Instance: /FFT128_tb/UUT/U_FFT2/UM383 File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/fft16.v Line: 447
+# ** Warning: (vsim-3015) [PCDPC] - Port size (7) does not match connection size (8) for port 'ADDR'. The port definition is at: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/Wave_ROM128.v(43).
+#    Time: 0 ps  Iteration: 0  Instance: /FFT128_tb/UR File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/FFT128_tb.v Line: 143
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# rms error is      -76744 lsb
+# Break key hit
+# Break in Module Wave_ROM128 at C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/Wave_ROM128.v line 109
+# End time: 09:51:05 on Mar 31,2021, Elapsed time: 0:01:10
+# Errors: 0, Warnings: 8

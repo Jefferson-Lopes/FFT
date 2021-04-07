@@ -1,0 +1,469 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/simulation/modelsim
+vBUFRAM128C
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1617194994
+!i10b 1
+!s100 8k>hd?KP@n5=mQH9i;D4A1
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IiPkU455bOIJ_eK_22<8Fk0
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1617112672
+8C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/bufram128c.v
+FC:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/bufram128c.v
+!i122 14
+Z5 L0 54 59
+Z6 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z7 !s108 1617194994.000000
+!s107 C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/FFT128_CONFIG.inc|C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/bufram128c.v|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128|C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/bufram128c.v|
+!i113 1
+Z8 o-sv -work work
+Z9 !s92 -sv -work work +incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128
+Z10 tCvgOpt 0
+n@b@u@f@r@a@m128@c
+vBUFRAM128C_1
+R1
+R2
+!i10b 1
+!s100 <H^>SRF^L@UQ]RoH[nO1k2
+R3
+IFYXgY;z[FGGB[EG<h;4zb3
+R4
+S1
+R0
+Z11 w1617111743
+8C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/bufram128c_1.v
+FC:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/bufram128c_1.v
+!i122 13
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/FFT128_CONFIG.inc|C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/bufram128c_1.v|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128|C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/bufram128c_1.v|
+!i113 1
+R8
+R9
+R10
+n@b@u@f@r@a@m128@c_1
+vBUFRAM128C_2
+R1
+Z12 !s110 1617194993
+!i10b 1
+!s100 h527HF8zLMSo>7oj6jCB]0
+R3
+Io<;oz4`ZSFJZW^hY0bl772
+R4
+S1
+R0
+R11
+8C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/bufram128c_2.v
+FC:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/bufram128c_2.v
+!i122 12
+R5
+R6
+r1
+!s85 0
+31
+Z13 !s108 1617194993.000000
+!s107 C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/FFT128_CONFIG.inc|C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/bufram128c_2.v|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128|C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/bufram128c_2.v|
+!i113 1
+R8
+R9
+R10
+n@b@u@f@r@a@m128@c_2
+vCNORM_1
+R1
+R12
+!i10b 1
+!s100 a<3]3k^6>lkcISfD=5G5X2
+R3
+IiC1m4l]_=kWhVn09gl3IV0
+R4
+S1
+R0
+w1617113961
+8C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/cnorm_1.v
+FC:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/cnorm_1.v
+!i122 11
+L0 58 76
+R6
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/FFT128_CONFIG.inc|C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/cnorm_1.v|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128|C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/cnorm_1.v|
+!i113 1
+R8
+R9
+R10
+n@c@n@o@r@m_1
+vCNORM_2
+R1
+R12
+!i10b 1
+!s100 bS?=38=QF?CKB][Njc_7e3
+R3
+IeZRcUPfkoPRQ>3jYNQ<=S2
+R4
+S1
+R0
+R11
+8C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/cnorm_2.v
+FC:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/cnorm_2.v
+!i122 10
+L0 58 75
+R6
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/FFT128_CONFIG.inc|C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/cnorm_2.v|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128|C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/cnorm_2.v|
+!i113 1
+R8
+R9
+R10
+n@c@n@o@r@m_2
+vfft128
+R1
+Z14 !s110 1617194992
+!i10b 1
+!s100 5lYB`XbBS[VDGfA6@kI[M1
+R3
+IzW@Z?2VYPjgGSY@znDgPa3
+R4
+S1
+R0
+w1617113250
+8C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/fft128.v
+FC:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/fft128.v
+!i122 9
+L0 70 118
+R6
+r1
+!s85 0
+31
+Z15 !s108 1617194992.000000
+!s107 C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/FFT128_CONFIG.inc|C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/fft128.v|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128|C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/fft128.v|
+!i113 1
+R8
+R9
+R10
+vFFT128_tb
+R1
+R2
+!i10b 1
+!s100 G3W`8@1i[?TOaM@e;kB412
+R3
+Ij@U7a=`L`WLASWJ;gWcY^2
+R4
+S1
+R0
+w1617113721
+8C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/FFT128_tb.v
+FC:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/FFT128_tb.v
+!i122 15
+L0 61 109
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/FFT128_CONFIG.inc|C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/FFT128_tb.v|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128|C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/FFT128_tb.v|
+!i113 1
+R8
+R9
+R10
+n@f@f@t128_tb
+vFFT16
+R1
+R14
+!i10b 1
+!s100 Qgdz:R2H7cAb338eAj;603
+R3
+IYGYbb^abCfk^j=zGaWgRj1
+R4
+S1
+R0
+R11
+8C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/fft16.v
+FC:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/fft16.v
+!i122 8
+L0 126 483
+R6
+r1
+!s85 0
+31
+R15
+!s107 C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/FFT128_CONFIG.inc|C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/fft16.v|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128|C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/fft16.v|
+!i113 1
+R8
+R9
+R10
+n@f@f@t16
+vFFT8
+R1
+R14
+!i10b 1
+!s100 CNn[B331@cCDOag7TI:zR3
+R3
+IB8laL_6Qaj:5`L5cQcC;N2
+R4
+S1
+R0
+R11
+8C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/fft8_3.v
+FC:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/fft8_3.v
+!i122 7
+L0 98 264
+R6
+r1
+!s85 0
+31
+R15
+!s107 C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/FFT128_CONFIG.inc|C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/fft8_3.v|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128|C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/fft8_3.v|
+!i113 1
+R8
+R9
+R10
+n@f@f@t8
+vMPUC1307
+R1
+R14
+!i10b 1
+!s100 J_aINW>:[8VJLlUBLW_fa0
+R3
+Ian_GIj7d?WZ;<A95d??@33
+R4
+S1
+R0
+R11
+8C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/mpuc1307.v
+FC:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/mpuc1307.v
+!i122 6
+Z16 L0 53 74
+R6
+r1
+!s85 0
+31
+Z17 !s108 1617194991.000000
+!s107 C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/FFT128_CONFIG.inc|C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/mpuc1307.v|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128|C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/mpuc1307.v|
+!i113 1
+R8
+R9
+R10
+n@m@p@u@c1307
+vMPUC541
+R1
+Z18 !s110 1617194991
+!i10b 1
+!s100 WH2W`Kaml;3gWP<21Lo]93
+R3
+IXMQ_JB74HbbQHH7W1hW2i1
+R4
+S1
+R0
+R11
+8C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/mpuc541.v
+FC:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/mpuc541.v
+!i122 5
+R16
+R6
+r1
+!s85 0
+31
+R17
+!s107 C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/FFT128_CONFIG.inc|C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/mpuc541.v|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128|C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/mpuc541.v|
+!i113 1
+R8
+R9
+R10
+n@m@p@u@c541
+vMPUC707
+R1
+R18
+!i10b 1
+!s100 TaIRzO5E=S:3AdkZVo_780
+R3
+Inb1LoAD7VGg;NFHEdzE`m1
+R4
+S1
+R0
+R11
+8C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/mpuc707.v
+FC:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/mpuc707.v
+!i122 4
+L0 52 72
+R6
+r1
+!s85 0
+31
+R17
+!s107 C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/FFT128_CONFIG.inc|C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/mpuc707.v|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128|C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/mpuc707.v|
+!i113 1
+R8
+R9
+R10
+n@m@p@u@c707
+vMPUC924_383
+R1
+R18
+!i10b 1
+!s100 eeB0Gd^jPB4zzjh`oQZom2
+R3
+Igl3U?MKDV[LRbHFdK:cPd1
+R4
+S1
+R0
+R11
+8C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/mpuc924_383.v
+FC:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/mpuc924_383.v
+!i122 3
+L0 53 84
+R6
+r1
+!s85 0
+31
+Z19 !s108 1617194990.000000
+!s107 C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/FFT128_CONFIG.inc|C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/mpuc924_383.v|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128|C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/mpuc924_383.v|
+!i113 1
+R8
+R9
+R10
+n@m@p@u@c924_383
+vRAM2x128C
+R1
+Z20 !s110 1617194990
+!i10b 1
+!s100 CdgEdHP9AMYL?oV58GSD80
+R3
+IJV<f]CHaT=h0aFdN_gA1D1
+R4
+S1
+R0
+R11
+8C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/ram2x128.v
+FC:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/ram2x128.v
+!i122 2
+L0 56 84
+R6
+r1
+!s85 0
+31
+R19
+!s107 C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/FFT128_CONFIG.inc|C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/ram2x128.v|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128|C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/ram2x128.v|
+!i113 1
+R8
+R9
+R10
+n@r@a@m2x128@c
+vROTATOR128
+R1
+R20
+!i10b 1
+!s100 DeRW5]?HL9FmbiJ6T<3:=1
+R3
+I]<S?J4KQEnJ4bR_eR>3dd0
+R4
+S1
+R0
+R11
+8C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/rotator128_v.v
+FC:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/rotator128_v.v
+!i122 1
+L0 54 81
+R6
+r1
+!s85 0
+31
+R19
+!s107 C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/FFT128_CONFIG.inc|C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/rotator128_v.v|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128|C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/rotator128_v.v|
+!i113 1
+R8
+R9
+R10
+n@r@o@t@a@t@o@r128
+vWave_ROM128
+R1
+!s110 1617194995
+!i10b 1
+!s100 CTU`YTZD7S;6emU]oEBGF2
+R3
+I0bT4B48UVDRLgSaVPL>;_0
+R4
+S1
+R0
+R11
+8C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/Wave_ROM128.v
+FC:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/Wave_ROM128.v
+!i122 16
+L0 43 68
+R6
+r1
+!s85 0
+31
+!s108 1617194995.000000
+!s107 C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/Wave_ROM128.v|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128|C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/Wave_ROM128.v|
+!i113 1
+R8
+R9
+R10
+n@wave_@r@o@m128
+vWROM128
+R1
+R20
+!i10b 1
+!s100 ]NKF:MEFke2FK6QJkM2lb1
+R3
+IP4=M42e8oK4_;VXJjZDPg0
+R4
+S1
+R0
+R11
+8C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/WROM128.v
+FC:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/WROM128.v
+!i122 0
+L0 53 59
+R6
+r1
+!s85 0
+31
+R19
+!s107 C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/FFT128_CONFIG.inc|C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/WROM128.v|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128|C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/WROM128.v|
+!i113 1
+R8
+R9
+R10
+n@w@r@o@m128
