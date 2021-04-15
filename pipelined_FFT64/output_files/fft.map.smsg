@@ -1,2 +1,0 @@
-Info (10281): Verilog HDL Declaration information at ram2x64c_1.v(89): object "DI" differs only in case from object "di" in the same scope File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/ram2x64c_1.v Line: 89
-Info (10281): Verilog HDL Declaration information at ram2x64c_1.v(73): object "DOI" differs only in case from object "doi" in the same scope File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT64/ram2x64c_1.v Line: 73

@@ -1,3 +1,0 @@
-Warning (10268): Verilog HDL information at ram2x128.v(123): always construct contains both blocking and non-blocking assignments File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/ram2x128.v Line: 123
-Info (10281): Verilog HDL Declaration information at ram2x128.v(78): object "DI" differs only in case from object "di" in the same scope File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/ram2x128.v Line: 78
-Info (10281): Verilog HDL Declaration information at ram2x128.v(62): object "DOI" differs only in case from object "doi" in the same scope File: C:/Users/Jeff/Documents/GitHub/FFT/pipelined_FFT128/ram2x128.v Line: 62
