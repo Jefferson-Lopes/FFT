@@ -4,9 +4,9 @@ FFT algorithm implementation on an FPGA for processing  `2^N`  points from the B
 
 ## FFT 64 points
 
-The picture below shows the FFT64 simulation on ModelSim-Altera:
+The picture below shows the FFT simulation on ModelSim-Altera:
 
-![modelSim_FFT64](modelSim_FFT64.png)
+![ModelSim](ModelSim.png)
 
 ## Reference
 

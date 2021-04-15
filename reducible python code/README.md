@@ -1,5 +1,5 @@
 # Understanding the FFT algorithm with python
 
-## Result of recursive FFT and numpy FFT
+## Using FFT for polynomial multiplication
 
-![plots](plots.png)
+* [The Fast Fourier Transform (FFT)](https://www.youtube.com/watch?v=h7apO7q16V0)
