@@ -1,7 +1,9 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+#############################
 ## generate a signal input ##
+#############################
 FREQ = 5
 AMP  = 512
 TIME = np.arange(0, 8, .125)       #64 points
@@ -13,8 +15,9 @@ di_re = wave
 di_im = np.zeros(64).astype(int)
 
 
-
+###########################
 ## dump into a text file ##
+###########################
 #open the files
 file_wr = open('R22SDF/simulation/modelsim/input.txt', 'w')
 #second file for keep track more easily
@@ -35,20 +38,23 @@ file_wr.close()
 file_wr_clone.close()
 
 
-
+###########################################
 ## process the data in verilog testbench ##
+###########################################
 #using make_output for testing
 
 
-
+#################################
 ## process the data with NumPy ##
+#################################
 comp = di_re + di_im*1j    #convert to complex list
 
 fft_np = np.fft.fft(comp)
 
 
-
+#####################
 ## load the result ##
+#####################
 #for testing
 file_rd = open('python encapsulation/output_clone.txt', 'r')
 #file_rd = open('R22SDF/simulation/modelsim/output.txt', 'r')
@@ -65,8 +71,9 @@ do_im = data_imag[1:].astype(int)
 fft_fpga = do_re + do_im*1j
 
 
-
+###################################################
 ## plot the result and the same thing with NumPy ##
+###################################################
 plt.figure(1)
 plt.title('Input wave')
 plt.plot(TIME, di_re, label='Real')
