@@ -1,8 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-
-
 ## generate a signal input ##
 FREQ = 5
 AMP  = 512
@@ -43,6 +41,13 @@ file_wr_clone.close()
 
 
 
+## process the data with NumPy ##
+comp = di_re + di_im*1j    #convert to complex list
+
+fft_np = np.fft.fft(comp)
+
+
+
 ## load the result ##
 #for testing
 file_rd = open('python encapsulation/output_clone.txt', 'r')
@@ -57,5 +62,32 @@ data_imag = np.array([row[1] for row in data_read])
 do_re = data_real[1:].astype(int)
 do_im = data_imag[1:].astype(int)
 
+fft_fpga = do_re + do_im*1j
+
+
 
 ## plot the result and the same thing with NumPy ##
+plt.figure(1)
+plt.title('Input wave')
+plt.plot(TIME, di_re, label='Real')
+plt.plot(TIME, di_im, label='Imag')
+plt.legend()
+plt.savefig('python encapsulation/input.png', bbox_inches='tight')
+
+plt.figure(2)
+plt.title('NumPy FFT')
+plt.plot(TIME,    fft_np.real, label='Real')
+plt.plot(TIME,    fft_np.imag, label='Imag')
+plt.plot(TIME, np.abs(fft_np),  label='ABS')
+plt.legend()
+plt.savefig('python encapsulation/fft_np.png', bbox_inches='tight')
+
+plt.figure(3)
+plt.title('FPGA FFT')
+plt.plot(TIME,    fft_fpga.real, label='Real')
+plt.plot(TIME,    fft_fpga.imag, label='Imag')
+plt.plot(TIME, np.abs(fft_fpga),  label='ABS')
+plt.legend()
+plt.savefig('python encapsulation/fft_fpga.png', bbox_inches='tight')
+
+plt.show()
