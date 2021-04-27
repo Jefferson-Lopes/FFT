@@ -8,30 +8,30 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/Jeff/Documents/GitHub/FFT/R22SDF/simulation/modelsim
+Z0 d/home/jeff/Documents/GitHub/FFT/R22SDF/simulation/modelsim
 vButterfly
-Z1 !s110 1617760802
+Z1 !s110 1619526220
 !i10b 1
 !s100 mD9[K_6J2jaEozc9DnS<n1
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
-I;SK3Q3ofBgRNlKF0[H5V51
+Indz=col6L>dGfW44DA_je2
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z4 w1617751359
-8C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/Butterfly.v
-FC:/Users/Jeff/Documents/GitHub/FFT/R22SDF/Butterfly.v
+Z4 w1617900461
+8/home/jeff/Documents/GitHub/FFT/R22SDF/Butterfly.v
+F/home/jeff/Documents/GitHub/FFT/R22SDF/Butterfly.v
 !i122 5
 Z5 L0 4 29
 Z6 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z7 !s108 1617760802.000000
-!s107 C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/Butterfly.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Jeff/Documents/GitHub/FFT/R22SDF|C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/Butterfly.v|
+Z7 !s108 1619526220.000000
+!s107 /home/jeff/Documents/GitHub/FFT/R22SDF/Butterfly.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/jeff/Documents/GitHub/FFT/R22SDF|/home/jeff/Documents/GitHub/FFT/R22SDF/Butterfly.v|
 !i113 1
 Z8 o-vlog01compat -work work
-Z9 !s92 -vlog01compat -work work +incdir+C:/Users/Jeff/Documents/GitHub/FFT/R22SDF
+Z9 !s92 -vlog01compat -work work +incdir+/home/jeff/Documents/GitHub/FFT/R22SDF
 Z10 tCvgOpt 0
 n@butterfly
 vDelayBuffer
@@ -39,12 +39,12 @@ R1
 !i10b 1
 !s100 _gZ`L@Y_[IYVb_4>B44Dk1
 R2
-IPhAXT;^QB1fnRAMW<bAY;2
+IM@jV`aTchdXiMSKV30ZS82
 R3
 R0
 R4
-8C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/DelayBuffer.v
-FC:/Users/Jeff/Documents/GitHub/FFT/R22SDF/DelayBuffer.v
+8/home/jeff/Documents/GitHub/FFT/R22SDF/DelayBuffer.v
+F/home/jeff/Documents/GitHub/FFT/R22SDF/DelayBuffer.v
 !i122 4
 R5
 R6
@@ -52,33 +52,33 @@ r1
 !s85 0
 31
 R7
-!s107 C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/DelayBuffer.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Jeff/Documents/GitHub/FFT/R22SDF|C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/DelayBuffer.v|
+!s107 /home/jeff/Documents/GitHub/FFT/R22SDF/DelayBuffer.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/jeff/Documents/GitHub/FFT/R22SDF|/home/jeff/Documents/GitHub/FFT/R22SDF/DelayBuffer.v|
 !i113 1
 R8
 R9
 R10
 n@delay@buffer
 vFFT64
-!s110 1617760801
+!s110 1619526219
 !i10b 1
-!s100 Q102;S4>cCgT:DGSX@BRR0
+!s100 c5=eN@S]4ogEcHCFbTEU13
 R2
-I]k72:gS7f5_j;ZTAc^@`Q3
+I8T2^DL;S4L<1V4g`^5GaN3
 R3
 R0
-w1617754838
-8C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/FFT64.v
-FC:/Users/Jeff/Documents/GitHub/FFT/R22SDF/FFT64.v
+R4
+8/home/jeff/Documents/GitHub/FFT/R22SDF/FFT64.v
+F/home/jeff/Documents/GitHub/FFT/R22SDF/FFT64.v
 !i122 0
-L0 4 59
+L0 4 57
 R6
 r1
 !s85 0
 31
-Z11 !s108 1617760801.000000
-!s107 C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/FFT64.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Jeff/Documents/GitHub/FFT/R22SDF|C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/FFT64.v|
+Z11 !s108 1619526219.000000
+!s107 /home/jeff/Documents/GitHub/FFT/R22SDF/FFT64.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/jeff/Documents/GitHub/FFT/R22SDF|/home/jeff/Documents/GitHub/FFT/R22SDF/FFT64.v|
 !i113 1
 R8
 R9
@@ -89,12 +89,12 @@ R1
 !i10b 1
 !s100 0R?lW[z@TZO1j7GeLBf:c0
 R2
-I@PcN[URMQAll`ze_HhoEz0
+IRffZEzG81Eoe=f:W9d`1N1
 R3
 R0
 R4
-8C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/Multiply.v
-FC:/Users/Jeff/Documents/GitHub/FFT/R22SDF/Multiply.v
+8/home/jeff/Documents/GitHub/FFT/R22SDF/Multiply.v
+F/home/jeff/Documents/GitHub/FFT/R22SDF/Multiply.v
 !i122 3
 L0 4 32
 R6
@@ -102,8 +102,8 @@ r1
 !s85 0
 31
 R7
-!s107 C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/Multiply.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Jeff/Documents/GitHub/FFT/R22SDF|C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/Multiply.v|
+!s107 /home/jeff/Documents/GitHub/FFT/R22SDF/Multiply.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/jeff/Documents/GitHub/FFT/R22SDF|/home/jeff/Documents/GitHub/FFT/R22SDF/Multiply.v|
 !i113 1
 R8
 R9
@@ -114,12 +114,12 @@ R1
 !i10b 1
 !s100 [c]A0JM<bSobO[TghoBi@0
 R2
-IcJ75klgiBYPd53McbmB=?2
+I5K8bC2Cc3A_i[i5NjOmRR2
 R3
 R0
 R4
-8C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v
-FC:/Users/Jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v
+8/home/jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v
+F/home/jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v
 !i122 2
 L0 4 274
 R6
@@ -127,8 +127,8 @@ r1
 !s85 0
 31
 R7
-!s107 C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Jeff/Documents/GitHub/FFT/R22SDF|C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v|
+!s107 /home/jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/jeff/Documents/GitHub/FFT/R22SDF|/home/jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v|
 !i113 1
 R8
 R9
@@ -137,23 +137,23 @@ n@sdf@unit
 vTB64
 R1
 !i10b 1
-!s100 _06ckgP27ofKS33;`[BP^0
+!s100 BdF=OU`W@D^F<23WCE@jZ3
 R2
-I`Lc6HUMfD64K;g0lZOVlU0
+IEaT]P[K68_o_O6TFTJ^Yc2
 R3
 R0
-w1617760781
-8C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/TB64.v
-FC:/Users/Jeff/Documents/GitHub/FFT/R22SDF/TB64.v
+R4
+8/home/jeff/Documents/GitHub/FFT/R22SDF/TB64.v
+F/home/jeff/Documents/GitHub/FFT/R22SDF/TB64.v
 !i122 6
-L0 5 117
+L0 7 120
 R6
 r1
 !s85 0
 31
 R7
-!s107 C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/TB64.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Jeff/Documents/GitHub/FFT/R22SDF|C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/TB64.v|
+!s107 /home/jeff/Documents/GitHub/FFT/R22SDF/TB64.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/jeff/Documents/GitHub/FFT/R22SDF|/home/jeff/Documents/GitHub/FFT/R22SDF/TB64.v|
 !i113 1
 R8
 R9
@@ -164,12 +164,12 @@ R1
 !i10b 1
 !s100 8@]Q;20P<QfRzYSTGgT=82
 R2
-IjCz8:0WJK^SK1>7DQjW>02
+IhgojCH6Bg>F8Z01f0J_EZ2
 R3
 R0
 R4
-8C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/Twiddle64.v
-FC:/Users/Jeff/Documents/GitHub/FFT/R22SDF/Twiddle64.v
+8/home/jeff/Documents/GitHub/FFT/R22SDF/Twiddle64.v
+F/home/jeff/Documents/GitHub/FFT/R22SDF/Twiddle64.v
 !i122 1
 L0 4 101
 R6
@@ -177,8 +177,8 @@ r1
 !s85 0
 31
 R11
-!s107 C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/Twiddle64.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Jeff/Documents/GitHub/FFT/R22SDF|C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/Twiddle64.v|
+!s107 /home/jeff/Documents/GitHub/FFT/R22SDF/Twiddle64.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/jeff/Documents/GitHub/FFT/R22SDF|/home/jeff/Documents/GitHub/FFT/R22SDF/Twiddle64.v|
 !i113 1
 R8
 R9
