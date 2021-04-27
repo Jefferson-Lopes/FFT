@@ -8,18 +8,20 @@ module TB64;
 
 	reg 			clock;
 	reg 	 		reset;
-	reg 	 		di_en;
+	reg 	 		di_en;	//enable input data
 	reg  [15:0]	di_re;
 	reg  [15:0]	di_im;
+	reg  [15:0]	tx_re;	//real data from .txt file
+	reg  [15:0]	tx_im;
 	wire	 		do_en;
 	wire [15:0]	do_re;
 	wire [15:0]	do_im;
 	
-	reg  [15:0]	omem[0:127];
-
+	integer  input_file;
+	integer output_file;
 
 	//----------------------------------------------------------------------
-	//	Clock and Reset
+	//	Initial configs
 	//----------------------------------------------------------------------
 	always begin
 		clock = 0; #10;
@@ -32,36 +34,47 @@ module TB64;
 		reset = 0;
 	end
 
-	
-	//----------------------------------------------------------------------
-	//	Functional Blocks
-	//----------------------------------------------------------------------
-
-	//	Data enable
 	initial begin
 		di_en = 0; #170;
 		di_en = 1;
 	end
 	
-	// Input data
+	
+	//----------------------------------------------------------------------
+	//	Read and Write
+	//----------------------------------------------------------------------
 	initial begin
-		di_re <= 16'hF;
-		di_im <= 16'h0;
+		input_file  = $fopen( "input.txt", "r");
+		output_file = $fopen("output.txt", "w");
+		
+		if (input_file && output_file) 
+			$display("Files were opened successfully");
+		else begin
+			$display("Files were NOT opened successfully");
+			#10; $stop;
+		end
 	end
 	
-	//	Output Data Capture
-	initial begin : OCAP
-		integer 	n;
-		forever begin
-			n = 0;
-			while (do_en !== 1) 
-				@(negedge clock);
-			while ((do_en == 1) && (n < 64)) begin
-				omem[2*n  ] = do_re;
-				omem[2*n+1] = do_im;
-				n = n + 1;
-				@(negedge clock);
+	//Read
+	always @ (posedge clock) begin
+		if (di_en) begin
+			$fscanf(input_file, "%d\n", tx_re);
+			$fscanf(input_file, "%d\n", tx_im);
+			
+			if ($feof(input_file))
+				di_en = 1'b0;
+			else begin
+				di_re = tx_re;
+				di_im = tx_im;
 			end
+		end
+	end
+	
+	//write
+	always @ (posedge clock) begin
+		if (do_en) begin
+			$fdisplay(output_file, "%0d", do_re);
+			$fdisplay(output_file, "%0d", do_im);
 		end
 	end
 
@@ -69,43 +82,12 @@ module TB64;
 	//----------------------------------------------------------------------
 	//	Ending condition
 	//----------------------------------------------------------------------
-	initial begin 
-		#3000;
-		$stop;
-	end
-
-	
-	//----------------------------------------------------------------------
-	//	Tasks
-	//----------------------------------------------------------------------
-	task SaveOutputData;
-		input[80*8:1]	filename;
-		integer 		fp, n, m;
-	begin
-		fp = $fopen(filename);
-		m = 0;
-		for (n = 0; n < 64; n = n + 1) begin
-			m[5] = n[0];
-			m[4] = n[1];
-			m[3] = n[2];
-			m[2] = n[3];
-			m[1] = n[4];
-			m[0] = n[5];
-			$fdisplay(fp, "%h  %h  // %d", omem[2*m], omem[2*m+1], n[5:0]);
+	always @ (negedge do_en) begin
+		if (!reset) begin
+			$fclose( input_file);
+			$fclose(output_file);
+			#10; $stop;
 		end
-		$fclose(fp);
-	end
-	endtask
-	
-	
-	//----------------------------------------------------------------------
-	//	Data Logger
-	//----------------------------------------------------------------------
-	initial begin : DATALOGGER
-		wait (do_en == 1);
-		repeat(64) @(posedge clock);
-		SaveOutputData("output1.txt");
-		@(negedge clock);
 	end
 
 

@@ -11,79 +11,79 @@
 # 
 # vlog -vlog01compat -work work +incdir+/home/jeff/Documents/GitHub/FFT/R22SDF {/home/jeff/Documents/GitHub/FFT/R22SDF/FFT64.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:23:39 on Apr 27,2021
+# Start time: 16:07:29 on Apr 27,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/jeff/Documents/GitHub/FFT/R22SDF" /home/jeff/Documents/GitHub/FFT/R22SDF/FFT64.v 
 # -- Compiling module FFT64
 # 
 # Top level modules:
 # 	FFT64
-# End time: 09:23:39 on Apr 27,2021, Elapsed time: 0:00:00
+# End time: 16:07:29 on Apr 27,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/jeff/Documents/GitHub/FFT/R22SDF {/home/jeff/Documents/GitHub/FFT/R22SDF/Twiddle64.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:23:39 on Apr 27,2021
+# Start time: 16:07:29 on Apr 27,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/jeff/Documents/GitHub/FFT/R22SDF" /home/jeff/Documents/GitHub/FFT/R22SDF/Twiddle64.v 
 # -- Compiling module Twiddle
 # 
 # Top level modules:
 # 	Twiddle
-# End time: 09:23:40 on Apr 27,2021, Elapsed time: 0:00:01
+# End time: 16:07:29 on Apr 27,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/jeff/Documents/GitHub/FFT/R22SDF {/home/jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:23:40 on Apr 27,2021
+# Start time: 16:07:29 on Apr 27,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/jeff/Documents/GitHub/FFT/R22SDF" /home/jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v 
 # -- Compiling module SdfUnit
 # 
 # Top level modules:
 # 	SdfUnit
-# End time: 09:23:40 on Apr 27,2021, Elapsed time: 0:00:00
+# End time: 16:07:29 on Apr 27,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/jeff/Documents/GitHub/FFT/R22SDF {/home/jeff/Documents/GitHub/FFT/R22SDF/Multiply.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:23:40 on Apr 27,2021
+# Start time: 16:07:29 on Apr 27,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/jeff/Documents/GitHub/FFT/R22SDF" /home/jeff/Documents/GitHub/FFT/R22SDF/Multiply.v 
 # -- Compiling module Multiply
 # 
 # Top level modules:
 # 	Multiply
-# End time: 09:23:40 on Apr 27,2021, Elapsed time: 0:00:00
+# End time: 16:07:29 on Apr 27,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/jeff/Documents/GitHub/FFT/R22SDF {/home/jeff/Documents/GitHub/FFT/R22SDF/DelayBuffer.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:23:40 on Apr 27,2021
+# Start time: 16:07:29 on Apr 27,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/jeff/Documents/GitHub/FFT/R22SDF" /home/jeff/Documents/GitHub/FFT/R22SDF/DelayBuffer.v 
 # -- Compiling module DelayBuffer
 # 
 # Top level modules:
 # 	DelayBuffer
-# End time: 09:23:40 on Apr 27,2021, Elapsed time: 0:00:00
+# End time: 16:07:30 on Apr 27,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/jeff/Documents/GitHub/FFT/R22SDF {/home/jeff/Documents/GitHub/FFT/R22SDF/Butterfly.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:23:40 on Apr 27,2021
+# Start time: 16:07:30 on Apr 27,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/jeff/Documents/GitHub/FFT/R22SDF" /home/jeff/Documents/GitHub/FFT/R22SDF/Butterfly.v 
 # -- Compiling module Butterfly
 # 
 # Top level modules:
 # 	Butterfly
-# End time: 09:23:40 on Apr 27,2021, Elapsed time: 0:00:00
+# End time: 16:07:30 on Apr 27,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -vlog01compat -work work +incdir+/home/jeff/Documents/GitHub/FFT/R22SDF {/home/jeff/Documents/GitHub/FFT/R22SDF/TB64.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:23:40 on Apr 27,2021
+# Start time: 16:07:30 on Apr 27,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/jeff/Documents/GitHub/FFT/R22SDF" /home/jeff/Documents/GitHub/FFT/R22SDF/TB64.v 
 # -- Compiling module TB64
 # 
 # Top level modules:
 # 	TB64
-# End time: 09:23:40 on Apr 27,2021, Elapsed time: 0:00:00
+# End time: 16:07:30 on Apr 27,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  TB64
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" TB64 
-# Start time: 09:23:40 on Apr 27,2021
+# Start time: 16:07:30 on Apr 27,2021
 # Loading work.TB64
 # Loading work.FFT64
 # Loading work.SdfUnit
@@ -91,6 +91,10 @@
 # Loading work.DelayBuffer
 # Loading work.Twiddle
 # Loading work.Multiply
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /TB64 File: /home/jeff/Documents/GitHub/FFT/R22SDF/TB64.v Line: 61
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /TB64 File: /home/jeff/Documents/GitHub/FFT/R22SDF/TB64.v Line: 62
 # 
 # add wave *
 # view structure
@@ -98,10 +102,11 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# ** Note: $stop    : /home/jeff/Documents/GitHub/FFT/R22SDF/TB64.v(74)
-#    Time: 3 us  Iteration: 0  Instance: /TB64
-# Break in Module TB64 at /home/jeff/Documents/GitHub/FFT/R22SDF/TB64.v line 74
+# Files were opened successfully
+# ** Note: $stop    : /home/jeff/Documents/GitHub/FFT/R22SDF/TB64.v(89)
+#    Time: 2860 ns  Iteration: 0  Instance: /TB64
+# Break in Module TB64 at /home/jeff/Documents/GitHub/FFT/R22SDF/TB64.v line 89
 # 
 # stdin: <EOF>
-# End time: 09:46:26 on Apr 27,2021, Elapsed time: 0:22:46
-# Errors: 0, Warnings: 0
+# End time: 16:08:32 on Apr 27,2021, Elapsed time: 0:01:02
+# Errors: 0, Warnings: 2

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FFT
-Tue Apr 06 23:17:06 2021
+Tue Apr 27 16:03:58 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -75,7 +75,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Apr 06 23:17:06 2021       ;
+; Analysis & Synthesis Status     ; Successful - Tue Apr 27 16:03:58 2021       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; FFT                                         ;
 ; Top-level Entity Name           ; FFT64                                       ;
@@ -199,29 +199,29 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                 ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                             ; Library ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------+---------+
-; FFT64.v                          ; yes             ; User Verilog HDL File        ; C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/FFT64.v                        ;         ;
-; Twiddle64.v                      ; yes             ; User Verilog HDL File        ; C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/Twiddle64.v                    ;         ;
-; SdfUnit.v                        ; yes             ; User Verilog HDL File        ; C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v                      ;         ;
-; Multiply.v                       ; yes             ; User Verilog HDL File        ; C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/Multiply.v                     ;         ;
-; DelayBuffer.v                    ; yes             ; User Verilog HDL File        ; C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/DelayBuffer.v                  ;         ;
-; Butterfly.v                      ; yes             ; User Verilog HDL File        ; C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/Butterfly.v                    ;         ;
-; altshift_taps.tdf                ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altshift_taps.tdf ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.inc      ;         ;
-; lpm_counter.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_counter.inc   ;         ;
-; lpm_compare.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_compare.inc   ;         ;
-; lpm_constant.inc                 ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_constant.inc  ;         ;
-; db/shift_taps_d0v.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/db/shift_taps_d0v.tdf          ;         ;
-; db/altsyncram_pu91.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/db/altsyncram_pu91.tdf         ;         ;
-; db/cntr_djf.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/db/cntr_djf.tdf                ;         ;
-; db/shift_taps_f0v.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/db/shift_taps_f0v.tdf          ;         ;
-; db/altsyncram_ru91.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/db/altsyncram_ru91.tdf         ;         ;
-; db/cntr_ejf.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/db/cntr_ejf.tdf                ;         ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                     ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------+---------+
+; FFT64.v                          ; yes             ; User Verilog HDL File        ; /home/jeff/Documents/GitHub/FFT/R22SDF/FFT64.v                                   ;         ;
+; Twiddle64.v                      ; yes             ; User Verilog HDL File        ; /home/jeff/Documents/GitHub/FFT/R22SDF/Twiddle64.v                               ;         ;
+; SdfUnit.v                        ; yes             ; User Verilog HDL File        ; /home/jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v                                 ;         ;
+; Multiply.v                       ; yes             ; User Verilog HDL File        ; /home/jeff/Documents/GitHub/FFT/R22SDF/Multiply.v                                ;         ;
+; DelayBuffer.v                    ; yes             ; User Verilog HDL File        ; /home/jeff/Documents/GitHub/FFT/R22SDF/DelayBuffer.v                             ;         ;
+; Butterfly.v                      ; yes             ; User Verilog HDL File        ; /home/jeff/Documents/GitHub/FFT/R22SDF/Butterfly.v                               ;         ;
+; altshift_taps.tdf                ; yes             ; Megafunction                 ; /home/jeff/intelFPGA_lite/20.1/quartus/libraries/megafunctions/altshift_taps.tdf ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                 ; /home/jeff/intelFPGA_lite/20.1/quartus/libraries/megafunctions/altdpram.inc      ;         ;
+; lpm_counter.inc                  ; yes             ; Megafunction                 ; /home/jeff/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_counter.inc   ;         ;
+; lpm_compare.inc                  ; yes             ; Megafunction                 ; /home/jeff/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_compare.inc   ;         ;
+; lpm_constant.inc                 ; yes             ; Megafunction                 ; /home/jeff/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_constant.inc  ;         ;
+; db/shift_taps_d0v.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/jeff/Documents/GitHub/FFT/R22SDF/db/shift_taps_d0v.tdf                     ;         ;
+; db/altsyncram_pu91.tdf           ; yes             ; Auto-Generated Megafunction  ; /home/jeff/Documents/GitHub/FFT/R22SDF/db/altsyncram_pu91.tdf                    ;         ;
+; db/cntr_djf.tdf                  ; yes             ; Auto-Generated Megafunction  ; /home/jeff/Documents/GitHub/FFT/R22SDF/db/cntr_djf.tdf                           ;         ;
+; db/shift_taps_f0v.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/jeff/Documents/GitHub/FFT/R22SDF/db/shift_taps_f0v.tdf                     ;         ;
+; db/altsyncram_ru91.tdf           ; yes             ; Auto-Generated Megafunction  ; /home/jeff/Documents/GitHub/FFT/R22SDF/db/altsyncram_ru91.tdf                    ;         ;
+; db/cntr_ejf.tdf                  ; yes             ; Auto-Generated Megafunction  ; /home/jeff/Documents/GitHub/FFT/R22SDF/db/cntr_ejf.tdf                           ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -346,9 +346,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
-; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |FFT64|SdfUnit:SU1|bf1_do_re[10] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |FFT64|SdfUnit:SU3|bf1_do_re[1]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |FFT64|SdfUnit:SU2|bf1_do_re[15] ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |FFT64|SdfUnit:SU1|bf1_do_re[15] ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |FFT64|SdfUnit:SU3|bf1_do_re[13] ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |FFT64|SdfUnit:SU2|bf1_do_re[9]  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
 
 
@@ -713,53 +713,53 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Apr 06 23:16:48 2021
+    Info: Processing started: Tue Apr 27 16:03:43 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FFT -c FFT
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file tb64.v
-    Info (12023): Found entity 1: TB64 File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/TB64.v Line: 7
-Info (12021): Found 1 design units, including 1 entities, in source file fft64.v
-    Info (12023): Found entity 1: FFT64 File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/FFT64.v Line: 4
-Info (12021): Found 1 design units, including 1 entities, in source file twiddle64.v
-    Info (12023): Found entity 1: Twiddle File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/Twiddle64.v Line: 4
-Info (12021): Found 1 design units, including 1 entities, in source file sdfunit.v
-    Info (12023): Found entity 1: SdfUnit File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v Line: 4
-Info (12021): Found 1 design units, including 1 entities, in source file multiply.v
-    Info (12023): Found entity 1: Multiply File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/Multiply.v Line: 4
-Info (12021): Found 1 design units, including 1 entities, in source file delaybuffer.v
-    Info (12023): Found entity 1: DelayBuffer File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/DelayBuffer.v Line: 4
-Info (12021): Found 1 design units, including 1 entities, in source file butterfly.v
-    Info (12023): Found entity 1: Butterfly File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/Butterfly.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file TB64.v
+    Info (12023): Found entity 1: TB64 File: /home/jeff/Documents/GitHub/FFT/R22SDF/TB64.v Line: 7
+Info (12021): Found 1 design units, including 1 entities, in source file FFT64.v
+    Info (12023): Found entity 1: FFT64 File: /home/jeff/Documents/GitHub/FFT/R22SDF/FFT64.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file Twiddle64.v
+    Info (12023): Found entity 1: Twiddle File: /home/jeff/Documents/GitHub/FFT/R22SDF/Twiddle64.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file SdfUnit.v
+    Info (12023): Found entity 1: SdfUnit File: /home/jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file Multiply.v
+    Info (12023): Found entity 1: Multiply File: /home/jeff/Documents/GitHub/FFT/R22SDF/Multiply.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file DelayBuffer.v
+    Info (12023): Found entity 1: DelayBuffer File: /home/jeff/Documents/GitHub/FFT/R22SDF/DelayBuffer.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file Butterfly.v
+    Info (12023): Found entity 1: Butterfly File: /home/jeff/Documents/GitHub/FFT/R22SDF/Butterfly.v Line: 4
 Info (12127): Elaborating entity "FFT64" for the top level hierarchy
-Info (12128): Elaborating entity "SdfUnit" for hierarchy "SdfUnit:SU1" File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/FFT64.v Line: 36
-Warning (10230): Verilog HDL assignment warning at SdfUnit.v(232): truncated value with size 6 to match size of target (4) File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v Line: 232
-Info (12128): Elaborating entity "Butterfly" for hierarchy "SdfUnit:SU1|Butterfly:BF1" File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v Line: 127
-Warning (10230): Verilog HDL assignment warning at Butterfly.v(27): truncated value with size 32 to match size of target (16) File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/Butterfly.v Line: 27
-Warning (10230): Verilog HDL assignment warning at Butterfly.v(28): truncated value with size 32 to match size of target (16) File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/Butterfly.v Line: 28
-Warning (10230): Verilog HDL assignment warning at Butterfly.v(29): truncated value with size 32 to match size of target (16) File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/Butterfly.v Line: 29
-Warning (10230): Verilog HDL assignment warning at Butterfly.v(30): truncated value with size 32 to match size of target (16) File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/Butterfly.v Line: 30
-Info (12128): Elaborating entity "DelayBuffer" for hierarchy "SdfUnit:SU1|DelayBuffer:DB1" File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v Line: 135
-Info (12128): Elaborating entity "Butterfly" for hierarchy "SdfUnit:SU1|Butterfly:BF2" File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v Line: 184
-Warning (10230): Verilog HDL assignment warning at Butterfly.v(27): truncated value with size 32 to match size of target (16) File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/Butterfly.v Line: 27
-Warning (10230): Verilog HDL assignment warning at Butterfly.v(28): truncated value with size 32 to match size of target (16) File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/Butterfly.v Line: 28
-Warning (10230): Verilog HDL assignment warning at Butterfly.v(29): truncated value with size 32 to match size of target (16) File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/Butterfly.v Line: 29
-Warning (10230): Verilog HDL assignment warning at Butterfly.v(30): truncated value with size 32 to match size of target (16) File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/Butterfly.v Line: 30
-Info (12128): Elaborating entity "DelayBuffer" for hierarchy "SdfUnit:SU1|DelayBuffer:DB2" File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v Line: 192
-Info (12128): Elaborating entity "Twiddle" for hierarchy "SdfUnit:SU1|Twiddle:TW" File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v Line: 240
-Info (12128): Elaborating entity "Multiply" for hierarchy "SdfUnit:SU1|Multiply:MU" File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v Line: 257
-Warning (10230): Verilog HDL assignment warning at Multiply.v(25): truncated value with size 32 to match size of target (16) File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/Multiply.v Line: 25
-Warning (10230): Verilog HDL assignment warning at Multiply.v(26): truncated value with size 32 to match size of target (16) File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/Multiply.v Line: 26
-Warning (10230): Verilog HDL assignment warning at Multiply.v(27): truncated value with size 32 to match size of target (16) File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/Multiply.v Line: 27
-Warning (10230): Verilog HDL assignment warning at Multiply.v(28): truncated value with size 32 to match size of target (16) File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/Multiply.v Line: 28
-Info (12128): Elaborating entity "SdfUnit" for hierarchy "SdfUnit:SU2" File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/FFT64.v Line: 47
-Warning (10230): Verilog HDL assignment warning at SdfUnit.v(232): truncated value with size 6 to match size of target (4) File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v Line: 232
-Info (12128): Elaborating entity "DelayBuffer" for hierarchy "SdfUnit:SU2|DelayBuffer:DB1" File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v Line: 135
-Info (12128): Elaborating entity "DelayBuffer" for hierarchy "SdfUnit:SU2|DelayBuffer:DB2" File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v Line: 192
-Info (12128): Elaborating entity "SdfUnit" for hierarchy "SdfUnit:SU3" File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/FFT64.v Line: 58
-Warning (10230): Verilog HDL assignment warning at SdfUnit.v(232): truncated value with size 6 to match size of target (4) File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v Line: 232
-Info (12128): Elaborating entity "DelayBuffer" for hierarchy "SdfUnit:SU3|DelayBuffer:DB1" File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v Line: 135
-Info (12128): Elaborating entity "DelayBuffer" for hierarchy "SdfUnit:SU3|DelayBuffer:DB2" File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v Line: 192
+Info (12128): Elaborating entity "SdfUnit" for hierarchy "SdfUnit:SU1" File: /home/jeff/Documents/GitHub/FFT/R22SDF/FFT64.v Line: 36
+Warning (10230): Verilog HDL assignment warning at SdfUnit.v(232): truncated value with size 6 to match size of target (4) File: /home/jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v Line: 232
+Info (12128): Elaborating entity "Butterfly" for hierarchy "SdfUnit:SU1|Butterfly:BF1" File: /home/jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v Line: 127
+Warning (10230): Verilog HDL assignment warning at Butterfly.v(27): truncated value with size 32 to match size of target (16) File: /home/jeff/Documents/GitHub/FFT/R22SDF/Butterfly.v Line: 27
+Warning (10230): Verilog HDL assignment warning at Butterfly.v(28): truncated value with size 32 to match size of target (16) File: /home/jeff/Documents/GitHub/FFT/R22SDF/Butterfly.v Line: 28
+Warning (10230): Verilog HDL assignment warning at Butterfly.v(29): truncated value with size 32 to match size of target (16) File: /home/jeff/Documents/GitHub/FFT/R22SDF/Butterfly.v Line: 29
+Warning (10230): Verilog HDL assignment warning at Butterfly.v(30): truncated value with size 32 to match size of target (16) File: /home/jeff/Documents/GitHub/FFT/R22SDF/Butterfly.v Line: 30
+Info (12128): Elaborating entity "DelayBuffer" for hierarchy "SdfUnit:SU1|DelayBuffer:DB1" File: /home/jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v Line: 135
+Info (12128): Elaborating entity "Butterfly" for hierarchy "SdfUnit:SU1|Butterfly:BF2" File: /home/jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v Line: 184
+Warning (10230): Verilog HDL assignment warning at Butterfly.v(27): truncated value with size 32 to match size of target (16) File: /home/jeff/Documents/GitHub/FFT/R22SDF/Butterfly.v Line: 27
+Warning (10230): Verilog HDL assignment warning at Butterfly.v(28): truncated value with size 32 to match size of target (16) File: /home/jeff/Documents/GitHub/FFT/R22SDF/Butterfly.v Line: 28
+Warning (10230): Verilog HDL assignment warning at Butterfly.v(29): truncated value with size 32 to match size of target (16) File: /home/jeff/Documents/GitHub/FFT/R22SDF/Butterfly.v Line: 29
+Warning (10230): Verilog HDL assignment warning at Butterfly.v(30): truncated value with size 32 to match size of target (16) File: /home/jeff/Documents/GitHub/FFT/R22SDF/Butterfly.v Line: 30
+Info (12128): Elaborating entity "DelayBuffer" for hierarchy "SdfUnit:SU1|DelayBuffer:DB2" File: /home/jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v Line: 192
+Info (12128): Elaborating entity "Twiddle" for hierarchy "SdfUnit:SU1|Twiddle:TW" File: /home/jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v Line: 240
+Info (12128): Elaborating entity "Multiply" for hierarchy "SdfUnit:SU1|Multiply:MU" File: /home/jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v Line: 257
+Warning (10230): Verilog HDL assignment warning at Multiply.v(25): truncated value with size 32 to match size of target (16) File: /home/jeff/Documents/GitHub/FFT/R22SDF/Multiply.v Line: 25
+Warning (10230): Verilog HDL assignment warning at Multiply.v(26): truncated value with size 32 to match size of target (16) File: /home/jeff/Documents/GitHub/FFT/R22SDF/Multiply.v Line: 26
+Warning (10230): Verilog HDL assignment warning at Multiply.v(27): truncated value with size 32 to match size of target (16) File: /home/jeff/Documents/GitHub/FFT/R22SDF/Multiply.v Line: 27
+Warning (10230): Verilog HDL assignment warning at Multiply.v(28): truncated value with size 32 to match size of target (16) File: /home/jeff/Documents/GitHub/FFT/R22SDF/Multiply.v Line: 28
+Info (12128): Elaborating entity "SdfUnit" for hierarchy "SdfUnit:SU2" File: /home/jeff/Documents/GitHub/FFT/R22SDF/FFT64.v Line: 47
+Warning (10230): Verilog HDL assignment warning at SdfUnit.v(232): truncated value with size 6 to match size of target (4) File: /home/jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v Line: 232
+Info (12128): Elaborating entity "DelayBuffer" for hierarchy "SdfUnit:SU2|DelayBuffer:DB1" File: /home/jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v Line: 135
+Info (12128): Elaborating entity "DelayBuffer" for hierarchy "SdfUnit:SU2|DelayBuffer:DB2" File: /home/jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v Line: 192
+Info (12128): Elaborating entity "SdfUnit" for hierarchy "SdfUnit:SU3" File: /home/jeff/Documents/GitHub/FFT/R22SDF/FFT64.v Line: 58
+Warning (10230): Verilog HDL assignment warning at SdfUnit.v(232): truncated value with size 6 to match size of target (4) File: /home/jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v Line: 232
+Info (12128): Elaborating entity "DelayBuffer" for hierarchy "SdfUnit:SU3|DelayBuffer:DB1" File: /home/jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v Line: 135
+Info (12128): Elaborating entity "DelayBuffer" for hierarchy "SdfUnit:SU3|DelayBuffer:DB2" File: /home/jeff/Documents/GitHub/FFT/R22SDF/SdfUnit.v Line: 192
 Info (286030): Timing-Driven Synthesis is running
 Info (19000): Inferred 2 megafunctions from design logic
     Info (276034): Inferred altshift_taps megafunction from the following design logic: "SdfUnit:SU1|DelayBuffer:DB1|buf_im_rtl_0"
@@ -779,11 +779,11 @@ Info (12133): Instantiated megafunction "SdfUnit:SU1|DelayBuffer:DB1|altshift_ta
     Info (12134): Parameter "WIDTH" = "32"
     Info (12134): Parameter "POWER_UP_STATE" = "DONT_CARE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/shift_taps_d0v.tdf
-    Info (12023): Found entity 1: shift_taps_d0v File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/db/shift_taps_d0v.tdf Line: 27
+    Info (12023): Found entity 1: shift_taps_d0v File: /home/jeff/Documents/GitHub/FFT/R22SDF/db/shift_taps_d0v.tdf Line: 27
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_pu91.tdf
-    Info (12023): Found entity 1: altsyncram_pu91 File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/db/altsyncram_pu91.tdf Line: 28
+    Info (12023): Found entity 1: altsyncram_pu91 File: /home/jeff/Documents/GitHub/FFT/R22SDF/db/altsyncram_pu91.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_djf.tdf
-    Info (12023): Found entity 1: cntr_djf File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/db/cntr_djf.tdf Line: 26
+    Info (12023): Found entity 1: cntr_djf File: /home/jeff/Documents/GitHub/FFT/R22SDF/db/cntr_djf.tdf Line: 26
 Info (12130): Elaborated megafunction instantiation "SdfUnit:SU1|DelayBuffer:DB2|altshift_taps:buf_im_rtl_0"
 Info (12133): Instantiated megafunction "SdfUnit:SU1|DelayBuffer:DB2|altshift_taps:buf_im_rtl_0" with the following parameter:
     Info (12134): Parameter "NUMBER_OF_TAPS" = "1"
@@ -791,11 +791,11 @@ Info (12133): Instantiated megafunction "SdfUnit:SU1|DelayBuffer:DB2|altshift_ta
     Info (12134): Parameter "WIDTH" = "32"
     Info (12134): Parameter "POWER_UP_STATE" = "DONT_CARE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/shift_taps_f0v.tdf
-    Info (12023): Found entity 1: shift_taps_f0v File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/db/shift_taps_f0v.tdf Line: 27
+    Info (12023): Found entity 1: shift_taps_f0v File: /home/jeff/Documents/GitHub/FFT/R22SDF/db/shift_taps_f0v.tdf Line: 27
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ru91.tdf
-    Info (12023): Found entity 1: altsyncram_ru91 File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/db/altsyncram_ru91.tdf Line: 28
+    Info (12023): Found entity 1: altsyncram_ru91 File: /home/jeff/Documents/GitHub/FFT/R22SDF/db/altsyncram_ru91.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_ejf.tdf
-    Info (12023): Found entity 1: cntr_ejf File: C:/Users/Jeff/Documents/GitHub/FFT/R22SDF/db/cntr_ejf.tdf Line: 26
+    Info (12023): Found entity 1: cntr_ejf File: /home/jeff/Documents/GitHub/FFT/R22SDF/db/cntr_ejf.tdf Line: 26
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Info (21057): Implemented 1445 device resources after synthesis - the final resource count might be different
@@ -805,9 +805,9 @@ Info (21057): Implemented 1445 device resources after synthesis - the final reso
     Info (21064): Implemented 64 RAM segments
     Info (21062): Implemented 10 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 16 warnings
-    Info: Peak virtual memory: 4831 megabytes
-    Info: Processing ended: Tue Apr 06 23:17:06 2021
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:36
+    Info: Peak virtual memory: 481 megabytes
+    Info: Processing ended: Tue Apr 27 16:03:58 2021
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:26
 
 
