@@ -29,13 +29,12 @@ module TB64;
 	end
 
 	initial begin
-		reset = 0; #20;
 		reset = 1; #100;
 		reset = 0;
 	end
 
 	initial begin
-		di_en = 0; #170;
+		di_en = 0; #100;
 		di_en = 1;
 	end
 	
@@ -56,8 +55,8 @@ module TB64;
 	end
 	
 	//Read
-	always @ (posedge clock) begin
-		if (di_en) begin
+	always @ (negedge clock) begin
+		if (di_en && !reset) begin
 			$fscanf(input_file, "%d\n", tx_re);
 			$fscanf(input_file, "%d\n", tx_im);
 			
@@ -73,8 +72,8 @@ module TB64;
 	//write
 	always @ (posedge clock) begin
 		if (do_en) begin
-			$fdisplay(output_file, "%0d", do_re);
-			$fdisplay(output_file, "%0d", do_im);
+			$fdisplay(output_file, "%b", do_re);
+			$fdisplay(output_file, "%b", do_im);
 		end
 	end
 
