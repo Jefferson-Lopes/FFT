@@ -1,14 +1,17 @@
+from bin2decimal import bin2decimal
+import math
 import numpy as np
 import matplotlib.pyplot as plt
 
 #############################
 ## generate a signal input ##
 #############################
-FREQ = 5
+#take off the off set
+FREQ = 2*math.pi*0.125
 AMP  = 512
 TIME = np.arange(0, 8, .125)       #64 points
-wave = AMP/2*np.sin(FREQ * TIME)   #max amplitude: 512 
-wave = wave + AMP/2                #add offset 
+wave = AMP/2*np.cos(FREQ * TIME)   #max amplitude: 512 
+#wave = wave + AMP/2                #add offset 
 
 di_re = wave.astype(int)
 di_im = np.zeros(64).astype(int)
@@ -37,7 +40,6 @@ file_wr.close()
 file_wr_clone.close()
 
 
-
 ###########################################
 ## process the data in verilog testbench ##
 ###########################################
@@ -59,17 +61,17 @@ fft_np = np.fft.fft(comp)
 ## load the result ##
 #####################
 #for testing
-file_rd = open('python encapsulation/output_clone.txt', 'r')
-#file_rd = open('R22SDF/simulation/modelsim/output.txt', 'r')
+#file_rd = open('python encapsulation/output_clone.txt', 'r')
+file_rd = open('R22SDF/simulation/modelsim/output.txt', 'r')
 data_read = file_rd.read()
 file_rd.close()
-data_read = data_read.split("\n")
+data_read = data_read.split('\n')
 data_read.pop() #delete the last element: '\n'
-data_real = np.array(data_read[0::2])
-data_imag = np.array(data_read[1::2])
+data_real = np.array([bin2decimal(i) for i in data_read[0::2]])
+data_imag = np.array([bin2decimal(i) for i in data_read[1::2]])
 
-do_re = data_real.astype(int)
-do_im = data_imag.astype(int)
+do_re = data_real
+do_im = data_imag
 
 fft_fpga = do_re + do_im*1j
 
@@ -89,6 +91,8 @@ plt.savefig('python encapsulation/input.png', bbox_inches='tight')
 plt.figure(2)
 plt.title('NumPy FFT')
 plt.plot(TIME, np.abs(fft_np), label='ABS')
+#plt.plot(TIME, fft_np.real,   label='Real')
+#plt.plot(TIME, fft_np.imag,   label='Imag')
 plt.legend()
 plt.grid()
 plt.savefig('python encapsulation/fft_np.png', bbox_inches='tight')
@@ -96,6 +100,8 @@ plt.savefig('python encapsulation/fft_np.png', bbox_inches='tight')
 plt.figure(3)
 plt.title('FPGA FFT')
 plt.plot(TIME, np.abs(fft_fpga), label='ABS')
+#plt.plot(TIME, fft_fpga.real,   label='Real')
+#plt.plot(TIME, fft_fpga.imag,   label='Imag')
 plt.legend()
 plt.grid()
 plt.savefig('python encapsulation/fft_fpga.png', bbox_inches='tight')
