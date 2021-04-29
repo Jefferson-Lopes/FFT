@@ -4,13 +4,13 @@ FFT algorithm implementation on an FPGA for processing  `2^N`  points from the B
 
 ## FFT 64 points
 
-The picture below shows the comparison between the NumPy FFT and the FPGA FFT, given the same input:
+#### The picture below shows the comparison between the NumPy FFT and the FPGA FFT, given the same input:
 
-![FFT result](FFT_result.png)
+![FFT result](resources/FFT_result.png)
 
-The picture below shows the FFT simulation on ModelSim-Altera:
+#### The picture below shows the FFT simulation on ModelSim-Altera:
 
-![ModelSim](ModelSim.png)
+![ModelSim](resources/ModelSim.png)
 
 ## Reference
 

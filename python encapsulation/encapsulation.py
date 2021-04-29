@@ -22,7 +22,7 @@ di_im = waves(freq=[1], amp=0)
 dump_path = 'R22SDF/simulation/modelsim/input.txt'
 dump_file(dump_path, di_re, di_im)
 
-clone_dump_path = 'python encapsulation/input_clone.txt'
+clone_dump_path = 'resources/input_clone.txt'
 dump_file(clone_dump_path, di_re, di_im)
 
 
@@ -55,7 +55,7 @@ fft_np = np.fft.fft(comp)
 load_path = 'R22SDF/simulation/modelsim/output.txt'
 do_re, do_im = load_file(load_path)
 ##for testing
-# clone_load_path = 'python encapsulation/output_clone.txt'
+# clone_load_path = 'resources/output_clone.txt'
 # do_re, do_im = load_file(clone_load_file)
 
 fft_fpga = do_re + do_im*1j  #numpy complex array
@@ -71,7 +71,7 @@ plt.plot(TIME, di_re, label='Real')
 plt.plot(TIME, di_im, label='Imag')
 plt.legend()
 plt.grid()
-plt.savefig('python encapsulation/input.png', bbox_inches='tight')
+plt.savefig('resources/input.png', bbox_inches='tight')
 
 plt.figure(2)
 plt.title('NumPy FFT')
@@ -80,7 +80,7 @@ plt.plot(TIME, np.abs(fft_np), label='ABS')
 # plt.plot(TIME, fft_np.imag,   label='Imag')
 plt.legend()
 plt.grid()
-plt.savefig('python encapsulation/fft_np.png', bbox_inches='tight')
+plt.savefig('resources/fft_np.png', bbox_inches='tight')
 
 plt.figure(3)
 plt.title('FPGA FFT')
@@ -89,6 +89,6 @@ plt.plot(TIME, np.abs(fft_fpga), label='ABS')
 # plt.plot(TIME, fft_fpga.imag,   label='Imag')
 plt.legend()
 plt.grid()
-plt.savefig('python encapsulation/fft_fpga.png', bbox_inches='tight')
+plt.savefig('resources/fft_fpga.png', bbox_inches='tight')
 
 plt.show()

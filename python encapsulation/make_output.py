@@ -6,7 +6,7 @@ import numpy as np
 
 def make_output():
     ## input data from input_clone ##
-    file1 = open('python encapsulation/input_clone.txt', 'r')
+    file1 = open('resources/input_clone.txt', 'r')
 
     if not file1:
         return 1
@@ -25,7 +25,7 @@ def make_output():
 
     fft = np.fft.fft(comp)
 
-    file2 = open('python encapsulation/output_clone.txt', 'w')
+    file2 = open('resources/output_clone.txt', 'w')
 
     if not file2:
         return 2

@@ -2,4 +2,4 @@
 
 ## Result of recursive FFT and numpy FFT
 
-![plots](plots.png)
+![plots](../resources/sistenix_plots.png)
