@@ -1,95 +1,69 @@
 import numpy as np
-from math import pi
 import matplotlib.pyplot as plt
+from math import pi
+from waves import waves
+from dump_file import dump_file
+from load_file import load_file
+from make_output import make_output
 from bin2decimal import bin2decimal
 from reverse_bits import reverse_bits
 
-#############################
+##############################
 ## generate a signal input ##
-#############################
-FREQ1 = 2*pi*1
-FREQ2 = 2*pi*0.25
-AMP  = 512
-TIME = np.arange(0, 8, .125)       #64 points
-wave = AMP/2*np.cos(FREQ1 * TIME) + AMP/2*np.cos(FREQ2 * TIME)
-
-di_re = wave.astype(int)
-di_im = np.zeros(64).astype(int)
+############################
+TIME = np.arange(0, 8, .125)  #64 points
+di_re = waves(freq=[1, 0.25], amp=512)
+di_im = waves(freq=[1], amp=0)
 
 
-###########################
+############################
 ## dump into a text file ##
-###########################
-#open the files
-file_wr = open('R22SDF/simulation/modelsim/input.txt', 'w')
-#second file for keep track more easily
-file_wr_clone = open('python encapsulation/input_clone.txt', 'w')
+##########################
+dump_path = 'R22SDF/simulation/modelsim/input.txt'
+dump_file(dump_path, di_re, di_im)
 
-#write the waves
-for i in range(64):
-    #real
-    file_wr.write(str(di_re[i]) + '\n')
-    file_wr_clone.write(str(di_re[i]) + '\n')
-
-    #imag
-    file_wr.write(str(di_im[i]) + '\n')
-    file_wr_clone.write(str(di_im[i]) + '\n')
-
-#close both files
-file_wr.close()
-file_wr_clone.close()
+clone_dump_path = 'python encapsulation/input_clone.txt'
+dump_file(clone_dump_path, di_re, di_im)
 
 
-###########################################
+############################################
 ## process the data in verilog testbench ##
-###########################################
-#using make_output for testing
-print('The input file was generated. ')
+##########################################
+
+##for testing
+# if make_output():
+#     print('Problem to open the file')
+# else:
+#     print('File generated successfully!')
+
+print('The input file was generated.')
 print('Please run the Verilog testbench then press enter.')
 input('Press enter. . .')
 
 
-#################################
+##################################
 ## process the data with NumPy ##
-#################################
-comp = di_re + di_im*1j    #convert to complex array
+################################
+comp = di_re + di_im*1j     #numpy complex array
 
-fft_np = np.fft.fft(comp)
+fft_np = np.fft.fft(comp)   
 
 
-#####################
+######################
 ## load the result ##
-#####################
-#for testing
-#file_rd = open('python encapsulation/output_clone.txt', 'r')
-file_rd = open('R22SDF/simulation/modelsim/output.txt', 'r')
-data_read = file_rd.read()
-file_rd.close()
-data_read = data_read.split('\n')
-data_read.pop() #delete the last element: '\n'
-data_real = np.array([bin2decimal(i) for i in data_read[0::2]])
-data_imag = np.array([bin2decimal(i) for i in data_read[1::2]])
+####################
+load_path = 'R22SDF/simulation/modelsim/output.txt'
+do_re, do_im = load_file(load_path)
+##for testing
+# clone_load_path = 'python encapsulation/output_clone.txt'
+# do_re, do_im = load_file(clone_load_file)
+
+fft_fpga = do_re + do_im*1j  #numpy complex array
 
 
-#######################
-## reverse bit order ##
-#######################
-aux_real = np.zeros(len(data_real)).astype(int)
-aux_imag = np.zeros(len(data_imag)).astype(int)
-for i in range(64):
-    index = reverse_bits(i, 6)
-    aux_real[index] = data_real[i]
-    aux_imag[index] = data_imag[i]
-
-do_re = aux_real
-do_im = aux_imag
-
-fft_fpga = do_re + do_im*1j
-
-
-###################################################
-## plot the result and the same thing with NumPy ##
-###################################################
+##############################################
+## plot the result from NumPy and the FPGA ##
+############################################
 print('Plotting...')
 plt.figure(1)
 plt.title('Input wave')
