@@ -1,5 +1,5 @@
 EDA Netlist Writer report for FFT
-Wed Apr 28 11:27:10 2021
+Wed Apr 28 23:04:36 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Wed Apr 28 11:27:10 2021 ;
+; EDA Netlist Writer Status ; Successful - Wed Apr 28 23:04:36 2021 ;
 ; Revision Name             ; FFT                                   ;
 ; Top-level Entity Name     ; FFT64                                 ;
 ; Family                    ; Cyclone V                             ;
@@ -81,14 +81,14 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Apr 28 11:27:08 2021
+    Info: Processing started: Wed Apr 28 23:04:34 2021
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off FFT -c FFT
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file FFT.vo in folder "/home/jeff/Documents/GitHub/FFT/R22SDF/simulation/modelsim/" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 704 megabytes
-    Info: Processing ended: Wed Apr 28 11:27:10 2021
+    Info: Processing ended: Wed Apr 28 23:04:36 2021
     Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Total CPU time (on all processors): 00:00:02
 
 
