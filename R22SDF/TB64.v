@@ -11,8 +11,6 @@ module TB64;
 	reg 	 		di_en;	//enable input data
 	reg  [15:0]	di_re;
 	reg  [15:0]	di_im;
-	reg  [15:0]	tx_re;	//real data from .txt file
-	reg  [15:0]	tx_im;
 	wire	 		do_en;
 	wire [15:0]	do_re;
 	wire [15:0]	do_im;
@@ -57,15 +55,11 @@ module TB64;
 	//Read
 	always @ (negedge clock) begin
 		if (di_en && !reset) begin
-			$fscanf(input_file, "%d\n", tx_re);
-			$fscanf(input_file, "%d\n", tx_im);
+			$fscanf(input_file, "%d\n", di_re);
+			$fscanf(input_file, "%d\n", di_im);
 			
 			if ($feof(input_file))
 				di_en <= 1'b0;
-			else begin
-				di_re <= tx_re;
-				di_im <= tx_im;
-			end
 		end
 	end
 	
