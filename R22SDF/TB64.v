@@ -21,21 +21,21 @@ module TB64;
 	integer output_file;
 
 	//----------------------------------------------------------------------
-	//	Initial configs
+	//	Initial settings
 	//----------------------------------------------------------------------
 	always begin
-		clock = 0; #10;
-		clock = 1; #10;
+		clock <= 0; #10;
+		clock <= 1; #10;
 	end
 
 	initial begin
-		reset = 1; #100;
-		reset = 0;
+		reset <= 1; #100;
+		reset <= 0;
 	end
 
 	initial begin
-		di_en = 0; #100;
-		di_en = 1;
+		di_en <= 0; #100;
+		di_en <= 1;
 	end
 	
 	
@@ -61,10 +61,10 @@ module TB64;
 			$fscanf(input_file, "%d\n", tx_im);
 			
 			if ($feof(input_file))
-				di_en = 1'b0;
+				di_en <= 1'b0;
 			else begin
-				di_re = tx_re;
-				di_im = tx_im;
+				di_re <= tx_re;
+				di_im <= tx_im;
 			end
 		end
 	end
