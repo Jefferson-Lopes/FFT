@@ -1,3 +1,4 @@
+import subprocess
 import numpy as np
 import matplotlib.pyplot as plt
 from math import pi
@@ -8,11 +9,15 @@ from make_output import make_output
 from bin2decimal import bin2decimal
 from reverse_bits import reverse_bits
 
+
 ##############################
 ## generate a signal input ##
 ############################
-TIME = np.arange(0, 8, .125)  #64 points
-di_re = waves(freq=[1, 0.25], amp=512)
+TIME = np.arange(0, 8, .125)  
+
+noise = np.random.normal(0, 25, np.zeros(64).shape).astype(int)
+
+di_re = waves(freq=[0.25], amp=512) + noise
 di_im = waves(freq=[1], amp=0)
 
 
@@ -37,8 +42,9 @@ dump_file(clone_dump_path, di_re, di_im)
 #     print('File generated successfully!')
 
 print('The input file was generated.')
-print('Please run the Verilog testbench then press enter.')
-input('Press enter. . .')
+print('Running the verilog simulation. . .')
+
+subprocess.call(['sh', './run_vsim.sh']) #run the simulation
 
 
 ##################################
@@ -64,7 +70,7 @@ fft_fpga = do_re + do_im*1j  #numpy complex array
 ##############################################
 ## plot the result from NumPy and the FPGA ##
 ############################################
-print('Plotting...')
+print('\nPlotting...')
 plt.figure(1)
 plt.title('Input wave')
 plt.plot(TIME, di_re, label='Real')
@@ -76,8 +82,6 @@ plt.savefig('resources/input.png', bbox_inches='tight')
 plt.figure(2)
 plt.title('NumPy FFT')
 plt.plot(TIME, np.abs(fft_np), label='ABS')
-# plt.plot(TIME, fft_np.real,   label='Real')
-# plt.plot(TIME, fft_np.imag,   label='Imag')
 plt.legend()
 plt.grid()
 plt.savefig('resources/fft_np.png', bbox_inches='tight')
@@ -85,8 +89,6 @@ plt.savefig('resources/fft_np.png', bbox_inches='tight')
 plt.figure(3)
 plt.title('FPGA FFT')
 plt.plot(TIME, np.abs(fft_fpga), label='ABS')
-# plt.plot(TIME, fft_fpga.real,   label='Real')
-# plt.plot(TIME, fft_fpga.imag,   label='Imag')
 plt.legend()
 plt.grid()
 plt.savefig('resources/fft_fpga.png', bbox_inches='tight')
