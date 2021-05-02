@@ -1,7 +1,6 @@
 import subprocess
 import numpy as np
 import matplotlib.pyplot as plt
-from math import pi
 from waves import waves
 from dump_file import dump_file
 from load_file import load_file
