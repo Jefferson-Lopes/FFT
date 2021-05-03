@@ -1,95 +1,38 @@
-import subprocess
 import numpy as np
 import matplotlib.pyplot as plt
 from waves import waves
-from dump_file import dump_file
-from load_file import load_file
-from make_output import make_output
-from bin2decimal import bin2decimal
-from reverse_bits import reverse_bits
+from encapsulation import encapsulation
 
 
-##############################
-## generate a signal input ##
-############################
-TIME = np.arange(0, 8, .125)  
-
-noise = np.random.normal(0, 25, np.zeros(64).shape).astype(int)
-
-di_re = waves(freq=[0.25], amp=512) + noise
+######################################
+## generate the first input signal ##
+####################################
+TIME = np.arange(0, 8, .125)  #const
+di_re = waves(freq=[0.25], amp=512)
 di_im = waves(freq=[1], amp=0)
 
-
-############################
-## dump into a text file ##
-##########################
-dump_path = 'R22SDF/simulation/modelsim/input.txt'
-dump_file(dump_path, di_re, di_im)
-
-clone_dump_path = 'resources/input_clone.txt'
-dump_file(clone_dump_path, di_re, di_im)
-
-
-############################################
-## process the data in verilog testbench ##
-##########################################
-
-##for testing
-# if make_output():
-#     print('Problem to open the file')
-# else:
-#     print('File generated successfully!')
-
-print('The input file was generated.')
-print('Running the verilog simulation. . .')
-
-subprocess.call(['sh', './run_vsim.sh']) #run the simulation
-
-
-##################################
-## process the data with NumPy ##
-################################
-comp = di_re + di_im*1j     #numpy complex array
-
-fft_np = np.fft.fft(comp)   
+fft_np, fft_fpga = encapsulation(di_re, di_im)
 
 
 ######################
-## load the result ##
+## start live plot ##
 ####################
-load_path = 'R22SDF/simulation/modelsim/output.txt'
-do_re, do_im = load_file(load_path)
-##for testing
-# clone_load_path = 'resources/output_clone.txt'
-# do_re, do_im = load_file(clone_load_file)
+plt.ion()
 
-fft_fpga = do_re + do_im*1j  #numpy complex array
+fig1 = plt.figure(1)
+sub1 = fig1.add_subplot(2, 1, 1)
+sub2 = fig1.add_subplot(2, 1, 2)
+line1, = sub1.plot(TIME, np.abs(fft_np),  label='NumPy')
+line2, = sub2.plot(TIME, np.abs(fft_fpga), 'r-', label='FPGA')
+fig1.legend()
 
+for i in range(15):
+    di_re = waves(freq=[0.25 + 2*i/10], amp=512)
+    di_im = waves(freq=[1], amp=0)
 
-##############################################
-## plot the result from NumPy and the FPGA ##
-############################################
-print('\nPlotting...')
-plt.figure(1)
-plt.title('Input wave')
-plt.plot(TIME, di_re, label='Real')
-plt.plot(TIME, di_im, label='Imag')
-plt.legend()
-plt.grid()
-plt.savefig('resources/input.png', bbox_inches='tight')
+    fft_np, fft_fpga = encapsulation(di_re, di_im)
 
-plt.figure(2)
-plt.title('NumPy FFT')
-plt.plot(TIME, np.abs(fft_np), label='ABS')
-plt.legend()
-plt.grid()
-plt.savefig('resources/fft_np.png', bbox_inches='tight')
-
-plt.figure(3)
-plt.title('FPGA FFT')
-plt.plot(TIME, np.abs(fft_fpga), label='ABS')
-plt.legend()
-plt.grid()
-plt.savefig('resources/fft_fpga.png', bbox_inches='tight')
-
-plt.show()
+    line1.set_ydata(np.abs(fft_np))
+    line2.set_ydata(np.abs(fft_fpga))
+    fig1.canvas.draw()
+    fig1.canvas.flush_events()
