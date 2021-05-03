@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 d/home/jeff/Documents/GitHub/FFT/R22SDF/simulation/modelsim
 vButterfly
-Z1 !s110 1619903510
+Z1 !s110 1619998810
 !i10b 1
 !s100 mD9[K_6J2jaEozc9DnS<n1
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -26,7 +26,7 @@ Z6 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z7 !s108 1619903510.000000
+Z7 !s108 1619998810.000000
 !s107 /home/jeff/Documents/GitHub/FFT/R22SDF/Butterfly.v|
 !s90 -vlog01compat|-work|work|+incdir+/home/jeff/Documents/GitHub/FFT/R22SDF|/home/jeff/Documents/GitHub/FFT/R22SDF/Butterfly.v|
 !i113 1
