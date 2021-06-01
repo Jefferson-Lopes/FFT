@@ -2,7 +2,7 @@
 
 ![plot](../resources/plot.png)
 
-## How to use TODO
+## How to use (TODO)
 
 ---
 

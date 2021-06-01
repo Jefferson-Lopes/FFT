@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 d/home/jeff/Documents/GitHub/FFT/R22SDF/simulation/modelsim
 vButterfly
-Z1 !s110 1620736107
+Z1 !s110 1622552742
 !i10b 1
 !s100 mD9[K_6J2jaEozc9DnS<n1
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -26,7 +26,7 @@ Z6 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z7 !s108 1620736107.000000
+Z7 !s108 1622552742.000000
 !s107 /home/jeff/Documents/GitHub/FFT/R22SDF/Butterfly.v|
 !s90 -vlog01compat|-work|work|+incdir+/home/jeff/Documents/GitHub/FFT/R22SDF|/home/jeff/Documents/GitHub/FFT/R22SDF/Butterfly.v|
 !i113 1
@@ -60,7 +60,7 @@ R9
 R10
 n@delay@buffer
 vFFT64
-Z11 !s110 1620736106
+R1
 !i10b 1
 !s100 c5=eN@S]4ogEcHCFbTEU13
 R2
@@ -76,7 +76,7 @@ R6
 r1
 !s85 0
 31
-Z12 !s108 1620736106.000000
+R7
 !s107 /home/jeff/Documents/GitHub/FFT/R22SDF/FFT64.v|
 !s90 -vlog01compat|-work|work|+incdir+/home/jeff/Documents/GitHub/FFT/R22SDF|/home/jeff/Documents/GitHub/FFT/R22SDF/FFT64.v|
 !i113 1
@@ -160,7 +160,7 @@ R9
 R10
 n@t@b64
 vTwiddle
-R11
+R1
 !i10b 1
 !s100 8@]Q;20P<QfRzYSTGgT=82
 R2
@@ -176,7 +176,7 @@ R6
 r1
 !s85 0
 31
-R12
+R7
 !s107 /home/jeff/Documents/GitHub/FFT/R22SDF/Twiddle64.v|
 !s90 -vlog01compat|-work|work|+incdir+/home/jeff/Documents/GitHub/FFT/R22SDF|/home/jeff/Documents/GitHub/FFT/R22SDF/Twiddle64.v|
 !i113 1
