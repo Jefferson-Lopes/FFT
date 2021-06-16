@@ -1,6 +1,6 @@
 import numpy as np
 
-def waves(freq, amp):
+def waves(freq, amp):  
     TIME = np.arange(0, 8, .125)  #64 points
     wave = 0
     for n in freq:
