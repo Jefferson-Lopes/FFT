@@ -10,7 +10,7 @@ FFT algorithm implementation on an FPGA for processing  `2^N`  points from the B
 
 First, you need to add ***vsim*** to your ***PATH***. So, open the terminal and type this command:
 
-    $ sudo nano .bashrc
+    sudo nano .bashrc
 
 **NOTE:** *nano* it's just a simple terminal text editor.
 
@@ -20,11 +20,15 @@ Now that we are at ***bashrc*** file, you just have to include the vsim in the *
 
 Write the changes with ***Ctrl+O*** and ***Enter***, and then exit with ***Ctrl+X***.
 
+After adding to PATH, update the bashrc file with:
+
+    source .bashrc
+
 ### Giving permission
 
 As we can execute ***vsim*** now, we need to give permission to ***run_vsim.sh*** do his work. So, to do that, run the command bellow at this repo directory:
 
-    $ chmod +x run_vsim.sh
+    chmod +x run_vsim.sh
 
 and that's it. ***run_vsim.sh*** can be executed by the python code now. Therefore, let's move on to the next settings.
 
