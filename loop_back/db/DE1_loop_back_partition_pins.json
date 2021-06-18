@@ -1,0 +1,73 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "FX2_SLRD",
+					"strict" : false
+				},
+				{
+					"name" : "FX2_SLWR",
+					"strict" : false
+				},
+				{
+					"name" : "FX2_PA_2",
+					"strict" : false
+				},
+				{
+					"name" : "FX2_PA_5",
+					"strict" : false
+				},
+				{
+					"name" : "FX2_FD[0]",
+					"strict" : false
+				},
+				{
+					"name" : "FX2_FD[1]",
+					"strict" : false
+				},
+				{
+					"name" : "FX2_FD[2]",
+					"strict" : false
+				},
+				{
+					"name" : "FX2_FD[3]",
+					"strict" : false
+				},
+				{
+					"name" : "FX2_FD[4]",
+					"strict" : false
+				},
+				{
+					"name" : "FX2_FD[5]",
+					"strict" : false
+				},
+				{
+					"name" : "FX2_FD[6]",
+					"strict" : false
+				},
+				{
+					"name" : "FX2_FD[7]",
+					"strict" : false
+				},
+				{
+					"name" : "FX2_PA_0",
+					"strict" : false
+				},
+				{
+					"name" : "FX2_flags[0]",
+					"strict" : false
+				},
+				{
+					"name" : "FX2_CLK",
+					"strict" : false
+				},
+				{
+					"name" : "FX2_flags[2]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

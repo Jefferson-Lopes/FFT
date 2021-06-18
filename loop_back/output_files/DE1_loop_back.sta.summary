@@ -1,0 +1,149 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'FX2_CLK'
+Slack : -3.970
+TNS   : -66.476
+
+Type  : Slow 1100mV 85C Model Setup 'FX2_flags[0]'
+Slack : -2.289
+TNS   : -27.176
+
+Type  : Slow 1100mV 85C Model Setup 'FX2_flags[2]'
+Slack : -2.139
+TNS   : -22.724
+
+Type  : Slow 1100mV 85C Model Hold 'FX2_CLK'
+Slack : 0.188
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'FX2_flags[0]'
+Slack : 0.482
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'FX2_flags[2]'
+Slack : 0.677
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'FX2_CLK'
+Slack : -2.636
+TNS   : -104.786
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'FX2_flags[0]'
+Slack : -0.394
+TNS   : -11.300
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'FX2_flags[2]'
+Slack : -0.394
+TNS   : -8.072
+
+Type  : Slow 1100mV 0C Model Setup 'FX2_CLK'
+Slack : -3.782
+TNS   : -59.904
+
+Type  : Slow 1100mV 0C Model Setup 'FX2_flags[0]'
+Slack : -2.214
+TNS   : -27.111
+
+Type  : Slow 1100mV 0C Model Setup 'FX2_flags[2]'
+Slack : -2.120
+TNS   : -22.893
+
+Type  : Slow 1100mV 0C Model Hold 'FX2_CLK'
+Slack : -0.038
+TNS   : -0.038
+
+Type  : Slow 1100mV 0C Model Hold 'FX2_flags[0]'
+Slack : 0.498
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'FX2_flags[2]'
+Slack : 0.697
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'FX2_CLK'
+Slack : -2.636
+TNS   : -104.796
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'FX2_flags[2]'
+Slack : -0.433
+TNS   : -9.907
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'FX2_flags[0]'
+Slack : -0.394
+TNS   : -9.872
+
+Type  : Fast 1100mV 85C Model Setup 'FX2_CLK'
+Slack : -2.468
+TNS   : -42.790
+
+Type  : Fast 1100mV 85C Model Setup 'FX2_flags[0]'
+Slack : -1.070
+TNS   : -9.571
+
+Type  : Fast 1100mV 85C Model Setup 'FX2_flags[2]'
+Slack : -0.875
+TNS   : -8.285
+
+Type  : Fast 1100mV 85C Model Hold 'FX2_CLK'
+Slack : -0.010
+TNS   : -0.010
+
+Type  : Fast 1100mV 85C Model Hold 'FX2_flags[0]'
+Slack : 0.257
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'FX2_flags[2]'
+Slack : 0.385
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'FX2_CLK'
+Slack : -2.636
+TNS   : -103.192
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'FX2_flags[2]'
+Slack : -0.387
+TNS   : -5.527
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'FX2_flags[0]'
+Slack : -0.360
+TNS   : -6.438
+
+Type  : Fast 1100mV 0C Model Setup 'FX2_CLK'
+Slack : -2.199
+TNS   : -39.019
+
+Type  : Fast 1100mV 0C Model Setup 'FX2_flags[0]'
+Slack : -0.899
+TNS   : -8.384
+
+Type  : Fast 1100mV 0C Model Setup 'FX2_flags[2]'
+Slack : -0.753
+TNS   : -7.368
+
+Type  : Fast 1100mV 0C Model Hold 'FX2_CLK'
+Slack : -0.074
+TNS   : -0.120
+
+Type  : Fast 1100mV 0C Model Hold 'FX2_flags[0]'
+Slack : 0.236
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'FX2_flags[2]'
+Slack : 0.355
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'FX2_CLK'
+Slack : -2.636
+TNS   : -103.244
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'FX2_flags[2]'
+Slack : -0.415
+TNS   : -6.139
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'FX2_flags[0]'
+Slack : -0.356
+TNS   : -6.021
+
+------------------------------------------------------------
