@@ -1,0 +1,46 @@
+set_global_assignment -entity "adc" -library "adc" -name IP_TOOL_NAME "Qsys"
+set_global_assignment -entity "adc" -library "adc" -name IP_TOOL_VERSION "20.1"
+set_global_assignment -entity "adc" -library "adc" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -library "adc" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../adc.sopcinfo"]
+set_global_assignment -entity "adc" -library "adc" -name SLD_INFO "QSYS_NAME adc HAS_SOPCINFO 1 GENERATION_ID 1626965069"
+set_global_assignment -library "adc" -name MISC_FILE [file join $::quartus(qip_path) "../adc.cmp"]
+set_global_assignment -library "adc" -name SLD_FILE [file join $::quartus(qip_path) "adc.debuginfo"]
+set_global_assignment -entity "adc" -library "adc" -name IP_TARGETED_DEVICE_FAMILY "Cyclone V"
+set_global_assignment -entity "adc" -library "adc" -name IP_GENERATED_DEVICE_FAMILY "{Cyclone V}"
+set_global_assignment -entity "adc" -library "adc" -name IP_QSYS_MODE "STANDALONE"
+set_global_assignment -name SYNTHESIS_ONLY_QIP ON
+set_global_assignment -library "adc" -name MISC_FILE [file join $::quartus(qip_path) "../../adc.qsys"]
+set_global_assignment -entity "adc" -library "adc" -name IP_COMPONENT_NAME "YWRj"
+set_global_assignment -entity "adc" -library "adc" -name IP_COMPONENT_DISPLAY_NAME "YWRj"
+set_global_assignment -entity "adc" -library "adc" -name IP_COMPONENT_REPORT_HIERARCHY "On"
+set_global_assignment -entity "adc" -library "adc" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "adc" -library "adc" -name IP_COMPONENT_VERSION "MS4w"
+set_global_assignment -entity "adc" -library "adc" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTYyNjk2NTA2OQ==::QXV0byBHRU5FUkFUSU9OX0lE"
+set_global_assignment -entity "adc" -library "adc" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::Q3ljbG9uZSBW::QXV0byBERVZJQ0VfRkFNSUxZ"
+set_global_assignment -entity "adc" -library "adc" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0U=::NUNTRU1BNUYzMUM2::QXV0byBERVZJQ0U="
+set_global_assignment -entity "adc" -library "adc" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfU1BFRURHUkFERQ==::Ng==::QXV0byBERVZJQ0VfU1BFRURHUkFERQ=="
+set_global_assignment -entity "adc" -library "adc" -name IP_COMPONENT_PARAMETER "QVVUT19DTEtfQ0xPQ0tfUkFURQ==::LTE=::QXV0byBDTE9DS19SQVRF"
+set_global_assignment -entity "adc" -library "adc" -name IP_COMPONENT_PARAMETER "QVVUT19DTEtfQ0xPQ0tfRE9NQUlO::LTE=::QXV0byBDTE9DS19ET01BSU4="
+set_global_assignment -entity "adc" -library "adc" -name IP_COMPONENT_PARAMETER "QVVUT19DTEtfUkVTRVRfRE9NQUlO::LTE=::QXV0byBSRVNFVF9ET01BSU4="
+set_global_assignment -entity "adc_adc_mega_0" -library "adc" -name IP_COMPONENT_NAME "YWRjX2FkY19tZWdhXzA="
+set_global_assignment -entity "adc_adc_mega_0" -library "adc" -name IP_COMPONENT_DISPLAY_NAME "QURDIENvbnRyb2xsZXIgZm9yIERFLXNlcmllcyBCb2FyZHM="
+set_global_assignment -entity "adc_adc_mega_0" -library "adc" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "adc_adc_mega_0" -library "adc" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "adc_adc_mega_0" -library "adc" -name IP_COMPONENT_AUTHOR "SW50ZWwgRlBHQSBVbml2ZXJzaXR5IFByb2dyYW0="
+set_global_assignment -entity "adc_adc_mega_0" -library "adc" -name IP_COMPONENT_VERSION "MTguMA=="
+set_global_assignment -entity "adc_adc_mega_0" -library "adc" -name IP_COMPONENT_DESCRIPTION "QURDIENvbnRyb2xsZXIgZm9yIEFsdGVyYSBERS1zZXJpZXMgQm9hcmRz"
+set_global_assignment -entity "adc_adc_mega_0" -library "adc" -name IP_COMPONENT_PARAMETER "Ym9hcmQ=::REUxLVNvQw==::REUtU2VyaWVzIEJvYXJk"
+set_global_assignment -entity "adc_adc_mega_0" -library "adc" -name IP_COMPONENT_PARAMETER "Ym9hcmRfcmV2::RiBvciBuZXdlcg==::Qm9hcmQgUmV2aXNpb24="
+set_global_assignment -entity "adc_adc_mega_0" -library "adc" -name IP_COMPONENT_PARAMETER "c2Nsa19mcmVx::MjAuMA==::QURDIENsb2NrIEZyZXF1ZW5jeSAoTUh6KQ=="
+set_global_assignment -entity "adc_adc_mega_0" -library "adc" -name IP_COMPONENT_PARAMETER "dHNjbGs=::Mw==::QURDX1NDTEsgU2NhbGluZyBGYWN0b3I="
+set_global_assignment -entity "adc_adc_mega_0" -library "adc" -name IP_COMPONENT_PARAMETER "bnVtY2hf::MQ==::TnVtYmVyIG9mIENoYW5uZWxzIFVzZWQ="
+set_global_assignment -entity "adc_adc_mega_0" -library "adc" -name IP_COMPONENT_PARAMETER "bnVtY2g=::MA==::TnVtYmVyIG9mIENoYW5uZWxzIFVzZWQgLSAx"
+set_global_assignment -entity "adc_adc_mega_0" -library "adc" -name IP_COMPONENT_PARAMETER "bWF4MTBwbGxtdWx0Ynk=::MQ==::TUFYMTAgQURDIFBsbCBtdWx0aXBseSBieSBmYWN0b3I="
+set_global_assignment -entity "adc_adc_mega_0" -library "adc" -name IP_COMPONENT_PARAMETER "bWF4MTBwbGxkaXZieQ==::MQ==::TUFYMTAgQURDIFBsbCBkaXZpZGUgYnkgZmFjdG9y"
+set_global_assignment -entity "adc_adc_mega_0" -library "adc" -name IP_COMPONENT_PARAMETER "c3lzX2Nsa19mcmVx::NTA=::U3lzdGVtIENsb2NrIEZyZXF1ZW5jeSAoTUh6KQ=="
+set_global_assignment -entity "adc_adc_mega_0" -library "adc" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::Q3ljbG9uZSBW::QXV0byBERVZJQ0VfRkFNSUxZ"
+set_global_assignment -entity "adc_adc_mega_0" -library "adc" -name IP_COMPONENT_PARAMETER "QVVUT19DTEtfQ0xPQ0tfUkFURQ==::MA==::QXV0byBDTE9DS19SQVRF"
+
+set_global_assignment -library "adc" -name VERILOG_FILE [file join $::quartus(qip_path) "adc.v"]
+set_global_assignment -library "adc" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_up_avalon_adv_adc.v"]
+set_global_assignment -library "adc" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/adc_adc_mega_0.v"]

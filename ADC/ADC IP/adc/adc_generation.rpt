@@ -1,0 +1,68 @@
+Info: Starting: Create simulation model
+Info: qsys-generate "/home/jeff/Documents/GitHub/FFT/ADC/ADC IP/adc.qsys" --simulation=VERILOG --allow-mixed-language-simulation --output-directory="/home/jeff/Documents/GitHub/FFT/ADC/ADC IP/adc/simulation" --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading ADC IP/adc.qsys
+Progress: Reading input file
+Progress: Adding adc_mega_0 [altera_up_avalon_adc_mega 18.0]
+Progress: Parameterizing module adc_mega_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: adc: Generating adc "adc" for SIM_VERILOG
+Info: adc_mega_0: Starting Generation of ADC Controller for DE-series Board
+Info: adc_mega_0: /home/jeff/intelFPGA_lite/20.1/ip/altera/university_program/input_output/altera_up_avalon_adc/hdl/altera_up_avalon_adv_adc.v /tmp/alt8830_8748313900422819170.dir/0002_sopcgen/adc_adc_mega_0.v
+Warning: adc_mega_0: Generation callback did not provide a top level file.  Found adc_adc_mega_0.v in output directory - callback must `add_file $output_dir/adc_adc_mega_0.v {SIMULATION SYNTHESIS}`
+Info: adc_mega_0: "adc" instantiated altera_up_avalon_adc_mega "adc_mega_0"
+Info: adc: Done "adc" with 2 modules, 3 files
+Info: qsys-generate succeeded.
+Info: Finished: Create simulation model
+Info: Starting: Create Modelsim Project.
+Info: sim-script-gen --spd="/home/jeff/Documents/GitHub/FFT/ADC/ADC IP/adc/adc.spd" --output-directory="/home/jeff/Documents/GitHub/FFT/ADC/ADC IP/adc/simulation/" --use-relative-paths=true
+Info: Doing: ip-make-simscript --spd=/home/jeff/Documents/GitHub/FFT/ADC/ADC IP/adc/adc.spd --output-directory=/home/jeff/Documents/GitHub/FFT/ADC/ADC IP/adc/simulation/ --use-relative-paths=true
+Info: Generating the following file(s) for MODELSIM simulator in /home/jeff/Documents/GitHub/FFT/ADC/ADC IP/adc/simulation/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Generating the following file(s) for VCS simulator in /home/jeff/Documents/GitHub/FFT/ADC/ADC IP/adc/simulation/ directory:
+Info: 	synopsys/vcs/vcs_setup.sh
+Info: Generating the following file(s) for VCSMX simulator in /home/jeff/Documents/GitHub/FFT/ADC/ADC IP/adc/simulation/ directory:
+Info: 	synopsys/vcsmx/synopsys_sim.setup
+Info: 	synopsys/vcsmx/vcsmx_setup.sh
+Info: Generating the following file(s) for NCSIM simulator in /home/jeff/Documents/GitHub/FFT/ADC/ADC IP/adc/simulation/ directory:
+Info: 	cadence/cds.lib
+Info: 	cadence/hdl.var
+Info: 	cadence/ncsim_setup.sh
+Info: 	1 .cds.lib files in cadence/cds_libs/ directory
+Info: Generating the following file(s) for RIVIERA simulator in /home/jeff/Documents/GitHub/FFT/ADC/ADC IP/adc/simulation/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under /home/jeff/Documents/GitHub/FFT/ADC/ADC IP/adc/simulation/.
+Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
+Info: Finished: Create Modelsim Project.
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate "/home/jeff/Documents/GitHub/FFT/ADC/ADC IP/adc.qsys" --block-symbol-file --output-directory="/home/jeff/Documents/GitHub/FFT/ADC/ADC IP/adc" --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading ADC IP/adc.qsys
+Progress: Reading input file
+Progress: Adding adc_mega_0 [altera_up_avalon_adc_mega 18.0]
+Progress: Parameterizing module adc_mega_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate "/home/jeff/Documents/GitHub/FFT/ADC/ADC IP/adc.qsys" --synthesis=VERILOG --output-directory="/home/jeff/Documents/GitHub/FFT/ADC/ADC IP/adc/synthesis" --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading ADC IP/adc.qsys
+Progress: Reading input file
+Progress: Adding adc_mega_0 [altera_up_avalon_adc_mega 18.0]
+Progress: Parameterizing module adc_mega_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: adc: Generating adc "adc" for QUARTUS_SYNTH
+Info: adc_mega_0: Starting Generation of ADC Controller for DE-series Board
+Info: adc_mega_0: /home/jeff/intelFPGA_lite/20.1/ip/altera/university_program/input_output/altera_up_avalon_adc/hdl/altera_up_avalon_adv_adc.v /tmp/alt8830_8748313900422819170.dir/0006_sopcgen/adc_adc_mega_0.v
+Info: adc_mega_0: "adc" instantiated altera_up_avalon_adc_mega "adc_mega_0"
+Info: adc: Done "adc" with 2 modules, 3 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

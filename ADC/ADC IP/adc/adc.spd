@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="simulation/submodules/altera_up_avalon_adv_adc.v"
+   type="VERILOG"
+   library="adc_mega_0" />
+ <file
+   path="simulation/submodules/adc_adc_mega_0.v"
+   type="VERILOG"
+   library="adc_mega_0" />
+ <file path="simulation/adc.v" type="VERILOG" />
+ <topLevel name="adc" />
+ <deviceFamily name="cyclonev" />
+</simPackage>
