@@ -11,13 +11,10 @@ dev = usb.core.find(idVendor=0x04b4, idProduct=0x8613)
 if dev is None:
     raise ValueError('Dispositivo nao encontrado')
 
-
 # ativar config default
 dev.set_configuration()
 dev.set_interface_altsetting(interface = 0, alternate_setting = 1)
 #dev.set_interface_altsetting(interface = 0, alternate_setting = 0)
-
-
 
 rst_ep = 1 # EP1 (output endpoint 1, host-2usb) -- usado para reset da FPGA
 cfg_ep = 4 # EP4 (output endpoint 4, host-2usb) -- usado para config da FPGA

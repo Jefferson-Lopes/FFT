@@ -31,6 +31,7 @@ dev.write(rst_ep, bytearray([0x00, 0x01, 0x00])) # reset OFF, ON, OFF
 
 out_ep = 2 # EP2 (output endpoint 2, host-2-usb)
 in_ep = 6 + 128 # EP6 (input endpoint 6, usb-2-host) o bit 7 tem que estar setado
+#   0b110 + 0b10000000 
 
 ##############################################
 
@@ -44,22 +45,22 @@ ampl = 32767
 
 theta = 0
 thetax = 0
-thetay = 1*np.pi/2
+thetay = np.pi/2
 
 buf_len = 512
 
-t = np.arange(0, write_samples)* 1/fs;
+t = np.arange(0, write_samples)* 1/fs
 tp = np.linspace(0, write_samples, fs)
 
 # sin_cos
-s_cos = 1*ampl/2 * np.cos(2 * np.pi * freq * (t + theta))+ampl/2
-s_sin = 1*ampl/2 * np.sin(2 * np.pi * freq * (t + theta))+ampl/2
+s_cos = ampl/2 * np.cos(2 * np.pi * freq * (t + theta)) + ampl/2
+s_sin = ampl/2 * np.sin(2 * np.pi * freq * (t + theta)) + ampl/2
 
 x = s_cos; y = s_sin
 
 # rampa
-r_cos = 1*ampl/2 * signal.sawtooth(2 * np.pi * freq * (t + thetax))+ampl/2
-r_sin = 1*ampl/2 * signal.sawtooth(2 * np.pi * freq * (t + thetay))+ampl/2
+r_cos = ampl/2 * signal.sawtooth(2 * np.pi * freq * (t + thetax)) + ampl/2
+r_sin = ampl/2 * signal.sawtooth(2 * np.pi * freq * (t + thetay)) + ampl/2
 
 #x = r_cos; y = r_sin
 
@@ -77,6 +78,8 @@ for i in range(int(buf_len/4)):
 	data_out_xy[4*i+1] = tempx[1]
 	data_out_xy[4*i+2] = tempy[0]
 	data_out_xy[4*i+3] = tempy[1]
+
+	
 		
 
 #print(len(data_out_xy))
@@ -92,14 +95,9 @@ dev.write(out_ep, data_out_xy)
 
 ##############################################
 
-#read_samples = 512
 read_samples = write_samples
 
-#data_in = dev.read(in_ep,read_samples) # clear buffer
-
 data_in = dev.read(in_ep,read_samples)
-
-#print(data_in)
 
 data_read = np.zeros((int(read_samples/2),), dtype=int)
 
@@ -107,13 +105,13 @@ data_real = np.zeros((int(read_samples/4),), dtype=int)
 data_imag = np.zeros((int(read_samples/4),), dtype=int)
 
 for i in range(int(read_samples/4)):
-	data_real[i] = int(data_in[4*i])*256+int(data_in[4*i+1])*1
-	data_imag[i] = int(data_in[4*i+2])*256+int(data_in[4*i+3])*1
+	data_real[i] = int(data_in[4*i])*256   + int(data_in[4*i+1])
+	data_imag[i] = int(data_in[4*i+2])*256 + int(data_in[4*i+3])
 	#print(i)
 
 # remove o offset (centraliza em zero)
 
-offset = 16384*1
+offset = 16384
 
 #for i in range(len(data_real)):
 #	if data_real[i] > offset:
