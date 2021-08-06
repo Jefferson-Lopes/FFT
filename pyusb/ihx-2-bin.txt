@@ -1,0 +1,1 @@
+objcopy -Iihex -Obinary slave_fifo.ihx slave_fifo.bin
