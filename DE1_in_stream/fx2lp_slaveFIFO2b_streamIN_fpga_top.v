@@ -36,7 +36,7 @@ reg slrd_d_n;
 
 reg [7:0] fifo_data_in;
 reg [7:0] fifo_data_out;
-reg [16:0] data_out2;
+reg [15:0] data_out2;
 //reg [7:0] data_out2;
 
 reg slrd_n;

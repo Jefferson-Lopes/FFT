@@ -1,5 +1,5 @@
 Flow report for DE1_in_stream
-Fri Aug  6 09:47:56 2021
+Fri Aug  6 10:17:50 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,15 +41,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Fri Aug  6 09:47:52 2021       ;
+; Flow Status                     ; Successful - Fri Aug  6 10:17:41 2021       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; DE1_in_stream                               ;
 ; Top-level Entity Name           ; fx2lp_slaveFIFO2b_streamIN_fpga_top         ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 45 / 32,070 ( < 1 % )                       ;
-; Total registers                 ; 9                                           ;
+; Logic utilization (in ALMs)     ; 2 / 32,070 ( < 1 % )                        ;
+; Total registers                 ; 2                                           ;
 ; Total pins                      ; 41 / 457 ( 9 % )                            ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                       ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 08/06/2021 09:47:05 ;
+; Start date & time ; 08/06/2021 10:16:21 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; DE1_in_stream       ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------------------------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name                         ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------------------------------+------------+
-; COMPILER_SIGNATURE_ID               ; 247207025700498.162825402539949        ; --            ; --                                  ; --         ;
+; COMPILER_SIGNATURE_ID               ; 198830102866097.162825578035678        ; --            ; --                                  ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --                                  ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --                                  ; --         ;
 ; MISC_FILE                           ; pll2_sim/pll2.vo                       ; --            ; --                                  ; --         ;
@@ -103,24 +103,24 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 445 MB              ; 00:00:17                           ;
-; Fitter               ; 00:00:31     ; 1.0                     ; 1569 MB             ; 00:00:50                           ;
-; Assembler            ; 00:00:06     ; 1.0                     ; 514 MB              ; 00:00:06                           ;
-; Timing Analyzer      ; 00:00:04     ; 1.0                     ; 789 MB              ; 00:00:04                           ;
-; Total                ; 00:00:49     ; --                      ; --                  ; 00:01:17                           ;
+; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 432 MB              ; 00:00:29                           ;
+; Fitter               ; 00:00:54     ; 1.0                     ; 1506 MB             ; 00:01:17                           ;
+; Assembler            ; 00:00:11     ; 1.0                     ; 501 MB              ; 00:00:11                           ;
+; Timing Analyzer      ; 00:00:07     ; 1.0                     ; 772 MB              ; 00:00:07                           ;
+; Total                ; 00:01:25     ; --                      ; --                  ; 00:02:04                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+----------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                        ;
-+----------------------+------------------+----------------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name        ; OS Version ; Processor type ;
-+----------------------+------------------+----------------+------------+----------------+
-; Analysis & Synthesis ; BINGO-FPGA       ; Ubuntu 20.04.2 ; 20         ; x86_64         ;
-; Fitter               ; BINGO-FPGA       ; Ubuntu 20.04.2 ; 20         ; x86_64         ;
-; Assembler            ; BINGO-FPGA       ; Ubuntu 20.04.2 ; 20         ; x86_64         ;
-; Timing Analyzer      ; BINGO-FPGA       ; Ubuntu 20.04.2 ; 20         ; x86_64         ;
-+----------------------+------------------+----------------+------------+----------------+
++----------------------------------------------------------------------------------+
+; Flow OS Summary                                                                  ;
++----------------------+------------------+----------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name  ; OS Version ; Processor type ;
++----------------------+------------------+----------+------------+----------------+
+; Analysis & Synthesis ; kde              ; KDE neon ; 5          ; x86_64         ;
+; Fitter               ; kde              ; KDE neon ; 5          ; x86_64         ;
+; Assembler            ; kde              ; KDE neon ; 5          ; x86_64         ;
+; Timing Analyzer      ; kde              ; KDE neon ; 5          ; x86_64         ;
++----------------------+------------------+----------+------------+----------------+
 
 
 ------------

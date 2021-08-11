@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Fri Aug  6 09:47:13 2021
+Analysis & Synthesis Status : Successful - Fri Aug  6 10:16:34 2021
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : DE1_in_stream
 Top-level Entity Name : fx2lp_slaveFIFO2b_streamIN_fpga_top
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 9
+Total registers : 2
 Total pins : 41
 Total virtual pins : 0
 Total block memory bits : 0

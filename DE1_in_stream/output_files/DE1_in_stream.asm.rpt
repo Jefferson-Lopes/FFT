@@ -1,5 +1,5 @@
 Assembler report for DE1_in_stream
-Fri Aug  6 09:47:52 2021
+Fri Aug  6 10:17:41 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -38,7 +38,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Fri Aug  6 09:47:52 2021 ;
+; Assembler Status      ; Successful - Fri Aug  6 10:17:41 2021 ;
 ; Revision Name         ; DE1_in_stream                         ;
 ; Top-level Entity Name ; fx2lp_slaveFIFO2b_streamIN_fpga_top   ;
 ; Family                ; Cyclone V                             ;
@@ -53,13 +53,13 @@ https://fpgasoftware.intel.com/eula.
 +--------+---------+---------------+
 
 
-+---------------------------------------------------------------------------+
-; Assembler Generated Files                                                 ;
-+---------------------------------------------------------------------------+
-; File Name                                                                 ;
-+---------------------------------------------------------------------------+
-; /home/bingo/Documentos/teste/DE1_in_stream/output_files/DE1_in_stream.sof ;
-+---------------------------------------------------------------------------+
++------------------------------------------------------------------------------+
+; Assembler Generated Files                                                    ;
++------------------------------------------------------------------------------+
+; File Name                                                                    ;
++------------------------------------------------------------------------------+
+; /home/jeff/Documents/GitHub/FFT/DE1_in_stream/output_files/DE1_in_stream.sof ;
++------------------------------------------------------------------------------+
 
 
 +---------------------------------------------+
@@ -67,8 +67,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------+----------------------------+
 ; Option         ; Setting                    ;
 +----------------+----------------------------+
-; JTAG usercode  ; 0x00B09A05                 ;
-; Checksum       ; 0x00B09A05                 ;
+; JTAG usercode  ; 0x00AF7772                 ;
+; Checksum       ; 0x00AF7772                 ;
 +----------------+----------------------------+
 
 
@@ -78,14 +78,14 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Fri Aug  6 09:47:46 2021
+    Info: Processing started: Fri Aug  6 10:17:30 2021
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off DE1_in_stream -c DE1_in_stream
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 514 megabytes
-    Info: Processing ended: Fri Aug  6 09:47:52 2021
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:06
+    Info: Peak virtual memory: 501 megabytes
+    Info: Processing ended: Fri Aug  6 10:17:41 2021
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:11
 
 
