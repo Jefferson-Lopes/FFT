@@ -1,0 +1,169 @@
+variáveis:
+
+CLK
+RESET
+SLWR_reg
+FIFOADR_reg_buf2 == 2'b10
+full
+FD_out
+indata
+
+module data2byte(input wire clk, conv_end, conv_start,
+					  input wire [11:0]data,
+					  output reg byte1_sent, byte2_sent,
+					  output reg [7:0]byte);
+
+reg [4:0]count;
+					  
+initial
+	begin
+		
+		count = 5'd0;
+		ready = 1'b0;
+		byte1_sent = 1'b0;
+		byte2_sent = 1'b0;
+	
+	end 
+
+always@(posedge conv_start)
+	begin	
+	
+		ready <= 1;
+		
+	end
+	
+	end
+	
+always@(posedge clk)
+	begin
+	
+		count <= count + 1'b1;
+	
+		if(conv_end == 1 && ready == 1)
+			begin
+			
+				case(count)
+					1:
+						begin
+							
+							byte <= data[11];
+							
+						end
+					2:
+						begin
+							
+							byte <= data[10];
+							
+						end
+					3:
+						begin
+							
+							byte <= data[9];
+							
+						end
+					4:
+						begin
+							
+							byte <= data[8];
+							
+						end
+					5:
+						begin
+							
+							byte <= data[7];
+							
+						end
+					6:
+						begin
+							
+							byte <= data[6];
+							
+						end
+					7:
+						begin
+							
+							byte <= data[5];
+							
+						end
+					8:
+						begin
+							
+							byte <= data[4];
+							
+						end
+					9:
+						begin
+							
+							byte1_sent <= 1'd1;
+							
+						end
+					10:
+						begin
+							
+							byte <= data[3];
+							
+						end
+					11:
+						begin
+							
+							byte <= data[2];
+							
+						end
+					12:
+						begin
+							
+							byte <= data[1];
+							
+						end
+					13:
+						begin
+							
+							byte <= data[0];
+							
+						end
+					14:
+						begin
+							
+							byte <= 1'b0;
+							
+						end
+					15:
+						begin
+							
+							byte <= 1'b0;
+							
+						end
+					
+					16:
+						begin
+							
+							byte <= 1'b0;
+							
+						end
+					17:
+						begin
+							
+							byte <= 1'b0;
+							
+						end
+					18:
+						begin
+							
+							byte2sent <= 1'b1;
+							ready <= 1'b0;
+							
+						end
+						
+					default:
+						begin
+						
+							ready <= 0;
+						
+						end
+				
+				endcase
+			
+			end
+	
+	end
+

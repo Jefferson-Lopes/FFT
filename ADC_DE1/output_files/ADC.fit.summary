@@ -1,0 +1,20 @@
+Fitter Status : Successful - Fri Aug  6 10:16:02 2021
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : ADC
+Top-level Entity Name : DE1_in_stream_ADC
+Family : Cyclone V
+Device : 5CSEMA5F31C6
+Timing Models : Final
+Logic utilization (in ALMs) : 288 / 32,070 ( < 1 % )
+Total registers : 581
+Total pins : 49 / 457 ( 11 % )
+Total virtual pins : 0
+Total block memory bits : 1,152 / 4,065,280 ( < 1 % )
+Total RAM Blocks : 1 / 397 ( < 1 % )
+Total DSP Blocks : 0 / 87 ( 0 % )
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 0 / 6 ( 0 % )
+Total DLLs : 0 / 4 ( 0 % )

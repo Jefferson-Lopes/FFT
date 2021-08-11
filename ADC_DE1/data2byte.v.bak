@@ -1,0 +1,15 @@
+module data2byte(input wire clk,
+					  input wire [11:0]dataFull,
+					  output reg byte1_sent, byte2_sent,
+					  output reg [7:0]byte);
+
+					  
+initial
+	begin
+	
+		byte1_sent = 1'b0;
+		byte2_sent = 1'b0;
+	
+	end 
+
+always@(posedge clk

@@ -1,0 +1,30 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate /home/bingo/Documentos/teste/ADC_DE1/ADC_IP.qsys --block-symbol-file --output-directory=/home/bingo/Documentos/teste/ADC_DE1/ADC_IP --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading ADC_DE1/ADC_IP.qsys
+Progress: Reading input file
+Progress: Adding adc_mega_0 [altera_up_avalon_adc_mega 18.0]
+Progress: Parameterizing module adc_mega_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate /home/bingo/Documentos/teste/ADC_DE1/ADC_IP.qsys --synthesis=VERILOG --output-directory=/home/bingo/Documentos/teste/ADC_DE1/ADC_IP/synthesis --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading ADC_DE1/ADC_IP.qsys
+Progress: Reading input file
+Progress: Adding adc_mega_0 [altera_up_avalon_adc_mega 18.0]
+Progress: Parameterizing module adc_mega_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: ADC_IP: Generating ADC_IP "ADC_IP" for QUARTUS_SYNTH
+Info: adc_mega_0: Starting Generation of ADC Controller for DE-series Board
+Info: adc_mega_0: /home/bingo/intelFPGA_lite/20.1/ip/altera/university_program/input_output/altera_up_avalon_adc/hdl/altera_up_avalon_adv_adc.v /tmp/alt8837_6039836474604113462.dir/0002_sopcgen/ADC_IP_adc_mega_0.v
+Info: adc_mega_0: "ADC_IP" instantiated altera_up_avalon_adc_mega "adc_mega_0"
+Info: ADC_IP: Done "ADC_IP" with 2 modules, 3 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

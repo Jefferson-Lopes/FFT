@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy
+ date="2021.07.29.14:55:02"
+ outputDirectory="/home/bingo/Documentos/teste/ADC_DE1/ADC_IP/">
+ <perimeter>
+  <parameter
+     name="AUTO_GENERATION_ID"
+     type="Integer"
+     defaultValue="0"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_UNIQUE_ID"
+     type="String"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_FAMILY"
+     type="String"
+     defaultValue="Cyclone V"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE"
+     type="String"
+     defaultValue="5CSEMA5F31C6"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_SPEEDGRADE"
+     type="String"
+     defaultValue="6"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_CLOCK_RATE"
+     type="Long"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_CLOCK_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_RESET_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <interface name="clk" kind="clock" start="0">
+   <property name="clockRate" value="0" />
+   <property name="externallyDriven" value="false" />
+   <property name="ptfSchematicName" value="" />
+   <port name="CLOCK" direction="input" role="clk" width="1" />
+  </interface>
+  <interface name="external_interface" kind="conduit" start="0">
+   <property name="associatedClock" value="" />
+   <property name="associatedReset" value="" />
+   <port name="ADC_SCLK" direction="output" role="SCLK" width="1" />
+   <port name="ADC_CS_N" direction="output" role="CS_N" width="1" />
+   <port name="ADC_DOUT" direction="input" role="DOUT" width="1" />
+   <port name="ADC_DIN" direction="output" role="DIN" width="1" />
+  </interface>
+  <interface name="readings" kind="conduit" start="0">
+   <property name="associatedClock" value="" />
+   <property name="associatedReset" value="" />
+   <port name="CH0" direction="output" role="CH0" width="12" />
+   <port name="CH1" direction="output" role="CH1" width="12" />
+   <port name="CH2" direction="output" role="CH2" width="12" />
+   <port name="CH3" direction="output" role="CH3" width="12" />
+   <port name="CH4" direction="output" role="CH4" width="12" />
+   <port name="CH5" direction="output" role="CH5" width="12" />
+   <port name="CH6" direction="output" role="CH6" width="12" />
+   <port name="CH7" direction="output" role="CH7" width="12" />
+  </interface>
+  <interface name="reset" kind="reset" start="0">
+   <property name="associatedClock" value="clk" />
+   <property name="synchronousEdges" value="DEASSERT" />
+   <port name="RESET" direction="input" role="reset" width="1" />
+  </interface>
+ </perimeter>
+ <entity
+   path=""
+   parameterizationKey="ADC_IP:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=5CSEMA5F31C6,AUTO_DEVICE_FAMILY=Cyclone V,AUTO_DEVICE_SPEEDGRADE=6,AUTO_GENERATION_ID=1627581300,AUTO_UNIQUE_ID=(altera_up_avalon_adc_mega:18.0:AUTO_CLK_CLOCK_RATE=0,AUTO_DEVICE_FAMILY=Cyclone V,board=DE1-SoC,board_rev=F or newer,max10plldivby=1,max10pllmultby=1,numch=0,numch_=1,sclk_freq=10.0,sys_clk_freq=50,tsclk=5)"
+   instancePathKey="ADC_IP"
+   kind="ADC_IP"
+   version="1.0"
+   name="ADC_IP">
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
+  <parameter name="AUTO_GENERATION_ID" value="1627581300" />
+  <parameter name="AUTO_DEVICE" value="5CSEMA5F31C6" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
+  <parameter name="AUTO_CLK_RESET_DOMAIN" value="-1" />
+  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="-1" />
+  <parameter name="AUTO_UNIQUE_ID" value="" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="6" />
+  <generatedFiles>
+   <file
+       path="/home/bingo/Documentos/teste/ADC_DE1/ADC_IP/synthesis/ADC_IP.v"
+       type="VERILOG" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="/home/bingo/Documentos/teste/ADC_DE1/ADC_IP/synthesis/submodules/altera_up_avalon_adv_adc.v"
+       type="VERILOG" />
+   <file
+       path="/home/bingo/Documentos/teste/ADC_DE1/ADC_IP/synthesis/submodules/ADC_IP_adc_mega_0.v"
+       type="VERILOG" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file path="/home/bingo/Documentos/teste/ADC_DE1/ADC_IP.qsys" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file
+       path="/home/bingo/intelFPGA_lite/20.1/ip/altera/university_program/input_output/altera_up_avalon_adc/altera_up_avalon_adc_mega_hw.tcl" />
+   <file
+       path="/home/bingo/intelFPGA_lite/20.1/ip/altera/university_program/input_output/altera_up_avalon_adc/hdl/altera_up_avalon_adv_adc.v" />
+  </childSourceFiles>
+  <messages>
+   <message level="Debug" culprit="ADC_IP">queue size: 0 starting:ADC_IP "ADC_IP"</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Debug">Transform: CustomInstructionTransform</message>
+   <message level="Debug">No custom instruction connections, skipping transform </message>
+   <message level="Debug" culprit="merlin_custom_instruction_transform"><![CDATA[After transform: <b>1</b> modules, <b>0</b> connections]]></message>
+   <message level="Debug">Transform: MMTransform</message>
+   <message level="Debug">Transform: InterruptMapperTransform</message>
+   <message level="Debug">Transform: InterruptSyncTransform</message>
+   <message level="Debug">Transform: InterruptFanoutTransform</message>
+   <message level="Debug">Transform: AvalonStreamingTransform</message>
+   <message level="Debug">Transform: ResetAdaptation</message>
+   <message level="Debug" culprit="ADC_IP"><![CDATA["<b>ADC_IP</b>" reuses <b>altera_up_avalon_adc_mega</b> "<b>submodules/ADC_IP_adc_mega_0</b>"]]></message>
+   <message level="Debug" culprit="ADC_IP">queue size: 0 starting:altera_up_avalon_adc_mega "submodules/ADC_IP_adc_mega_0"</message>
+   <message level="Info" culprit="adc_mega_0">Starting Generation of ADC Controller for DE-series Board</message>
+   <message level="Info" culprit="adc_mega_0">/home/bingo/intelFPGA_lite/20.1/ip/altera/university_program/input_output/altera_up_avalon_adc/hdl/altera_up_avalon_adv_adc.v /tmp/alt8837_6039836474604113462.dir/0002_sopcgen/ADC_IP_adc_mega_0.v</message>
+   <message level="Debug">set ALTERA_HW_TCL_KEEP_TEMP_FILES=1 to retain temp files</message>
+   <message level="Debug">Command: /home/bingo/intelFPGA_lite/20.1/quartus/linux64/quartus_map not_a_project --generate_hdl_interface=/tmp/alt8837_6039836474604113462.dir/0002_sopcgen/ADC_IP_adc_mega_0.v --source=/home/bingo/intelFPGA_lite/20.1/ip/altera/university_program/input_output/altera_up_avalon_adc/hdl/altera_up_avalon_adv_adc.v --source=/tmp/alt8837_6039836474604113462.dir/0002_sopcgen/ADC_IP_adc_mega_0.v --set=HDL_INTERFACE_OUTPUT_PATH=/tmp/alt8837_6039836474604113462.dir/0003_sopcqmap/ --ini=disable_check_quartus_compatibility_qsys_only=on</message>
+   <message level="Debug">Command took 0.905s</message>
+   <message level="Debug">set ALTERA_HW_TCL_KEEP_TEMP_FILES=1 to retain temp files</message>
+   <message level="Debug">Command: /home/bingo/intelFPGA_lite/20.1/quartus/linux64/quartus_map not_a_project --generate_hdl_interface=/tmp/alt8837_6039836474604113462.dir/0002_sopcgen/ADC_IP_adc_mega_0.v --source=/home/bingo/intelFPGA_lite/20.1/ip/altera/university_program/input_output/altera_up_avalon_adc/hdl/altera_up_avalon_adv_adc.v --source=/tmp/alt8837_6039836474604113462.dir/0002_sopcgen/ADC_IP_adc_mega_0.v --set=HDL_INTERFACE_OUTPUT_PATH=/tmp/alt8837_6039836474604113462.dir/0004_sopcqmap/ --set=HDL_INTERFACE_INSTANCE_NAME=inst --set=HDL_INTERFACE_INSTANCE_ENTITY=ADC_IP_adc_mega_0 --set=HDL_INTERFACE_INSTANCE_PARAMETERS=board=S"DE1-SoC";board_rev=S"F or newer";tsclk=D"5";numch=D"0";max10pllmultby=D"1";max10plldivby=D"1"; --ini=disable_check_quartus_compatibility_qsys_only=on</message>
+   <message level="Debug">Command took 0.791s</message>
+   <message level="Info" culprit="adc_mega_0"><![CDATA["<b>ADC_IP</b>" instantiated <b>altera_up_avalon_adc_mega</b> "<b>adc_mega_0</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_up_avalon_adc_mega:18.0:AUTO_CLK_CLOCK_RATE=0,AUTO_DEVICE_FAMILY=Cyclone V,board=DE1-SoC,board_rev=F or newer,max10plldivby=1,max10pllmultby=1,numch=0,numch_=1,sclk_freq=10.0,sys_clk_freq=50,tsclk=5"
+   instancePathKey="ADC_IP:.:adc_mega_0"
+   kind="altera_up_avalon_adc_mega"
+   version="18.0"
+   name="ADC_IP_adc_mega_0">
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="0" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
+  <parameter name="max10plldivby" value="1" />
+  <parameter name="sys_clk_freq" value="50" />
+  <parameter name="tsclk" value="5" />
+  <parameter name="sclk_freq" value="10.0" />
+  <parameter name="numch_" value="1" />
+  <parameter name="board_rev" value="F or newer" />
+  <parameter name="max10pllmultby" value="1" />
+  <parameter name="board" value="DE1-SoC" />
+  <parameter name="numch" value="0" />
+  <generatedFiles>
+   <file
+       path="/home/bingo/Documentos/teste/ADC_DE1/ADC_IP/synthesis/submodules/altera_up_avalon_adv_adc.v"
+       type="VERILOG" />
+   <file
+       path="/home/bingo/Documentos/teste/ADC_DE1/ADC_IP/synthesis/submodules/ADC_IP_adc_mega_0.v"
+       type="VERILOG" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="/home/bingo/intelFPGA_lite/20.1/ip/altera/university_program/input_output/altera_up_avalon_adc/altera_up_avalon_adc_mega_hw.tcl" />
+   <file
+       path="/home/bingo/intelFPGA_lite/20.1/ip/altera/university_program/input_output/altera_up_avalon_adc/hdl/altera_up_avalon_adv_adc.v" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="ADC_IP" as="adc_mega_0" />
+  <messages>
+   <message level="Debug" culprit="ADC_IP">queue size: 0 starting:altera_up_avalon_adc_mega "submodules/ADC_IP_adc_mega_0"</message>
+   <message level="Info" culprit="adc_mega_0">Starting Generation of ADC Controller for DE-series Board</message>
+   <message level="Info" culprit="adc_mega_0">/home/bingo/intelFPGA_lite/20.1/ip/altera/university_program/input_output/altera_up_avalon_adc/hdl/altera_up_avalon_adv_adc.v /tmp/alt8837_6039836474604113462.dir/0002_sopcgen/ADC_IP_adc_mega_0.v</message>
+   <message level="Debug">set ALTERA_HW_TCL_KEEP_TEMP_FILES=1 to retain temp files</message>
+   <message level="Debug">Command: /home/bingo/intelFPGA_lite/20.1/quartus/linux64/quartus_map not_a_project --generate_hdl_interface=/tmp/alt8837_6039836474604113462.dir/0002_sopcgen/ADC_IP_adc_mega_0.v --source=/home/bingo/intelFPGA_lite/20.1/ip/altera/university_program/input_output/altera_up_avalon_adc/hdl/altera_up_avalon_adv_adc.v --source=/tmp/alt8837_6039836474604113462.dir/0002_sopcgen/ADC_IP_adc_mega_0.v --set=HDL_INTERFACE_OUTPUT_PATH=/tmp/alt8837_6039836474604113462.dir/0003_sopcqmap/ --ini=disable_check_quartus_compatibility_qsys_only=on</message>
+   <message level="Debug">Command took 0.905s</message>
+   <message level="Debug">set ALTERA_HW_TCL_KEEP_TEMP_FILES=1 to retain temp files</message>
+   <message level="Debug">Command: /home/bingo/intelFPGA_lite/20.1/quartus/linux64/quartus_map not_a_project --generate_hdl_interface=/tmp/alt8837_6039836474604113462.dir/0002_sopcgen/ADC_IP_adc_mega_0.v --source=/home/bingo/intelFPGA_lite/20.1/ip/altera/university_program/input_output/altera_up_avalon_adc/hdl/altera_up_avalon_adv_adc.v --source=/tmp/alt8837_6039836474604113462.dir/0002_sopcgen/ADC_IP_adc_mega_0.v --set=HDL_INTERFACE_OUTPUT_PATH=/tmp/alt8837_6039836474604113462.dir/0004_sopcqmap/ --set=HDL_INTERFACE_INSTANCE_NAME=inst --set=HDL_INTERFACE_INSTANCE_ENTITY=ADC_IP_adc_mega_0 --set=HDL_INTERFACE_INSTANCE_PARAMETERS=board=S"DE1-SoC";board_rev=S"F or newer";tsclk=D"5";numch=D"0";max10pllmultby=D"1";max10plldivby=D"1"; --ini=disable_check_quartus_compatibility_qsys_only=on</message>
+   <message level="Debug">Command took 0.791s</message>
+   <message level="Info" culprit="adc_mega_0"><![CDATA["<b>ADC_IP</b>" instantiated <b>altera_up_avalon_adc_mega</b> "<b>adc_mega_0</b>"]]></message>
+  </messages>
+ </entity>
+</deploy>

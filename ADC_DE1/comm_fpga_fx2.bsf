@@ -1,0 +1,135 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 16 16 256 224)
+	(text "comm_fpga_fx2" (rect 5 0 73 12)(font "Arial" ))
+	(text "inst" (rect 8 192 20 204)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "fx2Clk_in" (rect 0 0 37 12)(font "Arial" ))
+		(text "fx2Clk_in" (rect 21 27 58 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "fx2GotData_in" (rect 0 0 57 12)(font "Arial" ))
+		(text "fx2GotData_in" (rect 21 43 78 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 1))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "fx2GotRoom_in" (rect 0 0 64 12)(font "Arial" ))
+		(text "fx2GotRoom_in" (rect 21 59 85 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 1))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "h2fReady_in" (rect 0 0 53 12)(font "Arial" ))
+		(text "h2fReady_in" (rect 21 75 74 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 1))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "f2hData_in[7..0]" (rect 0 0 63 12)(font "Arial" ))
+		(text "f2hData_in[7..0]" (rect 21 91 84 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 3))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "f2hValid_in" (rect 0 0 44 12)(font "Arial" ))
+		(text "f2hValid_in" (rect 21 107 65 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 1))
+	)
+	(port
+		(pt 240 32)
+		(output)
+		(text "fx2FifoSel_out" (rect 0 0 57 12)(font "Arial" ))
+		(text "fx2FifoSel_out" (rect 162 27 219 39)(font "Arial" ))
+		(line (pt 240 32)(pt 224 32)(line_width 1))
+	)
+	(port
+		(pt 240 64)
+		(output)
+		(text "fx2Read_out" (rect 0 0 53 12)(font "Arial" ))
+		(text "fx2Read_out" (rect 166 59 219 71)(font "Arial" ))
+		(line (pt 240 64)(pt 224 64)(line_width 1))
+	)
+	(port
+		(pt 240 80)
+		(output)
+		(text "fx2Write_out" (rect 0 0 53 12)(font "Arial" ))
+		(text "fx2Write_out" (rect 166 75 219 87)(font "Arial" ))
+		(line (pt 240 80)(pt 224 80)(line_width 1))
+	)
+	(port
+		(pt 240 96)
+		(output)
+		(text "fx2PktEnd_out" (rect 0 0 60 12)(font "Arial" ))
+		(text "fx2PktEnd_out" (rect 159 91 219 103)(font "Arial" ))
+		(line (pt 240 96)(pt 224 96)(line_width 1))
+	)
+	(port
+		(pt 240 112)
+		(output)
+		(text "chanAddr_out[6..0]" (rect 0 0 77 12)(font "Arial" ))
+		(text "chanAddr_out[6..0]" (rect 142 107 219 119)(font "Arial" ))
+		(line (pt 240 112)(pt 224 112)(line_width 3))
+	)
+	(port
+		(pt 240 128)
+		(output)
+		(text "h2fData_out[7..0]" (rect 0 0 69 12)(font "Arial" ))
+		(text "h2fData_out[7..0]" (rect 150 123 219 135)(font "Arial" ))
+		(line (pt 240 128)(pt 224 128)(line_width 3))
+	)
+	(port
+		(pt 240 144)
+		(output)
+		(text "h2fValid_out" (rect 0 0 50 12)(font "Arial" ))
+		(text "h2fValid_out" (rect 169 139 219 151)(font "Arial" ))
+		(line (pt 240 144)(pt 224 144)(line_width 1))
+	)
+	(port
+		(pt 240 160)
+		(output)
+		(text "f2hReady_out" (rect 0 0 59 12)(font "Arial" ))
+		(text "f2hReady_out" (rect 160 155 219 167)(font "Arial" ))
+		(line (pt 240 160)(pt 224 160)(line_width 1))
+	)
+	(port
+		(pt 240 48)
+		(bidir)
+		(text "fx2Data_io[7..0]" (rect 0 0 63 12)(font "Arial" ))
+		(text "fx2Data_io[7..0]" (rect 156 43 219 55)(font "Arial" ))
+		(line (pt 240 48)(pt 224 48)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 224 192)(line_width 1))
+	)
+)

@@ -1,0 +1,265 @@
+module DE1_in_stream(
+//	reset_n,
+	fdata,  
+    faddr,  
+	FX2_PA_0,	
+    slrd,   
+    slwr,   
+    sloe,              
+    flagc,  
+    flaga,  
+    clk,    
+    //clk_out,
+	pkt_end
+	//done,
+	//sync,
+	//dbug_sig
+);
+
+//input reset_n;
+//inout [15:0]fdata;
+inout [7:0]fdata;
+input flaga;
+input flagc;
+input clk;
+
+input FX2_PA_0;
+
+//output clk_out; 
+output [1:0]faddr;
+output sloe;
+output slwr;
+output slrd;
+output pkt_end;
+//output done;
+//input sync;
+
+//output dbug_sig;
+
+reg slrd_n = 1'b1;
+reg slwr_n = 1'b1;
+reg sloe_n = 1'b1;
+reg slrd_d_n;
+
+reg [7:0] fifo_data_in;
+reg [7:0] fifo_data_out;
+
+wire reset_n;
+wire reset = FX2_PA_0; //1'b0;
+
+parameter stream_in_idle   = 1'b0;
+parameter stream_in_write  = 1'b1;
+
+reg current_stream_in_state;
+reg next_stream_in_state;
+
+reg done_d;
+reg [3:0]wait_s;
+
+wire clk_out_0;
+/*
+wire clk_out_90;
+wire clk_out_180;
+wire clk_out_270;
+
+
+ODDR2 oddr2_inst
+	(
+	 .D0(1'b1),
+	 .D1(1'b0),
+	 .CE(1'b1),
+	 .C0(clk_out_180),  
+	 .C1(!clk_out_180), 
+	 .R (1'b0),
+	 .S (1'b0),
+	 .Q (clk_out)
+	);
+	
+		
+clk_wiz_v3_6 clk_inst  	                                   // PLL
+	(
+	 .CLK_IN1  (clk),
+	 .CLK_OUT1 (clk_out_0),		
+	 .CLK_OUT2 (clk_out_90),
+	 .CLK_OUT3 (clk_out_180),
+	 .CLK_OUT4 (clk_out_270),
+	 .RESET    (1'b0),
+	 .LOCKED   (lock)
+		);
+*/
+
+assign clk_out_0 = clk;
+
+//assign reset_n = sync & lock;		
+assign reset_n = ~reset;
+
+//assign clk_out_0 = clk;
+assign slwr = slwr_n;
+assign slrd = slrd_n;
+assign sloe = sloe_n;
+assign pkt_end = 1'b0;//1;
+assign fdata[7:0] = data_out; //data_out8[7:0];
+//assign fdata[15:0] = data_out16[15:0];
+assign faddr = 2'b10;
+//assign done = done_d;
+
+
+always@(posedge clk_out_0, negedge reset_n) begin
+	if(reset_n == 1'b0)begin
+		done_d <= 1'b0;
+ 	end else if(wait_s == 4'd10) begin
+		done_d <= 1'b1;
+
+	end
+end	
+
+always@(posedge clk_out_0, negedge reset_n) begin
+	if(reset_n == 1'b0)begin
+		wait_s <= 4'd0;
+ 	end else if(wait_s < 4'd10) begin
+		wait_s <= wait_s + 1'b1;
+
+	end
+end	
+
+
+
+//write control signal generation
+always@(*)begin
+	if((current_stream_in_state == stream_in_write) & (flagc == 1'b1) & (data_ready))
+		slwr_n <= 1'b0;
+	else
+		slwr_n <= 1'b1;
+end
+
+//dbugging 
+reg flagc_d;
+reg slwr_n_d;
+
+always@(posedge clk_out_0, negedge reset_n) begin
+	if(reset_n == 1'b0)begin
+		flagc_d  <= 1'b0;
+		slwr_n_d <= 1'b1;
+ 	end else begin
+		flagc_d  <= flagc;
+		slwr_n_d <= slwr_n;
+	end
+end	
+
+//assign dbug_sig = flagc_d | slwr_n_d;
+
+//loopback mode state machine 
+always@(posedge clk_out_0, negedge reset_n) begin
+	if(reset_n == 1'b0)
+      		current_stream_in_state <= stream_in_idle;
+        else
+            current_stream_in_state <= next_stream_in_state;
+end
+
+//LoopBack mode state machine combo
+always@(*) begin
+	next_stream_in_state = current_stream_in_state;
+	case(current_stream_in_state)
+		stream_in_idle:begin
+			if((flagc == 1'b1)) // & (sync == 1'b1))
+				next_stream_in_state = stream_in_write;
+			else
+				next_stream_in_state = stream_in_idle;
+		end
+		stream_in_write:begin
+			if(flagc == 1'b0)
+				next_stream_in_state = stream_in_idle;
+			else
+				next_stream_in_state = stream_in_write;
+		end
+		default: 
+			next_stream_in_state = stream_in_idle;
+	endcase
+end
+
+
+//data generator counter
+
+wire [15:0] data16;
+
+reg [15:0] data_out16;
+reg [7:0] data_out8;
+reg [1:0] hilo;
+
+always@(posedge clk_out_0, negedge reset_n)begin
+	if(reset_n == 1'b0)
+		hilo <= 2'd0;
+	else if(slwr_n == 1'b0)
+		hilo <= hilo + 2'd1;
+end
+
+always@(negedge hilo[0], negedge reset_n)begin
+	if(reset_n == 1'b0)
+		data_out16 <= 16'd0;
+	else if (data_out16 == 16'd128) data_out16 <= 16'd0;
+		else data_out16 <= data_out16 + 16'd1;
+end		
+
+always@(posedge clk_out_0, negedge reset_n)begin
+	if(reset_n == 1'b0)
+		data_out8 <= 8'd0;
+	else if(slwr_n == 1'b0)
+		data_out8 <= data_out8 + 8'd1;
+end
+
+assign data16 = data_out16 + 16'd16384;
+
+reg [7:0] data_out;
+
+always@(*) begin
+	case(hilo)
+		2'b00: data_out = cos;
+		2'b01: data_out = 8'd0;//sine;
+		2'b10: data_out = sine;//cos;
+		2'b11: data_out = 8'd0;//sine;
+		//
+		default: data_out = 8'd0;
+	endcase
+end
+
+wire data_en = (hilo == 2'b11);
+wire data_ready = 1'b1;
+
+//-------------------------------------
+wire [7:0] sine;
+wire [7:0] cos;
+
+sine_cos osc(.clk(clk), .reset(reset), .en(data_en), .sine(sine), .cos(cos));
+
+//-------------------------------------
+
+endmodule
+
+////////////////////////////////////////////////////////////////////////////////////
+
+module sine_cos(clk, reset, en, sine, cos);
+   input clk, reset, en;
+   output [7:0] sine,cos;
+   
+   reg [7:0] sine_r = 8'd0;
+   reg [7:0] cos_r = 8'd120;
+   
+   assign      sine = sine_r + {cos_r[7], cos_r[7], cos_r[7], cos_r[7:3]};
+   assign      cos  = cos_r - {sine[7], sine[7], sine[7], sine[7:3]};
+   
+   always@(posedge clk or posedge reset)
+     begin
+         if (reset) begin
+             sine_r <= 0;
+             cos_r <= 120;
+         end else begin
+             if (en) begin
+                 sine_r <= sine;
+                 cos_r <= cos;
+             end
+         end
+     end
+     
+endmodule // sine_cos
+
+/////////////////////////////////////////////////////////////////////////////////////////////

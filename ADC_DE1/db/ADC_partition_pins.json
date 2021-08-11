@@ -1,0 +1,145 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "fdata[4]",
+					"strict" : false
+				},
+				{
+					"name" : "fdata[5]",
+					"strict" : false
+				},
+				{
+					"name" : "fdata[6]",
+					"strict" : false
+				},
+				{
+					"name" : "fdata[7]",
+					"strict" : false
+				},
+				{
+					"name" : "fdata[8]",
+					"strict" : false
+				},
+				{
+					"name" : "fdata[9]",
+					"strict" : false
+				},
+				{
+					"name" : "fdata[10]",
+					"strict" : false
+				},
+				{
+					"name" : "fdata[11]",
+					"strict" : false
+				},
+				{
+					"name" : "fdata[12]",
+					"strict" : false
+				},
+				{
+					"name" : "fdata[13]",
+					"strict" : false
+				},
+				{
+					"name" : "fdata[14]",
+					"strict" : false
+				},
+				{
+					"name" : "fdata[15]",
+					"strict" : false
+				},
+				{
+					"name" : "slwr",
+					"strict" : false
+				},
+				{
+					"name" : "dbug_sig",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_OUT[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_OUT[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_OUT[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_OUT[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_OUT[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_OUT[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_OUT[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_OUT[7]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_OUT[8]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_OUT[9]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_OUT[10]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_OUT[11]",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_SCLK",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_CONVST",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_SDI",
+					"strict" : false
+				},
+				{
+					"name" : "flagd",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "sync",
+					"strict" : false
+				},
+				{
+					"name" : "CLOCK_50",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_SDO",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

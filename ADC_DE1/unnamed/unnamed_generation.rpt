@@ -1,0 +1,17 @@
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate /home/bingo/Documentos/Igor/DE1-SoC/Projetos/ADC_teste2/unnamed.qsys --synthesis=VERILOG --output-directory=/home/bingo/Documentos/Igor/DE1-SoC/Projetos/ADC_teste2/unnamed/synthesis --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading ADC_teste2/unnamed.qsys
+Progress: Reading input file
+Progress: Adding adc_mega_0 [altera_up_avalon_adc_mega 18.0]
+Progress: Parameterizing module adc_mega_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: unnamed: Generating unnamed "unnamed" for QUARTUS_SYNTH
+Info: adc_mega_0: Starting Generation of ADC Controller for DE-series Board
+Info: adc_mega_0: /home/bingo/intelFPGA_lite/20.1/ip/altera/university_program/input_output/altera_up_avalon_adc/hdl/altera_up_avalon_adv_adc.v /tmp/alt8835_430786808685543225.dir/0002_sopcgen/unnamed_adc_mega_0.v
+Info: adc_mega_0: "unnamed" instantiated altera_up_avalon_adc_mega "adc_mega_0"
+Info: unnamed: Done "unnamed" with 2 modules, 3 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis
