@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Fri Aug 13 11:37:53 2021
+Analysis & Synthesis Status : Successful - Fri Aug 13 13:17:04 2021
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : FIFO_controller
 Top-level Entity Name : FIFO_controller
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
 Total registers : 9
-Total pins : 25
+Total pins : 26
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

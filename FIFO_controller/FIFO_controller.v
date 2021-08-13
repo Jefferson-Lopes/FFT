@@ -9,6 +9,7 @@ module FIFO_controller(
    output reg slrd_n = 1'b1,       // \
    output reg slwr_n = 1'b1,       //  --> all low at start
    output reg sloe_n = 1'b1,       // /
+	output reg pkt_end = 1'b0,
 	
 	inout reset     // not used yet
 );

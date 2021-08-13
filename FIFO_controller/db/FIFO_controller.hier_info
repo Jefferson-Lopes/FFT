@@ -33,5 +33,6 @@ faddr[1] <= <GND>
 slrd_n <= <GND>
 slwr_n <= always0.DB_MAX_OUTPUT_PORT_TYPE
 sloe_n <= <GND>
+pkt_end <= <GND>
 
 

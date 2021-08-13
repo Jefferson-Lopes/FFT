@@ -58,7 +58,6 @@ set_global_assignment -name VERILOG_FILE FIFO_controller.v
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_location_assignment PIN_AC18 -to FX2_CLK
 set_location_assignment PIN_AC18 -to clk
 set_location_assignment PIN_AH18 -to FX2_FD[0]
@@ -69,14 +68,14 @@ set_location_assignment PIN_AF16 -to FX2_FD[4]
 set_location_assignment PIN_AG17 -to FX2_FD[5]
 set_location_assignment PIN_AA18 -to FX2_FD[6]
 set_location_assignment PIN_AA19 -to FX2_FD[7]
-set_location_assignment PIN_AH18 -to fdata[0]
-set_location_assignment PIN_AH17 -to fdata[1]
-set_location_assignment PIN_AG16 -to fdata[2]
-set_location_assignment PIN_AE16 -to fdata[3]
-set_location_assignment PIN_AF16 -to fdata[4]
-set_location_assignment PIN_AG17 -to fdata[5]
-set_location_assignment PIN_AA18 -to fdata[6]
-set_location_assignment PIN_AA19 -to fdata[7]
+set_location_assignment PIN_AH18 -to data_out[0]
+set_location_assignment PIN_AH17 -to data_out[1]
+set_location_assignment PIN_AG16 -to data_out[2]
+set_location_assignment PIN_AE16 -to data_out[3]
+set_location_assignment PIN_AF16 -to data_out[4]
+set_location_assignment PIN_AG17 -to data_out[5]
+set_location_assignment PIN_AA18 -to data_out[6]
+set_location_assignment PIN_AA19 -to data_out[7]
 set_location_assignment PIN_AH20 -to pa[0]
 set_location_assignment PIN_AK21 -to pa[1]
 set_location_assignment PIN_AD19 -to pa[2]
@@ -102,15 +101,17 @@ set_location_assignment PIN_AF21 -to FX2_PA_7
 set_location_assignment PIN_AE18 -to faddr[0]
 set_location_assignment PIN_AE19 -to faddr[1]
 #
-set_location_assignment PIN_AD19 -to sloe
+set_location_assignment PIN_AD19 -to sloe_n
 set_location_assignment PIN_AD20 -to wup2
 #
-set_location_assignment PIN_AH19 -to slrd
-set_location_assignment PIN_AJ20 -to slwr
+set_location_assignment PIN_AH19 -to slrd_n
+set_location_assignment PIN_AJ20 -to slwr_n
 #
 set_location_assignment PIN_AF20 -to pkt_end
 #
-set_location_assignment PIN_AE17 -to flaga
-set_location_assignment PIN_AC20 -to flagb
-set_location_assignment PIN_Y17 -to flagc
-set_location_assignment PIN_AF21 -to flagd
+set_location_assignment PIN_AE17 -to flaga_n
+set_location_assignment PIN_AC20 -to flagb_n
+set_location_assignment PIN_Y17 -to flagc_n
+set_location_assignment PIN_AF21 -to flagd_n
+
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

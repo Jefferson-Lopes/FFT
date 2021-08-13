@@ -15,6 +15,7 @@ instance = comp, \faddr[1]~output , faddr[1]~output, FIFO_controller, 1
 instance = comp, \slrd_n~output , slrd_n~output, FIFO_controller, 1
 instance = comp, \slwr_n~output , slwr_n~output, FIFO_controller, 1
 instance = comp, \sloe_n~output , sloe_n~output, FIFO_controller, 1
+instance = comp, \pkt_end~output , pkt_end~output, FIFO_controller, 1
 instance = comp, \reset~output , reset~output, FIFO_controller, 1
 instance = comp, \clk~input , clk~input, FIFO_controller, 1
 instance = comp, \clk~inputCLKENA0 , clk~inputCLKENA0, FIFO_controller, 1
