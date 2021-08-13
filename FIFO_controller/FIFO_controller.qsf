@@ -59,3 +59,58 @@ set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_location_assignment PIN_AC18 -to FX2_CLK
+set_location_assignment PIN_AC18 -to clk
+set_location_assignment PIN_AH18 -to FX2_FD[0]
+set_location_assignment PIN_AH17 -to FX2_FD[1]
+set_location_assignment PIN_AG16 -to FX2_FD[2]
+set_location_assignment PIN_AE16 -to FX2_FD[3]
+set_location_assignment PIN_AF16 -to FX2_FD[4]
+set_location_assignment PIN_AG17 -to FX2_FD[5]
+set_location_assignment PIN_AA18 -to FX2_FD[6]
+set_location_assignment PIN_AA19 -to FX2_FD[7]
+set_location_assignment PIN_AH18 -to fdata[0]
+set_location_assignment PIN_AH17 -to fdata[1]
+set_location_assignment PIN_AG16 -to fdata[2]
+set_location_assignment PIN_AE16 -to fdata[3]
+set_location_assignment PIN_AF16 -to fdata[4]
+set_location_assignment PIN_AG17 -to fdata[5]
+set_location_assignment PIN_AA18 -to fdata[6]
+set_location_assignment PIN_AA19 -to fdata[7]
+set_location_assignment PIN_AH20 -to pa[0]
+set_location_assignment PIN_AK21 -to pa[1]
+set_location_assignment PIN_AD19 -to pa[2]
+set_location_assignment PIN_AD20 -to pa[3]
+set_location_assignment PIN_AE18 -to pa[4]
+set_location_assignment PIN_AE19 -to pa[5]
+set_location_assignment PIN_AF20 -to pa[6]
+set_location_assignment PIN_AF21 -to pa[7]
+set_location_assignment PIN_AE17 -to FX2_flags[0]
+set_location_assignment PIN_AC20 -to FX2_flags[1]
+set_location_assignment PIN_Y17 -to FX2_flags[2]
+set_location_assignment PIN_AH19 -to FX2_SLRD
+set_location_assignment PIN_AJ20 -to FX2_SLWR
+set_location_assignment PIN_AH20 -to FX2_PA_0
+set_location_assignment PIN_AK21 -to FX2_PA_1
+set_location_assignment PIN_AD19 -to FX2_PA_2
+set_location_assignment PIN_AD20 -to FX2_PA_3
+set_location_assignment PIN_AE18 -to FX2_PA_4
+set_location_assignment PIN_AE19 -to FX2_PA_5
+set_location_assignment PIN_AF20 -to FX2_PA_6
+set_location_assignment PIN_AF21 -to FX2_PA_7
+#
+set_location_assignment PIN_AE18 -to faddr[0]
+set_location_assignment PIN_AE19 -to faddr[1]
+#
+set_location_assignment PIN_AD19 -to sloe
+set_location_assignment PIN_AD20 -to wup2
+#
+set_location_assignment PIN_AH19 -to slrd
+set_location_assignment PIN_AJ20 -to slwr
+#
+set_location_assignment PIN_AF20 -to pkt_end
+#
+set_location_assignment PIN_AE17 -to flaga
+set_location_assignment PIN_AC20 -to flagb
+set_location_assignment PIN_Y17 -to flagc
+set_location_assignment PIN_AF21 -to flagd
