@@ -4,11 +4,39 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "slwr",
+					"name" : "data_out[0]",
 					"strict" : false
 				},
 				{
-					"name" : "done",
+					"name" : "data_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[7]",
+					"strict" : false
+				},
+				{
+					"name" : "slwr_n",
 					"strict" : false
 				},
 				{
@@ -16,15 +44,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "flagd",
-					"strict" : false
-				},
-				{
-					"name" : "sync",
+					"name" : "flagd_n",
 					"strict" : false
 				},
 				{
 					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "sync_n",
 					"strict" : false
 				}
 			]

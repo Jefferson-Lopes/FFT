@@ -1,110 +1,62 @@
 module FIFO_controller(
-	input flaga,
-	input flagd,   
+	input flagd_n,  // EP6 FULL FLAG 
    input clk,
-	input sync,
-	input [11:0] data_adc,
+	input sync_n,
+	input [7:0] data_in,
 	
-	output reg [15:0]fdata,  
-   output [1:0]faddr,  
-   output reg slrd,   
-   output reg slwr,   
-   output reg sloe,              
-   output clk_out,
-	output pkt_end,
-	output reg done,
-	output dbug_sig,
+	output reg [7:0]data_out,  
+   output reg [1:0]faddr = 2'b10,  // fx2 address
+   output reg slrd_n = 1'b1,       // \
+   output reg slwr_n = 1'b1,       //  --> all low at start
+   output reg sloe_n = 1'b1,       // /
 	
-	inout reset
+	inout reset     // not used yet
 );
 
 	reg current_stream_in_state;
 	reg next_stream_in_state;
-	reg [3:0]wait_s;
-	reg [6:0]count;
 	
 	parameter stream_in_idle  = 1'b0;
 	parameter stream_in_write = 1'b1;
 	
-	assign pkt_end = 1'b1;
-	assign faddr = 2'b10;
-
-	// -----debugging----- 
-	//	reg done_d;
-	//	reg flagd_d;
-	//	reg slwr_n_d;
-	//	
-	//	assign done = done_d;
-	//	assign dbug_sig = flagd_d | slwr_n_d;
-	//
-	//	always@(posedge clk, negedge reset_n) begin
-	//		if(reset_n == 1'b0)begin
-	//			flagd_d  <= 1'b0;
-	//			slwr_n_d <= 1'b1;
-	//		end else begin
-	//			flagd_d  <= flagd_d;
-	//			slwr_n_d <= slwr_n;
-	//		end
-	//	end	
 	
-	initial begin
-		slrd = 1'b1;
-		slwr = 1'b0;
-		sloe = 1'b0;
-	end
-	
-	always @ (posedge clk, posedge reset) begin
-		if(reset == 1'b1)begin
-			done <= 1'b0;
-		end else if(wait_s == 4'd10) begin
-			done <= 1'b1;
-		end
-	end	
+	// just tied together right now
+	//	assign data_out = data_in;	
 
-	always @ (posedge clk, posedge reset) begin
-		if(reset == 1'b1)begin
-			wait_s <= 4'd0;
-		end else if(wait_s < 4'd10) begin
-			wait_s <= wait_s + 1'b1;
-		end
-	end	
 
 	//write control signal generation
 	always @ (*)begin
-		if((current_stream_in_state == stream_in_write) & (flagd == 1'b1))
-			slwr <= 1'b0;
+		if((current_stream_in_state == stream_in_write) & (flagd_n == 1'b0))
+			slwr_n <= 1'b1;
 		else
-			slwr <= 1'b1;
+			slwr_n <= 1'b0;
 	end
 
-	//loopback mode state machine 
+	//reset state machine
 	always @ (posedge clk, posedge reset) begin
-		if(reset == 1'b1) begin
+		if(reset == 1'b1) 
 			current_stream_in_state <= stream_in_idle;
-		end else begin
+		else 
 			current_stream_in_state <= next_stream_in_state;
-		end
 	end
 
-	//LoopBack mode state machine combo
+	//stream in state machine
 	always @ (*) begin
 		next_stream_in_state = current_stream_in_state;
 		
 		case(current_stream_in_state)
 			stream_in_idle:begin
-					if((flagd == 1'b1) & (sync == 1'b1)) begin
+					if((flagd_n == 1'b0) & (sync_n == 1'b0))
 						next_stream_in_state = stream_in_write;
-					end else begin
+					else 
 						next_stream_in_state = stream_in_idle;
-					end
 				end
 			
 			stream_in_write:begin
-				if(flagd == 1'b0) begin
+				if(flagd_n == 1'b1)
 					next_stream_in_state = stream_in_idle;
-				end else begin
+				else 
 					next_stream_in_state = stream_in_write;
-				end
 			end
 			
 			default: 
@@ -115,16 +67,12 @@ module FIFO_controller(
 
 	//data generator counter
 
-	/* just to see how the data is sent
-	always @ (posedge clk_out_0, negedge reset_n)begin
-		if(reset_n == 1'b0)
-			data_out2 <= 8'd0;//data_out1 <= 16'd0;
+	// just to see how the data is sent
+	always @ (posedge clk, posedge reset)begin
+		if(reset == 1'b1)
+			data_out <= 8'b0;
 		else if(slwr_n == 1'b0)
-			//data_out1 <= {4'd0, data_adc};
-			count <= count+1;
-			case (count)
-				 8'b00000000: data_out2 <= 8'b01111111;
-				 8'b00000001: data_out2 <= 8'b10000010;
-	*/
-
+			data_out = data_out + 8'b1;
+	end
+	
 endmodule
