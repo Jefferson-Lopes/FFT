@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FIFO_controller
-Fri Aug 13 13:17:04 2021
+Fri Aug 13 13:49:20 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -18,7 +18,6 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  10. Post-Synthesis Netlist Statistics for Top Partition
  11. Elapsed Time Per Partition
  12. Analysis & Synthesis Messages
- 13. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -45,7 +44,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Aug 13 13:17:04 2021       ;
+; Analysis & Synthesis Status     ; Successful - Fri Aug 13 13:49:20 2021       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; FIFO_controller                             ;
 ; Top-level Entity Name           ; FIFO_controller                             ;
@@ -169,13 +168,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                    ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                      ; Library ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------+---------+
-; FIFO_controller.v                ; yes             ; User Verilog HDL File  ; /home/jeff/Documents/GitHub/FFT/FIFO_controller/FIFO_controller.v ;         ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                      ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                        ; Library ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------+---------+
+; FIFO_controller.v                ; yes             ; User Verilog HDL File  ; /home/bingo/Documentos/GitHub/FFT/FIFO_controller/FIFO_controller.v ;         ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -250,19 +249,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     CLR               ; 1                           ;
 ;     ENA CLR           ; 8                           ;
 ; arriav_io_obuf        ; 1                           ;
-; arriav_lcell_comb     ; 11                          ;
+; arriav_lcell_comb     ; 12                          ;
 ;     arith             ; 7                           ;
 ;         1 data inputs ; 6                           ;
 ;         2 data inputs ; 1                           ;
-;     normal            ; 4                           ;
+;     normal            ; 5                           ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 1                           ;
+;         1 data inputs ; 2                           ;
 ;         2 data inputs ; 1                           ;
 ;         3 data inputs ; 1                           ;
 ; boundary_port         ; 26                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 1.60                        ;
-; Average LUT depth     ; 1.14                        ;
+; Max LUT depth         ; 2.00                        ;
+; Average LUT depth     ; 1.26                        ;
 +-----------------------+-----------------------------+
 
 
@@ -281,53 +280,46 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Fri Aug 13 13:16:50 2021
+    Info: Processing started: Fri Aug 13 13:49:13 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FIFO_controller -c FIFO_controller
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file FIFO_controller.v
-    Info (12023): Found entity 1: FIFO_controller File: /home/jeff/Documents/GitHub/FFT/FIFO_controller/FIFO_controller.v Line: 1
+    Info (12023): Found entity 1: FIFO_controller File: /home/bingo/Documentos/GitHub/FFT/FIFO_controller/FIFO_controller.v Line: 1
 Info (12127): Elaborating entity "FIFO_controller" for the top level hierarchy
-Warning (10034): Output port "faddr" at FIFO_controller.v(8) has no driver File: /home/jeff/Documents/GitHub/FFT/FIFO_controller/FIFO_controller.v Line: 8
-Warning (10034): Output port "slrd_n" at FIFO_controller.v(9) has no driver File: /home/jeff/Documents/GitHub/FFT/FIFO_controller/FIFO_controller.v Line: 9
-Warning (10034): Output port "sloe_n" at FIFO_controller.v(11) has no driver File: /home/jeff/Documents/GitHub/FFT/FIFO_controller/FIFO_controller.v Line: 11
-Warning (10034): Output port "pkt_end" at FIFO_controller.v(12) has no driver File: /home/jeff/Documents/GitHub/FFT/FIFO_controller/FIFO_controller.v Line: 12
+Warning (10034): Output port "faddr" at FIFO_controller.v(8) has no driver File: /home/bingo/Documentos/GitHub/FFT/FIFO_controller/FIFO_controller.v Line: 8
+Warning (10034): Output port "slrd_n" at FIFO_controller.v(9) has no driver File: /home/bingo/Documentos/GitHub/FFT/FIFO_controller/FIFO_controller.v Line: 9
+Warning (10034): Output port "sloe_n" at FIFO_controller.v(11) has no driver File: /home/bingo/Documentos/GitHub/FFT/FIFO_controller/FIFO_controller.v Line: 11
+Warning (10034): Output port "pkt_end" at FIFO_controller.v(12) has no driver File: /home/bingo/Documentos/GitHub/FFT/FIFO_controller/FIFO_controller.v Line: 12
 Warning (13039): The following bidirectional pins have no drivers
-    Warning (13040): bidirectional pin "reset" has no driver File: /home/jeff/Documents/GitHub/FFT/FIFO_controller/FIFO_controller.v Line: 15
+    Warning (13040): bidirectional pin "reset" has no driver File: /home/bingo/Documentos/GitHub/FFT/FIFO_controller/FIFO_controller.v Line: 15
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "faddr[0]" is stuck at GND File: /home/jeff/Documents/GitHub/FFT/FIFO_controller/FIFO_controller.v Line: 8
-    Warning (13410): Pin "faddr[1]" is stuck at GND File: /home/jeff/Documents/GitHub/FFT/FIFO_controller/FIFO_controller.v Line: 8
-    Warning (13410): Pin "slrd_n" is stuck at GND File: /home/jeff/Documents/GitHub/FFT/FIFO_controller/FIFO_controller.v Line: 9
-    Warning (13410): Pin "sloe_n" is stuck at GND File: /home/jeff/Documents/GitHub/FFT/FIFO_controller/FIFO_controller.v Line: 11
-    Warning (13410): Pin "pkt_end" is stuck at GND File: /home/jeff/Documents/GitHub/FFT/FIFO_controller/FIFO_controller.v Line: 12
+    Warning (13410): Pin "faddr[0]" is stuck at GND File: /home/bingo/Documentos/GitHub/FFT/FIFO_controller/FIFO_controller.v Line: 8
+    Warning (13410): Pin "faddr[1]" is stuck at GND File: /home/bingo/Documentos/GitHub/FFT/FIFO_controller/FIFO_controller.v Line: 8
+    Warning (13410): Pin "slrd_n" is stuck at GND File: /home/bingo/Documentos/GitHub/FFT/FIFO_controller/FIFO_controller.v Line: 9
+    Warning (13410): Pin "sloe_n" is stuck at GND File: /home/bingo/Documentos/GitHub/FFT/FIFO_controller/FIFO_controller.v Line: 11
+    Warning (13410): Pin "pkt_end" is stuck at GND File: /home/bingo/Documentos/GitHub/FFT/FIFO_controller/FIFO_controller.v Line: 12
 Info (286030): Timing-Driven Synthesis is running
-Info (144001): Generated suppressed messages file /home/jeff/Documents/GitHub/FFT/FIFO_controller/output_files/FIFO_controller.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 8 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "data_in[0]" File: /home/jeff/Documents/GitHub/FFT/FIFO_controller/FIFO_controller.v Line: 5
-    Warning (15610): No output dependent on input pin "data_in[1]" File: /home/jeff/Documents/GitHub/FFT/FIFO_controller/FIFO_controller.v Line: 5
-    Warning (15610): No output dependent on input pin "data_in[2]" File: /home/jeff/Documents/GitHub/FFT/FIFO_controller/FIFO_controller.v Line: 5
-    Warning (15610): No output dependent on input pin "data_in[3]" File: /home/jeff/Documents/GitHub/FFT/FIFO_controller/FIFO_controller.v Line: 5
-    Warning (15610): No output dependent on input pin "data_in[4]" File: /home/jeff/Documents/GitHub/FFT/FIFO_controller/FIFO_controller.v Line: 5
-    Warning (15610): No output dependent on input pin "data_in[5]" File: /home/jeff/Documents/GitHub/FFT/FIFO_controller/FIFO_controller.v Line: 5
-    Warning (15610): No output dependent on input pin "data_in[6]" File: /home/jeff/Documents/GitHub/FFT/FIFO_controller/FIFO_controller.v Line: 5
-    Warning (15610): No output dependent on input pin "data_in[7]" File: /home/jeff/Documents/GitHub/FFT/FIFO_controller/FIFO_controller.v Line: 5
+    Warning (15610): No output dependent on input pin "data_in[0]" File: /home/bingo/Documentos/GitHub/FFT/FIFO_controller/FIFO_controller.v Line: 5
+    Warning (15610): No output dependent on input pin "data_in[1]" File: /home/bingo/Documentos/GitHub/FFT/FIFO_controller/FIFO_controller.v Line: 5
+    Warning (15610): No output dependent on input pin "data_in[2]" File: /home/bingo/Documentos/GitHub/FFT/FIFO_controller/FIFO_controller.v Line: 5
+    Warning (15610): No output dependent on input pin "data_in[3]" File: /home/bingo/Documentos/GitHub/FFT/FIFO_controller/FIFO_controller.v Line: 5
+    Warning (15610): No output dependent on input pin "data_in[4]" File: /home/bingo/Documentos/GitHub/FFT/FIFO_controller/FIFO_controller.v Line: 5
+    Warning (15610): No output dependent on input pin "data_in[5]" File: /home/bingo/Documentos/GitHub/FFT/FIFO_controller/FIFO_controller.v Line: 5
+    Warning (15610): No output dependent on input pin "data_in[6]" File: /home/bingo/Documentos/GitHub/FFT/FIFO_controller/FIFO_controller.v Line: 5
+    Warning (15610): No output dependent on input pin "data_in[7]" File: /home/bingo/Documentos/GitHub/FFT/FIFO_controller/FIFO_controller.v Line: 5
 Info (21057): Implemented 36 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 11 input pins
     Info (21059): Implemented 14 output pins
     Info (21060): Implemented 1 bidirectional pins
     Info (21061): Implemented 10 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 22 warnings
-    Info: Peak virtual memory: 446 megabytes
-    Info: Processing ended: Fri Aug 13 13:17:04 2021
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:29
-
-
-+------------------------------------------+
-; Analysis & Synthesis Suppressed Messages ;
-+------------------------------------------+
-The suppressed messages can be found in /home/jeff/Documents/GitHub/FFT/FIFO_controller/output_files/FIFO_controller.map.smsg.
+    Info: Peak virtual memory: 458 megabytes
+    Info: Processing ended: Fri Aug 13 13:49:20 2021
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:16
 
 

@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
-// DATE "08/13/2021 13:18:19"
+// DATE "08/13/2021 13:50:02"
 
 // 
 // Device: Altera 5CSEMA5F31C6 Package FBGA896
@@ -312,7 +312,7 @@ defparam \slrd_n~output .shift_series_termination_control = "false";
 
 // Location: IOOBUF_X62_Y0_N36
 cyclonev_io_obuf \slwr_n~output (
-	.i(\always0~0_combout ),
+	.i(!\always0~0_combout ),
 	.oe(vcc),
 	.dynamicterminationcontrol(gnd),
 	.seriesterminationcontrol(16'b0000000000000000),
@@ -502,7 +502,7 @@ defparam current_stream_in_state.power_up = "low";
 // Location: LABCELL_X56_Y1_N27
 cyclonev_lcell_comb \always0~0 (
 // Equation(s):
-// \always0~0_combout  = ( \current_stream_in_state~q  & ( !\flagd_n~input_o  ) )
+// \always0~0_combout  = ( \current_stream_in_state~q  & ( \flagd_n~input_o  ) )
 
 	.dataa(!\flagd_n~input_o ),
 	.datab(gnd),
@@ -519,7 +519,7 @@ cyclonev_lcell_comb \always0~0 (
 	.shareout());
 // synopsys translate_off
 defparam \always0~0 .extended_lut = "off";
-defparam \always0~0 .lut_mask = 64'h00000000AAAAAAAA;
+defparam \always0~0 .lut_mask = 64'h0000000055555555;
 defparam \always0~0 .shared_arith = "off";
 // synopsys translate_on
 
@@ -532,7 +532,7 @@ dffeas \data_out[0]~reg0 (
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
-	.ena(!\always0~0_combout ),
+	.ena(\always0~0_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.q(\data_out[0]~reg0_q ),
@@ -576,7 +576,7 @@ dffeas \data_out[1]~reg0 (
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
-	.ena(!\always0~0_combout ),
+	.ena(\always0~0_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.q(\data_out[1]~reg0_q ),
@@ -620,7 +620,7 @@ dffeas \data_out[2]~reg0 (
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
-	.ena(!\always0~0_combout ),
+	.ena(\always0~0_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.q(\data_out[2]~reg0_q ),
@@ -664,7 +664,7 @@ dffeas \data_out[3]~reg0 (
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
-	.ena(!\always0~0_combout ),
+	.ena(\always0~0_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.q(\data_out[3]~reg0_q ),
@@ -708,7 +708,7 @@ dffeas \data_out[4]~reg0 (
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
-	.ena(!\always0~0_combout ),
+	.ena(\always0~0_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.q(\data_out[4]~reg0_q ),
@@ -752,7 +752,7 @@ dffeas \data_out[5]~reg0 (
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
-	.ena(!\always0~0_combout ),
+	.ena(\always0~0_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.q(\data_out[5]~reg0_q ),
@@ -796,7 +796,7 @@ dffeas \data_out[6]~reg0 (
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
-	.ena(!\always0~0_combout ),
+	.ena(\always0~0_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.q(\data_out[6]~reg0_q ),
@@ -839,7 +839,7 @@ dffeas \data_out[7]~reg0 (
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
-	.ena(!\always0~0_combout ),
+	.ena(\always0~0_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.q(\data_out[7]~reg0_q ),

@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at FIFO_controller.v(72): always construct contains both blocking and non-blocking assignments File: /home/jeff/Documents/GitHub/FFT/FIFO_controller/FIFO_controller.v Line: 72
+Warning (10268): Verilog HDL information at FIFO_controller.v(72): always construct contains both blocking and non-blocking assignments File: /home/bingo/Documentos/GitHub/FFT/FIFO_controller/FIFO_controller.v Line: 72

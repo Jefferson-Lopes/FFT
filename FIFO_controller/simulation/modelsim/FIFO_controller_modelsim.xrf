@@ -1,6 +1,6 @@
 vendor_name = ModelSim
-source_file = 1, /home/jeff/Documents/GitHub/FFT/FIFO_controller/FIFO_controller.v
-source_file = 1, /home/jeff/Documents/GitHub/FFT/FIFO_controller/db/FIFO_controller.cbx.xml
+source_file = 1, /home/bingo/Documentos/GitHub/FFT/FIFO_controller/FIFO_controller.v
+source_file = 1, /home/bingo/Documentos/GitHub/FFT/FIFO_controller/db/FIFO_controller.cbx.xml
 design_name = FIFO_controller
 instance = comp, \data_out[0]~output , data_out[0]~output, FIFO_controller, 1
 instance = comp, \data_out[1]~output , data_out[1]~output, FIFO_controller, 1

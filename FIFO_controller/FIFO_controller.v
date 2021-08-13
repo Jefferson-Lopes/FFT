@@ -6,12 +6,12 @@ module FIFO_controller(
 	
 	output reg [7:0]data_out,  
    output reg [1:0]faddr = 2'b10,  // fx2 address
-   output reg slrd_n = 1'b1,       // \
+   output reg slrd_n = 1'b0,       // \
    output reg slwr_n = 1'b1,       //  --> all low at start
    output reg sloe_n = 1'b1,       // /
-	output reg pkt_end = 1'b0,
+	output reg pkt_end = 1'b1,
 	
-	inout reset     // not used yet
+	inout reg reset = 1'b0     // not used yet
 );
 
 	reg current_stream_in_state;
@@ -27,10 +27,10 @@ module FIFO_controller(
 
 	//write control signal generation
 	always @ (*)begin
-		if((current_stream_in_state == stream_in_write) & (flagd_n == 1'b0))
-			slwr_n <= 1'b1;
-		else
+		if((current_stream_in_state == stream_in_write) & (flagd_n == 1'b1))
 			slwr_n <= 1'b0;
+		else
+			slwr_n <= 1'b1;
 	end
 
 	//reset state machine
@@ -47,7 +47,7 @@ module FIFO_controller(
 		
 		case(current_stream_in_state)
 			stream_in_idle:begin
-					if((flagd_n == 1'b0) & (sync_n == 1'b0))
+					if((flagd_n == 1'b1) & (sync_n == 1'b1))
 						next_stream_in_state = stream_in_write;
 					else 
 						next_stream_in_state = stream_in_idle;
@@ -66,14 +66,14 @@ module FIFO_controller(
 	end
 
 
-	//data generator counter
+	//data generator counter	
 
 	// just to see how the data is sent
 	always @ (posedge clk, posedge reset)begin
 		if(reset == 1'b1)
 			data_out <= 8'b0;
 		else if(slwr_n == 1'b0)
-			data_out = data_out + 8'b1;
+			data_out <= data_out + 8'b1;
 	end
 	
 endmodule
