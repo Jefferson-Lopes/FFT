@@ -1,4 +1,4 @@
-# DE1_in_stream project
+# FIFO controller project
 
 Projeto com a finalidade de testar o envio de dados da FPGA para o PC Host
 
@@ -13,6 +13,8 @@ Projeto com a finalidade de testar o envio de dados da FPGA para o PC Host
 ### Notes
 
 * add a reset input to the FPGA project, due to the time required for the FX2 initialize
+* use 2 bits in the data package, one being the start of packet and the other the end of packet
+* use parity bit to ensure the data is right
 
 ### Hardware connections
 
