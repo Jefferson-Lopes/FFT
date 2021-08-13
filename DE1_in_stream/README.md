@@ -8,11 +8,22 @@ Projeto com a finalidade de testar o envio de dados da FPGA para o PC Host
 * **FLAGB** - endpoint 4 empty flag
 * **FLAGC** - endpoint 6 full flag
 * **FLAGD** - endpoint 8 full flag
-* **PC0**   - sync signal
+* **PC0** - sync signal
 
 ### Notes
 
 * add a reset input to the FPGA project, due to the time required for the FX2 initialize
+
+### Hardware connections
+
+This block represents the primary connections between fpga and fx2. Also, the only remaining connection is the ADC data out.
+
+![hardware connections](hardware_connections_diagram.png)
+### Diagram
+
+some text
+
+![stream in](data_stream_in_state_diagram.png)
 
 ### Reference
 
