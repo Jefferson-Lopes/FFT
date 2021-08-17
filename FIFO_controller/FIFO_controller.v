@@ -69,6 +69,8 @@ module FIFO_controller(
 	//data generator counter	
 
 	// just to see how the data is sent
+	// increments data_out bit by bit until it
+	// overflows, i.e. from 8'd0 to 8'd255
 	always @ (posedge clk, posedge reset)begin
 		if(reset == 1'b1)
 			data_out <= 8'b0;
